@@ -7,10 +7,6 @@ The Code is structured to be work as modules to create reusability for Projects.
 
 ## Documentation
 A rough Overview of how the Library works and how to use it
-
-### Core
-
-#### Application:
 ## Authors
 
 - [@leonschultz](https://github.com/ProdByTENSHI)
