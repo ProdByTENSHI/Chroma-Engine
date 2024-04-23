@@ -1,5 +1,6 @@
 #include <iostream>
 #include <core/Application.h>
+#include <eventsystem/EventSystem.h>
 
 using namespace chroma;
 
@@ -13,11 +14,7 @@ int main(int argc, char* argv[])
 	Uint32 _renderFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
 	Renderer* _renderer = new Renderer(_window->GetWindowInformation().window, _renderFlags);
 
-	AppInformation _appInfo;
-	_appInfo.window = _window;
-	_appInfo.renderer = _renderer;
-
-	_app->Init(_appInfo);
+	_app->Init(_window, _renderer);
 	_app->Update();
 
 	return 0;
