@@ -8,7 +8,7 @@ namespace chroma
 	class InputManager
 	{
 	public:
-		InputManager(SDL_Window* window);
+		static InputManager* GetInstance();
 
 		void HandleInput();
 
@@ -19,7 +19,16 @@ namespace chroma
 		Event<SDL_Keycode> OnKeyDown;
 		Event<SDL_Keycode> OnKeyUp;
 
+		// -- Mouse Events
+		Event<int, int> OnMouseMove;
+
 	private:
+		InputManager() : m_MouseX(0), m_MouseY(0) {}
+		InputManager(const InputManager& other);
+
+		int m_MouseX;
+		int m_MouseY;
+
 		SDL_Window* m_Window = nullptr;
 	};
 }

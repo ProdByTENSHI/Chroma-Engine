@@ -1,7 +1,9 @@
 #include "core/Application.h"
 
 #include <iostream>
+
 #include "logger/Logger.h"
+#include "input/InputManager.h"
 
 namespace chroma
 {
@@ -38,7 +40,6 @@ namespace chroma
 		}
 
 		m_Renderer = renderer;
-		m_InputManager = new InputManager(window->GetWindowInformation().window);
 
 		// Lambda Function for the On Quit Event
 		EventHandler<> _quitFunction = EventHandler<>([this]()
@@ -47,7 +48,7 @@ namespace chroma
 
 				SDL_Quit();
 			});
-		m_InputManager->OnQuit += _quitFunction;
+		InputManager::GetInstance()->OnQuit += _quitFunction;
 
 		Logger::GetInstance()->Log("Chroma Engine initialized");
 	}
@@ -58,7 +59,7 @@ namespace chroma
 		{
 			m_Renderer->Prepare();
 
-			m_InputManager->HandleInput();
+			InputManager::GetInstance()->HandleInput();
 
 			// Todo: Render everything that needs to be shown
 

@@ -4,9 +4,14 @@
 
 namespace chroma
 {
-	InputManager::InputManager(SDL_Window* window)
+	static InputManager* instance = nullptr;
+
+	InputManager* InputManager::GetInstance()
 	{
-		m_Window = window;
+		if (instance == nullptr)
+			instance = new InputManager();
+
+		return instance;
 	}
 
 	void InputManager::HandleInput()
@@ -28,6 +33,18 @@ namespace chroma
 				OnKeyUp.Dispatch(e.key.keysym.sym);
 				break;
 			}
+		}
+
+		// Update Mouse State
+		int _x, _y;
+		SDL_GetMouseState(&_x, &_y);
+
+		if (m_MouseX != _x || m_MouseY != _y)
+		{
+			m_MouseX = _x;
+			m_MouseY = _y;
+
+			OnMouseMove.Dispatch(m_MouseX, m_MouseY);
 		}
 	}
 }

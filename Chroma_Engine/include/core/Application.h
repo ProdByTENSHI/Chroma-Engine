@@ -2,7 +2,6 @@
 
 #include "Window.h"
 #include "rendering/Renderer.h"
-#include "input/InputManager.h"
 
 namespace chroma
 {
@@ -18,12 +17,10 @@ namespace chroma
 		// -- Getter
 		const Window& GetWindow() const { return *m_Window; }
 		const Renderer& GetRenderer() const { return *m_Renderer; }
-		InputManager* GetInputManager() const { return m_InputManager; }
 
 	private:
 		Window* m_Window = nullptr;
 		Renderer* m_Renderer = nullptr;
-		InputManager* m_InputManager = nullptr;
 
 		bool m_IsRunning = false;
 

@@ -1,5 +1,8 @@
 #include "rendering/Renderer.h"
 
+#include "input/InputManager.h"
+#include "eventsystem/EventSystem.h"
+#include "util/Random.h"
 #include "logger/Logger.h"
 
 namespace chroma
@@ -14,6 +17,18 @@ namespace chroma
 		}
 
 		m_CreationStatus = true;
+
+		EventHandler<SDL_Keycode> _randomDrawColor([this](SDL_Keycode key)
+			{
+				if (key != SDLK_SPACE)
+					return;
+
+				m_R = Random::GetInt(0, 255);
+				m_G = Random::GetInt(0, 255);
+				m_B = Random::GetInt(0, 255);
+			});
+
+		InputManager::GetInstance()->OnKeyDown.Subscribe(_randomDrawColor);
 	}
 
 	Renderer::~Renderer()
@@ -23,7 +38,7 @@ namespace chroma
 
 	void Renderer::Prepare()
 	{
-		SDL_SetRenderDrawColor(m_Renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+		SDL_SetRenderDrawColor(m_Renderer, m_R, m_G, m_B, 0xFF);
 		SDL_RenderClear(m_Renderer);
 	}
 

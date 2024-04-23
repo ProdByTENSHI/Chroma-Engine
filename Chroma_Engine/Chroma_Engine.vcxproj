@@ -137,6 +137,7 @@
     <ClInclude Include="include\input\InputManager.h" />
     <ClInclude Include="include\logger\Logger.h" />
     <ClInclude Include="include\rendering\Renderer.h" />
+    <ClInclude Include="include\util\Random.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Application.cpp" />
@@ -144,6 +145,7 @@
     <ClCompile Include="src\input\InputManager.cpp" />
     <ClCompile Include="src\logger\Logger.cpp" />
     <ClCompile Include="src\rendering\Renderer.cpp" />
+    <ClCompile Include="src\util\Random.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

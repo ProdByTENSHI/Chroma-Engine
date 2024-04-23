@@ -1,24 +1,9 @@
 #include <iostream>
 #include <core/Application.h>
+#include <input/InputManager.h>
 #include <eventsystem/EventSystem.h>
 
 using namespace chroma;
-
-void keyDown(SDL_Keycode key)
-{
-	if (key == SDLK_w)
-	{
-		std::cout << "Bing Bong der Eiermann ist da" << std::endl;
-		return;
-	}
-
-	std::cout << SDL_GetKeyName(key) << " was pressed down!" << std::endl;
-}
-
-void keyUp(SDL_Keycode key)
-{
-	std::cout << SDL_GetKeyName(key) << " was released!" << std::endl;
-}
 
 int main(int argc, char* argv[])
 {
@@ -32,11 +17,12 @@ int main(int argc, char* argv[])
 
 	_app->Init(_window, _renderer);
 
-	EventHandler<SDL_Keycode> _keyDownEvent = EventHandler<SDL_Keycode>(keyDown);
-	EventHandler<SDL_Keycode> _keyReleaseEvent = EventHandler<SDL_Keycode>(keyUp);
+	EventHandler<int, int> _mousePosition([](int x, int y)
+		{
+			std::cout << "X: " << x << " Y: " << y << std::endl;
+		});
 
-	_app->GetInputManager()->OnKeyDown += _keyDownEvent;
-	_app->GetInputManager()->OnKeyUp += _keyReleaseEvent;
+	InputManager::GetInstance()->OnMouseMove.Subscribe(_mousePosition);
 
 	_app->Update();
 
