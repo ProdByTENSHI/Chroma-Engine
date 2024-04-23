@@ -12,7 +12,12 @@ namespace chroma
 
 		void HandleInput();
 
+		// -- Application Events
 		Event<> OnQuit;
+
+		// -- Key Events
+		Event<SDL_Keycode> OnKeyDown;
+		Event<SDL_Keycode> OnKeyUp;
 
 	private:
 		SDL_Window* m_Window = nullptr;

@@ -40,13 +40,13 @@ namespace chroma
 		m_Renderer = renderer;
 		m_InputManager = new InputManager(window->GetWindowInformation().window);
 
+		// Lambda Function for the On Quit Event
 		EventHandler<> _quitFunction = EventHandler<>([this]()
 			{
 				m_IsRunning = false;
 
 				SDL_Quit();
 			});
-
 		m_InputManager->OnQuit += _quitFunction;
 
 		Logger::GetInstance()->Log("Chroma Engine initialized");

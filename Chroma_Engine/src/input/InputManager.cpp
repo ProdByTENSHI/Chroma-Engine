@@ -17,8 +17,15 @@ namespace chroma
 			switch (e.type)
 			{
 			case SDL_QUIT:
-			case SDLK_ESCAPE:
 				OnQuit.Dispatch();
+				break;
+
+			case SDL_KEYDOWN:
+				OnKeyDown.Dispatch(e.key.keysym.sym);
+				break;
+
+			case SDL_KEYUP:
+				OnKeyUp.Dispatch(e.key.keysym.sym);
 				break;
 			}
 		}
