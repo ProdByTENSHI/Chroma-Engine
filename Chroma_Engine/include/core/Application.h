@@ -14,7 +14,6 @@ namespace chroma
 
 		void Init(Window* window, Renderer* renderer);
 		void Update();
-		void Quit();
 
 	private:
 		Window* m_Window = nullptr;

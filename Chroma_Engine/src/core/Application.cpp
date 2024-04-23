@@ -1,5 +1,6 @@
 #include "core/Application.h"
 
+#include <iostream>
 #include "logger/Logger.h"
 
 namespace chroma
@@ -39,6 +40,15 @@ namespace chroma
 		m_Renderer = renderer;
 		m_InputManager = new InputManager(window->GetWindowInformation().window);
 
+		EventHandler<> _quitFunction = EventHandler<>([this]()
+			{
+				m_IsRunning = false;
+
+				SDL_Quit();
+			});
+
+		m_InputManager->OnQuit += _quitFunction;
+
 		Logger::GetInstance()->Log("Chroma Engine initialized");
 	}
 
@@ -48,7 +58,7 @@ namespace chroma
 		{
 			m_Renderer->Prepare();
 
-			// Todo: Handle Input
+			m_InputManager->HandleInput();
 
 			// Todo: Render everything that needs to be shown
 
@@ -56,13 +66,5 @@ namespace chroma
 
 			SDL_Delay(16); // Todo: Replace with actual Fixed Update
 		}
-	}
-
-	void Application::Quit()
-	{
-		delete m_Renderer;
-		delete m_Window;
-
-		SDL_Quit();
 	}
 }

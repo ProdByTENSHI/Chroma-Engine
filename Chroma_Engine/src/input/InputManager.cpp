@@ -1,5 +1,7 @@
 #include "input/InputManager.h"
 
+#include <iostream>
+
 namespace chroma
 {
 	InputManager::InputManager(SDL_Window* window)
@@ -15,6 +17,8 @@ namespace chroma
 			switch (e.type)
 			{
 			case SDL_QUIT:
+			case SDLK_ESCAPE:
+				OnQuit.Dispatch();
 				break;
 			}
 		}

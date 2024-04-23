@@ -5,6 +5,7 @@
 
 namespace chroma
 {
+	// TODO: Make Thead-Safe
 	// An Event Handler is the Subscriber to an Event that calls a Function when notified by the Event
 	template <typename... Args> class EventHandler
 	{
@@ -42,7 +43,6 @@ namespace chroma
 		// Function that gets called when notified
 		functionType m_Function;
 
-		// TODO: Make Thead-Safe
 		static unsigned int idCounter;
 	};
 
@@ -53,19 +53,19 @@ namespace chroma
 	public:
 		typedef EventHandler<Args...> eventHandlerType;
 
-		void Subscribe(const EventHandler<Args...>& subscriber) const
+		void Subscribe(const eventHandlerType& subscriber)
 		{
 			m_Handlers.push_back(subscriber);
 		}
 
-		void Unsubscribe(const EventHandler<Args...>& subscriber) const
+		void Unsubscribe(const eventHandlerType& subscriber)
 		{
 			auto it = std::find(m_Handlers.begin(), m_Handlers.end(), subscriber);
 			if (it != m_Handlers.end())
 				m_Handlers.erase(it);
 		}
 
-		void Dispatch(Args... params) const
+		void Dispatch(Args... params)
 		{
 			for (const auto& subscriber : m_Handlers)
 			{
@@ -74,12 +74,12 @@ namespace chroma
 		}
 
 		// -- Operator(For Usage Convenience)
-		void operator+=(const EventHandler<Args...>& other)
+		void operator+=(const eventHandlerType& other)
 		{
 			Subscribe(other);
 		}
 
-		void operator-=(const EventHandler<Args...>& other)
+		void operator-=(const eventHandlerType& other)
 		{
 			Unsubscribe(other);
 		}
