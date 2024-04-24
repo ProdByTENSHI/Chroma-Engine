@@ -17,12 +17,23 @@ int main(int argc, char* argv[])
 
 	_app->Init(_window, _renderer);
 
-	EventHandler<int, int> _mousePosition([](int x, int y)
+	EventHandler<SDL_Keycode> keyDownEvent([](SDL_Keycode key)
 		{
-			std::cout << "Mouse Position X: " << x << " Y: " << y << std::endl;
+			std::cout << SDL_GetKeyName(key) << " was pressed" << std::endl;
 		});
+	InputManager::GetInstance()->OnKeyDown.Subscribe(keyDownEvent);
 
-	InputManager::GetInstance()->OnMouseMove.Subscribe(_mousePosition);
+	EventHandler<MouseButtonType> mouseDownEvent([](MouseButtonType button)
+		{
+			std::cout << button << " was pressed" << std::endl;
+		});
+	InputManager::GetInstance()->OnMouseDown.Subscribe(mouseDownEvent);
+
+	EventHandler<MouseButtonType> mouseUpEvent([](MouseButtonType button)
+		{
+			std::cout << button << " was released" << std::endl;
+		});
+	InputManager::GetInstance()->OnMouseUp.Subscribe(mouseUpEvent);
 
 	_app->Update();
 

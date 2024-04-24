@@ -14,7 +14,22 @@ namespace chroma
 		return instance;
 	}
 
-	void InputManager::HandleInput()
+	MouseButtonType InputManager::GetMouseButtonByEvent(SDL_MouseButtonEvent e)
+	{
+		switch (e.button)
+		{
+		case SDL_BUTTON_LEFT:
+			return MouseButtonType::Left;
+
+		case SDL_BUTTON_MIDDLE:
+			return MouseButtonType::Middle;
+
+		case SDL_BUTTON_RIGHT:
+			return MouseButtonType::Right;
+		}
+	}
+
+	void InputManager::Update()
 	{
 		SDL_Event e;
 		while (SDL_PollEvent(&e))
@@ -32,19 +47,21 @@ namespace chroma
 			case SDL_KEYUP:
 				OnKeyUp.Dispatch(e.key.keysym.sym);
 				break;
+
+			case SDL_MOUSEMOTION:
+				int _x, _y;
+				SDL_GetMouseState(&_x, &_y);
+				OnMouseMove.Dispatch(_x, _y);
+				break;
+
+			case SDL_MOUSEBUTTONDOWN:
+				OnMouseDown.Dispatch(GetMouseButtonByEvent(e.button));
+				break;
+
+			case SDL_MOUSEBUTTONUP:
+				OnMouseUp.Dispatch(GetMouseButtonByEvent(e.button));
+				break;
 			}
-		}
-
-		// Update Mouse State
-		int _x, _y;
-		SDL_GetMouseState(&_x, &_y);
-
-		if (m_MouseX != _x || m_MouseY != _y)
-		{
-			m_MouseX = _x;
-			m_MouseY = _y;
-
-			OnMouseMove.Dispatch(m_MouseX, m_MouseY);
 		}
 	}
 }

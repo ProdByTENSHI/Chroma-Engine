@@ -59,7 +59,7 @@ namespace chroma
 		{
 			m_Renderer->Prepare();
 
-			InputManager::GetInstance()->HandleInput();
+			InputManager::GetInstance()->Update();
 
 			// Todo: Render everything that needs to be shown
 
