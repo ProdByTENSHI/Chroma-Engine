@@ -132,6 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\core\Application.h" />
+    <ClInclude Include="include\core\Time.h" />
     <ClInclude Include="include\core\Window.h" />
     <ClInclude Include="include\ecs\ECS.h" />
     <ClInclude Include="include\eventsystem\EventSystem.h" />
@@ -143,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Application.cpp" />
+    <ClCompile Include="src\core\Time.cpp" />
     <ClCompile Include="src\core\Window.cpp" />
     <ClCompile Include="src\ecs\ECS.cpp" />
     <ClCompile Include="src\input\InputManager.cpp" />

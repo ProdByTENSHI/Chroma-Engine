@@ -45,10 +45,14 @@ namespace chroma
 		EventHandler<> _quitFunction = EventHandler<>([this]()
 			{
 				m_IsRunning = false;
+				OnApplicationEnd.Dispatch();
 
 				SDL_Quit();
 			});
 		InputManager::GetInstance()->OnQuit += _quitFunction;
+
+		// Dispatch the Start Event
+		OnApplicationStart.Dispatch();
 
 		Logger::GetInstance()->Log("Chroma Engine initialized");
 	}
@@ -58,14 +62,24 @@ namespace chroma
 		while (m_IsRunning)
 		{
 			m_Renderer->Prepare();
+			OnApplicationUpdate.Dispatch();
 
 			InputManager::GetInstance()->Update();
-
-			// Todo: Render everything that needs to be shown
-
-			m_Renderer->Present();
-
-			SDL_Delay(16); // Todo: Replace with actual Fixed Update
+			FixedUpdate();
 		}
+	}
+
+	void Application::FixedUpdate()
+	{
+		OnApplicationFixedUpdate.Dispatch();
+
+		Render();
+	}
+
+	void Application::Render()
+	{
+		m_Renderer->Present();
+
+		Update();
 	}
 }
