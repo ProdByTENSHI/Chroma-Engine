@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 
 	EventHandler<int, int> _mousePosition([](int x, int y)
 		{
-			std::cout << "X: " << x << " Y: " << y << std::endl;
+			std::cout << "Mouse Position X: " << x << " Y: " << y << std::endl;
 		});
 
 	InputManager::GetInstance()->OnMouseMove.Subscribe(_mousePosition);

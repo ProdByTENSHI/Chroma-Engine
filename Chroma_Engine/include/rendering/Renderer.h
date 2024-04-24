@@ -29,10 +29,6 @@ namespace chroma
 	private:
 		SDL_Renderer* m_Renderer;
 
-		Uint8 m_R = 0xFF;
-		Uint8 m_G = 0xFF;
-		Uint8 m_B = 0xFF;
-
 		bool m_CreationStatus;
 
 	};
