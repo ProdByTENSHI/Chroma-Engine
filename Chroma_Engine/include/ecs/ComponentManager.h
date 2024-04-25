@@ -32,6 +32,8 @@ namespace chroma
 			m_IndexToEntity[_newIndex] = entity;
 			m_ComponentArray[_newIndex] = component:
 
+			Logger::getInstance()->Log("Registered Component!");
+
 			++m_ValidEntries;
 		}
 
@@ -99,7 +101,7 @@ namespace chroma
 		template <typename T> void RegisterComponent()
 		{
 			// Get String Pointer of type
-			const char* _name = typeid(T).name;
+			const char* _name = typeid(T).name();
 
 			assert(m_RegisteredComponentTypes.find(_name) == m_RegisteredComponentTypes.end() && "Cannot register already registered Component");
 
@@ -116,7 +118,7 @@ namespace chroma
 		// Returns the registered Type of the given Component
 		template <typename T> ComponentType GetComponentType()
 		{
-			const char* _name = typeid(T).name;
+			const char* _name = typeid(T).name();
 
 			assert(m_RegisteredComponentTypes.find(_name) != m_RegisteredComponentTypes.end() && "Component not registered!");
 

@@ -7,16 +7,6 @@
 
 namespace chroma
 {
-	static EntityManager* entityManagerInstance;
-
-	EntityManager* EntityManager::GetInstance()
-	{
-		if (entityManagerInstance == nullptr)
-			entityManagerInstance = new EntityManager();
-
-		return entityManagerInstance;
-	}
-
 	EntityManager::EntityManager()
 	{
 		for (int i = 0; i < MAX_ENTITIES; i++)

@@ -12,8 +12,6 @@ namespace chroma
 	class EntityManager
 	{
 	public:
-		static EntityManager* GetInstance();
-
 		EntityManager();
 
 		// -- Entity Lifetime
@@ -27,7 +25,7 @@ namespace chroma
 	private:
 		/*
 		* Gets filled with MAX_ENTITIES Amount of Entities at the Start
-		* When creating an Entity an Entity is popped of the Front(FIFO
+		* When creating an Entity an Entity is popped of the Front(FIFO)
 		* When Destroying an Entity it is returned to the Queue
 		*/
 		std::queue<Entity> m_AvaiableEntities;
