@@ -1,4 +1,4 @@
-#include "ecs/ECS.h"
+#include "ecs/EntityManager.h"
 
 #include <iostream>
 #include <assert.h>
