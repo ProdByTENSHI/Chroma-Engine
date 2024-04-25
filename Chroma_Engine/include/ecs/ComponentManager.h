@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <memory>
 #include <assert.h>
+#include <iostream>
 
 namespace chroma
 {
@@ -30,7 +31,7 @@ namespace chroma
 
 			m_EntityToIndex[entity] = _newIndex;
 			m_IndexToEntity[_newIndex] = entity;
-			m_ComponentArray[_newIndex] = component:
+			m_ComponentArray[_newIndex] = component;
 
 			Logger::getInstance()->Log("Registered Component!");
 
@@ -75,7 +76,9 @@ namespace chroma
 			assert(entity != m_EntityToIndex.find(entity) && "Entity ID not valid!");
 
 			if (std::find(m_EntityToIndex.begin, m_EntityToIndex.end, entity) != m_EntityToIndex.end)
+			{
 				Remove(entity);
+			}
 		}
 
 	private:

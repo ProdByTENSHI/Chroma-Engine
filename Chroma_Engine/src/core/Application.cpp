@@ -4,6 +4,7 @@
 
 #include "logger/Logger.h"
 #include "input/InputManager.h"
+#include "ecs/ECS.h"
 
 namespace chroma
 {
@@ -40,6 +41,8 @@ namespace chroma
 		}
 
 		m_Renderer = renderer;
+
+		ECS::GetInstance()->Init();
 
 		// Lambda Function for the On Quit Event
 		EventHandler<> _quitFunction = EventHandler<>([this]()

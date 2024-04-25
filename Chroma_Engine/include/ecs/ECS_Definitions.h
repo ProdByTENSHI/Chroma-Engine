@@ -1,5 +1,6 @@
 #pragma once
 
+#include <set>
 #include <bitset>
 
 namespace chroma
@@ -15,4 +16,13 @@ namespace chroma
 	// -- Signature
 	// To know what Components an Entity has and what Components a certain System cares about a Bitfield is used
 	using Signature = std::bitset<MAX_COMPONENTS>;
+
+	// A system is any functionality that iterates upon a list of entities with a certain signature of components
+	// Base class for all Systems
+	struct System
+	{
+		virtual void Update() = 0;
+
+		std::set<Entity> m_Entities;
+	};
 }

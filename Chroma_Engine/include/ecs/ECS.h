@@ -60,7 +60,7 @@ namespace chroma
 		}
 
 		// Returns a Reference to a Component of an Entity
-		template <typename T> T& GetComponent(Entity entity, T component)
+		template <typename T> T& GetComponent(Entity entity)
 		{
 			return m_ComponentManager->GetComponent<T>(entity);
 		}

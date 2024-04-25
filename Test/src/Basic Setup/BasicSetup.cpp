@@ -3,6 +3,9 @@
 #include <input/InputManager.h>
 #include <eventsystem/EventSystem.h>
 
+#include "ecs/ECS.h"
+#include "ecs/Components/Components.h"
+
 using namespace chroma;
 
 int main(int argc, char* argv[])
@@ -16,6 +19,12 @@ int main(int argc, char* argv[])
 	Renderer* _renderer = new Renderer(_window->GetWindowInformation().window, _renderFlags);
 
 	_app->Init(_window, _renderer);
+
+	ECS::GetInstance()->RegisterComponent<TransformComponent>();
+	ECS::GetInstance()->RegisterComponent<SpriteComponent>();
+
+	Entity _entity = ECS::GetInstance()->CreateEntity();
+
 	_app->Update();
 
 	return 0;

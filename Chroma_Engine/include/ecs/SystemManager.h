@@ -2,20 +2,12 @@
 
 #include "ecs/ECS_Definitions.h"
 
-#include <set>
 #include <unordered_map>
 #include <memory>
 #include <assert.h>
 
 namespace chroma
 {
-	// A system is any functionality that iterates upon a list of entities with a certain signature of components
-	// Base class for all ECS Systems
-	struct System
-	{
-		std::set<Entity> m_Entities;
-	};
-
 	// Handles everything ECS System related
 	class SystemManager
 	{
@@ -30,7 +22,7 @@ namespace chroma
 			auto _system = std::make_shared<T>();
 			m_Systems.insert(std::make_pair(_name, _system));
 
-			return _systen;
+			return _system;
 		}
 
 		// Sets the Signature of the given System

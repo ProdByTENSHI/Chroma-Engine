@@ -7,7 +7,7 @@
 
 namespace chroma
 {
-	EntityManager::EntityManager()
+	EntityManager::EntityManager() : m_EntitiesInScene(0)
 	{
 		for (int i = 0; i < MAX_ENTITIES; i++)
 		{

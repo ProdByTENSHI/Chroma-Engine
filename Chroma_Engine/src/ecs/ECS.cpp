@@ -7,7 +7,7 @@ namespace chroma
 	ECS* ECS::GetInstance()
 	{
 		if (instance == nullptr)
-			return;
+			instance = new ECS();
 
 		return instance;
 	}
