@@ -32,7 +32,7 @@ namespace chroma
 		*/
 		std::queue<Entity> m_AvaiableEntities;
 
-		// An Array that holds all Signatures where the Index corresponds to the Entity
+		// An Array that holds all Signatures where the Index corresponds to the Entity ID
 		std::array<Signature, MAX_ENTITIES> m_Signatures;
 
 		// Keeps track of the amount of Entities in the Scene
