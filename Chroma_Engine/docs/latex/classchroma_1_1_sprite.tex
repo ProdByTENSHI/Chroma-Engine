@@ -1,22 +1,95 @@
 \doxysection{chroma\+::Sprite Class Reference}
 \hypertarget{classchroma_1_1_sprite}{}\label{classchroma_1_1_sprite}\index{chroma::Sprite@{chroma::Sprite}}
+
+
+{\ttfamily \#include $<$Sprite.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classchroma_1_1_sprite_a3eea221aaf58560db33bc8085fca0a71}{Sprite}} (const std\+::string \&path)
+\item 
+\mbox{\hyperlink{classchroma_1_1_sprite_ae4c48d1cb62474077aa148c3bab4e84b}{Sprite}} (SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}tetxure)
+\item 
+\mbox{\hyperlink{classchroma_1_1_sprite_a7f1d28a6d3818a546e0ddf5531f3c526}{\texorpdfstring{$\sim$}{\string~}\+Sprite}} ()
+\item 
+void \mbox{\hyperlink{classchroma_1_1_sprite_a6cf3f912c7df2cc76ba31781dbe8d730}{Load\+Texture}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Loads a Texture from the \doxylink{classchroma_1_1_resource_manager}{Resource\+Manager}. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classchroma_1_1_sprite_a07a6c4de63211f32713d3cdd661eceac}{Get\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current Texture. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classchroma_1_1_sprite_abf952765a099502fed8fe9b4f0a81b21}{Get\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Path of the current Texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_sprite_8h_source_l00008}{8}} of file \mbox{\hyperlink{_sprite_8h_source}{Sprite.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classchroma_1_1_sprite_a3eea221aaf58560db33bc8085fca0a71}\label{classchroma_1_1_sprite_a3eea221aaf58560db33bc8085fca0a71} 
-{\bfseries Sprite} (const std\+::string \&path)
-\item 
+\index{chroma::Sprite@{chroma::Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!chroma::Sprite@{chroma::Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily chroma\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
 \Hypertarget{classchroma_1_1_sprite_ae4c48d1cb62474077aa148c3bab4e84b}\label{classchroma_1_1_sprite_ae4c48d1cb62474077aa148c3bab4e84b} 
-{\bfseries Sprite} (SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}tetxure)
-\item 
-\Hypertarget{classchroma_1_1_sprite_a6cf3f912c7df2cc76ba31781dbe8d730}\label{classchroma_1_1_sprite_a6cf3f912c7df2cc76ba31781dbe8d730} 
-void {\bfseries Load\+Texture} (const std\+::string \&path)
-\item 
+\index{chroma::Sprite@{chroma::Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!chroma::Sprite@{chroma::Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily chroma\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{tetxure }\end{DoxyParamCaption})}
+
+\Hypertarget{classchroma_1_1_sprite_a7f1d28a6d3818a546e0ddf5531f3c526}\label{classchroma_1_1_sprite_a7f1d28a6d3818a546e0ddf5531f3c526} 
+\index{chroma::Sprite@{chroma::Sprite}!````~Sprite@{\texorpdfstring{$\sim$}{\string~}Sprite}}
+\index{````~Sprite@{\texorpdfstring{$\sim$}{\string~}Sprite}!chroma::Sprite@{chroma::Sprite}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Sprite()}{\string~Sprite()}}
+{\footnotesize\ttfamily chroma\+::\+Sprite\+::\texorpdfstring{$\sim$}{\string~}\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classchroma_1_1_sprite_abf952765a099502fed8fe9b4f0a81b21}\label{classchroma_1_1_sprite_abf952765a099502fed8fe9b4f0a81b21} 
+\index{chroma::Sprite@{chroma::Sprite}!GetPath@{GetPath}}
+\index{GetPath@{GetPath}!chroma::Sprite@{chroma::Sprite}}
+\doxysubsubsection{\texorpdfstring{GetPath()}{GetPath()}}
+{\footnotesize\ttfamily const std\+::string \& chroma\+::\+Sprite\+::\+Get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Path of the current Texture. 
+
+
+
+Definition at line \mbox{\hyperlink{_sprite_8h_source_l00026}{26}} of file \mbox{\hyperlink{_sprite_8h_source}{Sprite.\+h}}.
+
 \Hypertarget{classchroma_1_1_sprite_a07a6c4de63211f32713d3cdd661eceac}\label{classchroma_1_1_sprite_a07a6c4de63211f32713d3cdd661eceac} 
-SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries Get\+Texture} ()
-\end{DoxyCompactItemize}
+\index{chroma::Sprite@{chroma::Sprite}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!chroma::Sprite@{chroma::Sprite}}
+\doxysubsubsection{\texorpdfstring{GetTexture()}{GetTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} chroma\+::\+Sprite\+::\+Get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current Texture. 
+
+
+
+Definition at line \mbox{\hyperlink{_sprite_8h_source_l00020}{20}} of file \mbox{\hyperlink{_sprite_8h_source}{Sprite.\+h}}.
+
+\Hypertarget{classchroma_1_1_sprite_a6cf3f912c7df2cc76ba31781dbe8d730}\label{classchroma_1_1_sprite_a6cf3f912c7df2cc76ba31781dbe8d730} 
+\index{chroma::Sprite@{chroma::Sprite}!LoadTexture@{LoadTexture}}
+\index{LoadTexture@{LoadTexture}!chroma::Sprite@{chroma::Sprite}}
+\doxysubsubsection{\texorpdfstring{LoadTexture()}{LoadTexture()}}
+{\footnotesize\ttfamily void chroma\+::\+Sprite\+::\+Load\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads a Texture from the \doxylink{classchroma_1_1_resource_manager}{Resource\+Manager}. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Sprite.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{_sprite_8h}{Sprite.\+h}}\end{DoxyCompactItemize}

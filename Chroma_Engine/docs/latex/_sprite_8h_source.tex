@@ -1,34 +1,38 @@
 \doxysection{Sprite.\+h}
 \hypertarget{_sprite_8h_source}{}\label{_sprite_8h_source}\index{Sprite.h@{Sprite.h}}
-
+\mbox{\hyperlink{_sprite_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL\_image.h>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }chroma}
-\DoxyCodeLine{00007\ \{}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_sprite}{Sprite}}}
-\DoxyCodeLine{00009\ \ \ \ \ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_sprite}{Sprite}}(\textcolor{keyword}{const}\ std::string\&\ path);}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_sprite}{Sprite}}(SDL\_Texture*\ tetxure);}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_sprite}{\string~Sprite}}();}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loads\ a\ Texture\ from\ the\ ResourceManager}}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ LoadTexture(\textcolor{keyword}{const}\ std::string\&\ path);}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ SDL\_Texture*\ GetTexture()}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Texture;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ m\_Path;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ SDL\_Texture*\ m\_Texture;}
-\DoxyCodeLine{00027\ \ \ \ \ \};}
-\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <SDL\_image.h>}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacechroma}{chroma}}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00008}\mbox{\hyperlink{classchroma_1_1_sprite}{00008}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_sprite}{Sprite}}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00011}\mbox{\hyperlink{classchroma_1_1_sprite_a3eea221aaf58560db33bc8085fca0a71}{00011}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_sprite_a3eea221aaf58560db33bc8085fca0a71}{Sprite}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00012}\mbox{\hyperlink{classchroma_1_1_sprite_ae4c48d1cb62474077aa148c3bab4e84b}{00012}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_sprite_ae4c48d1cb62474077aa148c3bab4e84b}{Sprite}}(SDL\_Texture*\ tetxure);}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00014}\mbox{\hyperlink{classchroma_1_1_sprite_a7f1d28a6d3818a546e0ddf5531f3c526}{00014}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_sprite_a7f1d28a6d3818a546e0ddf5531f3c526}{\string~Sprite}}();}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00017}\mbox{\hyperlink{classchroma_1_1_sprite_a6cf3f912c7df2cc76ba31781dbe8d730}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_sprite_a6cf3f912c7df2cc76ba31781dbe8d730}{LoadTexture}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00020}\mbox{\hyperlink{classchroma_1_1_sprite_a07a6c4de63211f32713d3cdd661eceac}{00020}}\ \ \ \ \ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{classchroma_1_1_sprite_a07a6c4de63211f32713d3cdd661eceac}{GetTexture}}()}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Texture;}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00026}\mbox{\hyperlink{classchroma_1_1_sprite_abf952765a099502fed8fe9b4f0a81b21}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classchroma_1_1_sprite_abf952765a099502fed8fe9b4f0a81b21}{GetPath}}()}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Path;}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ std::string\ m\_Path;}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ SDL\_Texture*\ m\_Texture;}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00034}00034\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_sprite_8h_source_l00035}00035\ \}}
 
 \end{DoxyCode}

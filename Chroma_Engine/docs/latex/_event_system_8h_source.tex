@@ -1,96 +1,93 @@
 \doxysection{Event\+System.\+h}
 \hypertarget{_event_system_8h_source}{}\label{_event_system_8h_source}\index{EventSystem.h@{EventSystem.h}}
-
+\mbox{\hyperlink{_event_system_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <functional>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <list>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }chroma}
-\DoxyCodeLine{00007\ \{}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Make\ Thead-\/Safe}}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ An\ Event\ Handler\ is\ the\ Subscriber\ to\ an\ Event\ that\ calls\ a\ Function\ when\ notified\ by\ the\ Event}}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}}
-\DoxyCodeLine{00011\ \ \ \ \ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::function<void(Args...)>\ functionType;}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ handlerId;}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}(\textcolor{keyword}{const}\ functionType\&\ function)\ :\ m\_Function(function)}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Id\ =\ ++idCounter;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Operator}}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator()(Args...\ params)\textcolor{keyword}{\ const}}
-\DoxyCodeLine{00023\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_Function)}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_Function(params...);}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}\&\ other)\textcolor{keyword}{\ const}}
-\DoxyCodeLine{00029\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Id\ ==\ other.m\_Id;}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Getter}}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ handlerId\ GetID()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{00035\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Id;}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ID\ of\ the\ Handler}}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ handlerId\ m\_Id;}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ that\ gets\ called\ when\ notified}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ functionType\ m\_Function;}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ idCounter;}
-\DoxyCodeLine{00047\ \ \ \ \ \};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}<Args...>::idCounter;}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_event}{Event}}}
-\DoxyCodeLine{00052\ \ \ \ \ \{}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}<Args...>\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}};}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Subscribe(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ subscriber)}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Handlers.push\_back(subscriber);}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Unsubscribe(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ subscriber)}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(m\_Handlers.begin(),\ m\_Handlers.end(),\ subscriber);}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ m\_Handlers.end())}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_Handlers.erase(it);}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Dispatch(Args...\ params)}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ subscriber\ :\ m\_Handlers)}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subscriber(params...);}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Operator(For\ Usage\ Convenience)}}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator+=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ other)}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ Subscribe(other);}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ operator-\/=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ other)}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ Unsubscribe(other);}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ std::list<eventHandlerType>\ m\_Handlers;}
-\DoxyCodeLine{00089\ \ \ \ \ \};}
-\DoxyCodeLine{00090\ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00006}00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacechroma}{chroma}}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Make\ Thead-\/Safe}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00010}\mbox{\hyperlink{classchroma_1_1_event_handler}{00010}}\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00014}\mbox{\hyperlink{classchroma_1_1_event_handler_acef7fdb9900eca46e29df925cbe7ff41}{00014}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ std::function<void(Args...)>\ \mbox{\hyperlink{classchroma_1_1_event_handler_acef7fdb9900eca46e29df925cbe7ff41}{functionType}};}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00015}\mbox{\hyperlink{classchroma_1_1_event_handler_ad417f6ff7069532db09923c1f7be84ec}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classchroma_1_1_event_handler_ad417f6ff7069532db09923c1f7be84ec}{handlerId}};}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00018}\mbox{\hyperlink{classchroma_1_1_event_handler_a8389a9fe43f22f3a2cc751d79d8f7a61}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classchroma_1_1_event_handler_a8389a9fe43f22f3a2cc751d79d8f7a61}{EventHandler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler_acef7fdb9900eca46e29df925cbe7ff41}{functionType}}\&\ function)\ :\ m\_Function(function)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Id\ =\ ++idCounter;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Operator}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00025}\mbox{\hyperlink{classchroma_1_1_event_handler_ac25a70d063048acdd2cdf3d93f0c3572}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_event_handler_ac25a70d063048acdd2cdf3d93f0c3572}{operator()}}(Args...\ params)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00026}00026\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_Function)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_Function(params...);}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00032}\mbox{\hyperlink{classchroma_1_1_event_handler_a8226cc030ec417b74d30eb14ac52ecb7}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classchroma_1_1_event_handler_a8226cc030ec417b74d30eb14ac52ecb7}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}\&\ other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00033}00033\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Id\ ==\ other.m\_Id;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Getter}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00038}\mbox{\hyperlink{classchroma_1_1_event_handler_a06a1cd9bb1f210189b4c1357eb93d6fd}{00038}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event_handler_ad417f6ff7069532db09923c1f7be84ec}{handlerId}}\ \mbox{\hyperlink{classchroma_1_1_event_handler_a06a1cd9bb1f210189b4c1357eb93d6fd}{GetID}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00039}00039\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Id;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event_handler_ad417f6ff7069532db09923c1f7be84ec}{handlerId}}\ m\_Id;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event_handler_acef7fdb9900eca46e29df925cbe7ff41}{functionType}}\ m\_Function;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ idCounter;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00052}00052\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ EventHandler<Args...>::idCounter;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00056}\mbox{\hyperlink{classchroma_1_1_event}{00056}}\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_event}{Event}}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00057}00057\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00058}00058\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00059}\mbox{\hyperlink{classchroma_1_1_event_a930fe3222021ff8307976493d3ea3112}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{EventHandler}}<Args...>\ \mbox{\hyperlink{classchroma_1_1_event_a930fe3222021ff8307976493d3ea3112}{eventHandlerType}};}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00062}\mbox{\hyperlink{classchroma_1_1_event_a2188f824f955b8060d3cd0603e8562f0}{00062}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_event_a2188f824f955b8060d3cd0603e8562f0}{Subscribe}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ subscriber)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Handlers.push\_back(subscriber);}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00068}\mbox{\hyperlink{classchroma_1_1_event_ae3519425f6638d971412b591a4e1d6c7}{00068}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_event_ae3519425f6638d971412b591a4e1d6c7}{Unsubscribe}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ subscriber)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(m\_Handlers.begin(),\ m\_Handlers.end(),\ subscriber);}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (it\ !=\ m\_Handlers.end())}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ m\_Handlers.erase(it);}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00076}\mbox{\hyperlink{classchroma_1_1_event_aa8e7507dcab069bc7a4e56d0ae5c7900}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_event_aa8e7507dcab069bc7a4e56d0ae5c7900}{Dispatch}}(Args...\ params)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ subscriber\ :\ m\_Handlers)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ subscriber(params...);}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Operator(For\ Usage\ Convenience)}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00085}\mbox{\hyperlink{classchroma_1_1_event_af12eb3faaeef021badddc00acead5f00}{00085}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_event_af12eb3faaeef021badddc00acead5f00}{operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ other)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event_a2188f824f955b8060d3cd0603e8562f0}{Subscribe}}(other);}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00090}\mbox{\hyperlink{classchroma_1_1_event_a9bb1340b33cbd6baaf21d0e4d5330c19}{00090}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_event_a9bb1340b33cbd6baaf21d0e4d5330c19}{operator-\/=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_event_handler}{eventHandlerType}}\&\ other)}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event_ae3519425f6638d971412b591a4e1d6c7}{Unsubscribe}}(other);}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00095}00095\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00097}00097\ \ \ \ \ \ \ \ \ std::list<eventHandlerType>\ m\_Handlers;}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00098}00098\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_event_system_8h_source_l00099}00099\ \}}
 
 \end{DoxyCode}

@@ -99,26 +99,27 @@ $(function(){initNavTree('_sprite_renderer_system_8h_source.html',''); initResiz
   <div class="headertitle"><div class="title">SpriteRendererSystem.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_sprite_renderer_system_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;ecs/ECS.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;ecs/ECS_Definitions.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;ecs/Components/TransformComponent.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;ecs/Components/SpriteComponent.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_e_c_s_8h.html">ecs/ECS.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_e_c_s___definitions_8h.html">ecs/ECS_Definitions.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_transform_component_8h.html">ecs/Components/TransformComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_sprite_component_8h.html">ecs/Components/SpriteComponent.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;rendering/Renderer.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="_renderer_8h.html">rendering/Renderer.h</a>&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>chroma</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacechroma.html">chroma</a></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
 <div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structchroma_1_1_sprite_renderer_system.html">   12</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structchroma_1_1_sprite_renderer_system.html">SpriteRendererSystem</a> : <a class="code hl_struct" href="structchroma_1_1_system.html">System</a></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">void</span> Update(<a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a>* renderer)</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structchroma_1_1_sprite_renderer_system.html#af5ba7418805c6127d6720aec683e665c">   14</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="structchroma_1_1_sprite_renderer_system.html#af5ba7418805c6127d6720aec683e665c">Update</a>(<a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a>* renderer)</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; entity : m_Entities)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> <span class="keyword">const</span>&amp; entity : <a class="code hl_variable" href="structchroma_1_1_system.html#a005ebcdf9c233f9f3b38dfdee2cb13c0">m_Entities</a>)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keyword">auto</span>&amp; _transformComponent = ECS::GetInstance()-&gt;GetComponent&lt;<a class="code hl_struct" href="structchroma_1_1_transform_component.html">TransformComponent</a>&gt;(entity);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keyword">auto</span>&amp; _spriteComponent = ECS::GetInstance()-&gt;GetComponent&lt;<a class="code hl_struct" href="structchroma_1_1_sprite_component.html">SpriteComponent</a>&gt;(entity);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keyword">auto</span>&amp; _transformComponent = <a class="code hl_function" href="classchroma_1_1_e_c_s.html#a5cc40c966c017ada2d76e67ef3f6e74e">ECS::GetInstance</a>()-&gt;<a class="code hl_function" href="classchroma_1_1_e_c_s.html#a6061745563d6a6c1c77e8a24cae719f4">GetComponent</a>&lt;<a class="code hl_struct" href="structchroma_1_1_transform_component.html">TransformComponent</a>&gt;(entity);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="keyword">auto</span>&amp; _spriteComponent = <a class="code hl_function" href="classchroma_1_1_e_c_s.html#a5cc40c966c017ada2d76e67ef3f6e74e">ECS::GetInstance</a>()-&gt;<a class="code hl_function" href="classchroma_1_1_e_c_s.html#a6061745563d6a6c1c77e8a24cae719f4">GetComponent</a>&lt;<a class="code hl_struct" href="structchroma_1_1_sprite_component.html">SpriteComponent</a>&gt;(entity);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                SDL_Rect _position;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                _position.w = 100;</div>
@@ -126,23 +127,35 @@ $(function(){initNavTree('_sprite_renderer_system_8h_source.html',''); initResiz
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                _position.x = _transformComponent.position.x;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                _position.y = _transformComponent.position.y;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                renderer-&gt;RenderTexture(_spriteComponent.m_Sprite-&gt;GetTexture(), NULL, &amp;_position);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                renderer-&gt;<a class="code hl_function" href="classchroma_1_1_renderer.html#adf3288f837ce521b2df7ad0e0190daac">RenderTexture</a>(_spriteComponent.m_Sprite-&gt;GetTexture(), NULL, &amp;_position);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            }</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        }</div>
+</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    };</div>
 </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
-<div class="ttc" id="aclasschroma_1_1_renderer_html"><div class="ttname"><a href="classchroma_1_1_renderer.html">chroma::Renderer</a></div><div class="ttdef"><b>Definition</b> Renderer.h:8</div></div>
-<div class="ttc" id="astructchroma_1_1_sprite_component_html"><div class="ttname"><a href="structchroma_1_1_sprite_component.html">chroma::SpriteComponent</a></div><div class="ttdef"><b>Definition</b> SpriteComponent.h:12</div></div>
-<div class="ttc" id="astructchroma_1_1_sprite_renderer_system_html"><div class="ttname"><a href="structchroma_1_1_sprite_renderer_system.html">chroma::SpriteRendererSystem</a></div><div class="ttdef"><b>Definition</b> SpriteRendererSystem.h:13</div></div>
-<div class="ttc" id="astructchroma_1_1_system_html"><div class="ttname"><a href="structchroma_1_1_system.html">chroma::System</a></div><div class="ttdef"><b>Definition</b> ECS_Definitions.h:23</div></div>
-<div class="ttc" id="astructchroma_1_1_transform_component_html"><div class="ttname"><a href="structchroma_1_1_transform_component.html">chroma::TransformComponent</a></div><div class="ttdef"><b>Definition</b> TransformComponent.h:8</div></div>
+<div class="ttc" id="a_e_c_s_8h_html"><div class="ttname"><a href="_e_c_s_8h.html">ECS.h</a></div></div>
+<div class="ttc" id="a_e_c_s___definitions_8h_html"><div class="ttname"><a href="_e_c_s___definitions_8h.html">ECS_Definitions.h</a></div></div>
+<div class="ttc" id="a_renderer_8h_html"><div class="ttname"><a href="_renderer_8h.html">Renderer.h</a></div></div>
+<div class="ttc" id="a_sprite_component_8h_html"><div class="ttname"><a href="_sprite_component_8h.html">SpriteComponent.h</a></div></div>
+<div class="ttc" id="a_transform_component_8h_html"><div class="ttname"><a href="_transform_component_8h.html">TransformComponent.h</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_e_c_s_html_a5cc40c966c017ada2d76e67ef3f6e74e"><div class="ttname"><a href="classchroma_1_1_e_c_s.html#a5cc40c966c017ada2d76e67ef3f6e74e">chroma::ECS::GetInstance</a></div><div class="ttdeci">static ECS * GetInstance()</div></div>
+<div class="ttc" id="aclasschroma_1_1_e_c_s_html_a6061745563d6a6c1c77e8a24cae719f4"><div class="ttname"><a href="classchroma_1_1_e_c_s.html#a6061745563d6a6c1c77e8a24cae719f4">chroma::ECS::GetComponent</a></div><div class="ttdeci">T &amp; GetComponent(Entity entity)</div><div class="ttdoc">Returns a Reference to a Component of an Entity.</div><div class="ttdef"><b>Definition</b> <a href="_e_c_s_8h_source.html#l00066">ECS.h:66</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html"><div class="ttname"><a href="classchroma_1_1_renderer.html">chroma::Renderer</a></div><div class="ttdef"><b>Definition</b> <a href="_renderer_8h_source.html#l00007">Renderer.h:8</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_adf3288f837ce521b2df7ad0e0190daac"><div class="ttname"><a href="classchroma_1_1_renderer.html#adf3288f837ce521b2df7ad0e0190daac">chroma::Renderer::RenderTexture</a></div><div class="ttdeci">void RenderTexture(SDL_Texture *texture, const SDL_Rect *srcRect, const SDL_Rect *dstRect)</div><div class="ttdoc">Render a Texture with the given Size and Position.</div></div>
+<div class="ttc" id="anamespacechroma_html"><div class="ttname"><a href="namespacechroma.html">chroma</a></div><div class="ttdef"><b>Definition</b> <a href="_application_8h_source.html#l00008">Application.h:9</a></div></div>
+<div class="ttc" id="astructchroma_1_1_sprite_component_html"><div class="ttname"><a href="structchroma_1_1_sprite_component.html">chroma::SpriteComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_sprite_component_8h_source.html#l00011">SpriteComponent.h:12</a></div></div>
+<div class="ttc" id="astructchroma_1_1_sprite_renderer_system_html"><div class="ttname"><a href="structchroma_1_1_sprite_renderer_system.html">chroma::SpriteRendererSystem</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">SpriteRendererSystem.h:13</a></div></div>
+<div class="ttc" id="astructchroma_1_1_sprite_renderer_system_html_af5ba7418805c6127d6720aec683e665c"><div class="ttname"><a href="structchroma_1_1_sprite_renderer_system.html#af5ba7418805c6127d6720aec683e665c">chroma::SpriteRendererSystem::Update</a></div><div class="ttdeci">void Update(Renderer *renderer)</div><div class="ttdef"><b>Definition</b> <a href="#l00014">SpriteRendererSystem.h:14</a></div></div>
+<div class="ttc" id="astructchroma_1_1_system_html"><div class="ttname"><a href="structchroma_1_1_system.html">chroma::System</a></div><div class="ttdef"><b>Definition</b> <a href="_e_c_s___definitions_8h_source.html#l00022">ECS_Definitions.h:23</a></div></div>
+<div class="ttc" id="astructchroma_1_1_system_html_a005ebcdf9c233f9f3b38dfdee2cb13c0"><div class="ttname"><a href="structchroma_1_1_system.html#a005ebcdf9c233f9f3b38dfdee2cb13c0">chroma::System::m_Entities</a></div><div class="ttdeci">std::set&lt; Entity &gt; m_Entities</div><div class="ttdef"><b>Definition</b> <a href="_e_c_s___definitions_8h_source.html#l00024">ECS_Definitions.h:24</a></div></div>
+<div class="ttc" id="astructchroma_1_1_transform_component_html"><div class="ttname"><a href="structchroma_1_1_transform_component.html">chroma::TransformComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_transform_component_8h_source.html#l00007">TransformComponent.h:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_03b8e24d0c8528d6b83b13523eccafd1.html">ecs</a></li><li class="navelem"><a class="el" href="dir_4c6f199da3848c00dc3588edde5c80aa.html">systems</a></li><li class="navelem"><b>SpriteRendererSystem.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_03b8e24d0c8528d6b83b13523eccafd1.html">ecs</a></li><li class="navelem"><a class="el" href="dir_4c6f199da3848c00dc3588edde5c80aa.html">systems</a></li><li class="navelem"><a class="el" href="_sprite_renderer_system_8h.html">SpriteRendererSystem.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

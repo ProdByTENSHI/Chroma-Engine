@@ -99,9 +99,9 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
   <div class="headertitle"><div class="title">ComponentManager.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_component_manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;ecs/ECS_Definitions.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_e_c_s___definitions_8h.html">ecs/ECS_Definitions.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;array&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
@@ -109,16 +109,16 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>chroma</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacechroma.html">chroma</a></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// -- Component Array</span></div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structchroma_1_1_i_component_array.html">   14</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structchroma_1_1_i_component_array.html">IComponentArray</a></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">virtual</span> <a class="code hl_struct" href="structchroma_1_1_i_component_array.html">~IComponentArray</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structchroma_1_1_i_component_array.html#a5fe06c0283ee1daae959da5455d86299">   16</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="structchroma_1_1_i_component_array.html#a5fe06c0283ee1daae959da5455d86299">~IComponentArray</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="comment">// Gets called when an Entity is destroyed to let the ComponentArray(s) know to update their Maps</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> EntityDestroyed(Entity entity) = 0;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structchroma_1_1_i_component_array.html#a46ea2de1c76c8097df281a6a644c0161">   19</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structchroma_1_1_i_component_array.html#a46ea2de1c76c8097df281a6a644c0161">EntityDestroyed</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity) = 0;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    };</div>
 </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
@@ -126,8 +126,8 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_array.html">   22</a></span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">class </span><a class="code hl_class" href="classchroma_1_1_component_array.html">ComponentArray</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structchroma_1_1_i_component_array.html">IComponentArray</a></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">// Inserts a Component at Entity&#39;s Index and Update Maps</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> Insert(Entity entity, T component)</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_array.html#a43262f4a63d90a0a98b0b410ecae14e8">   26</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_component_array.html#a43262f4a63d90a0a98b0b410ecae14e8">Insert</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity, T component)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            assert(m_EntityToIndex.find(entity) == m_EntityToIndex.end() &amp;&amp; <span class="stringliteral">&quot;Entity ID not valid!&quot;</span>);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
@@ -139,9 +139,10 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            ++m_ValidEntries;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">// Removes the Component and the Entity</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> Remove(Entity entity)</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_array.html#a7373df9665dc47f474ba9416458a5437">   40</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_component_array.html#a7373df9665dc47f474ba9416458a5437">Remove</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            assert(m_EntityToIndex.find(entity) != m_EntityToIndex.end() &amp;&amp; <span class="stringliteral">&quot;Entity ID not valid!&quot;</span>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
@@ -152,7 +153,7 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            m_ComponentArray[_removedEntityIndex] = m_ComponentArray[_lastElement];</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="comment">// Update Maps</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            Entity _lastEntity = m_IndexToEntity[_lastElement];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> _lastEntity = m_IndexToEntity[_lastElement];</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            m_EntityToIndex[_lastEntity] = _removedEntityIndex;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            m_IndexToEntity[_removedEntityIndex] = _lastEntity;</div>
@@ -163,34 +164,32 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            --m_ValidEntries;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">// Returns a Reference to the associated Component of the given Entity</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        T&amp; GetData(Entity entity)</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_array.html#a9c4035f9bf0f4748d58fd2078f9b630b">   64</a></span>        T&amp; <a class="code hl_function" href="classchroma_1_1_component_array.html#a9c4035f9bf0f4748d58fd2078f9b630b">GetData</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity)</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            assert(m_EntityToIndex.find(entity) != m_EntityToIndex.end() &amp;&amp; <span class="stringliteral">&quot;Entity ID not valid!&quot;</span>);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> m_ComponentArray[m_EntityToIndex[entity]];</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">void</span> EntityDestroyed(Entity entity)<span class="keyword"> override</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_array.html#aff4dbbc54673dc486777c62783000a09">   72</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_component_array.html#aff4dbbc54673dc486777c62783000a09">EntityDestroyed</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity)<span class="keyword"> override</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">        </span>{</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (m_EntityToIndex.find(entity) != m_EntityToIndex.end())</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                Remove(entity);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <a class="code hl_function" href="classchroma_1_1_component_array.html#a7373df9665dc47f474ba9416458a5437">Remove</a>(entity);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="comment">// A packed array that holds all Components of this type</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="comment">// Each Entity has a unique Spot in the Compnent Array</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::array&lt;T, MAX_ENTITIES&gt; m_ComponentArray;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="comment">// Unordered Map that returns the index into the m_ComponentArray by the Entity(ID)</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        std::unordered_map&lt;Entity, size_t&gt; m_EntityToIndex;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="comment">// An Unordered Map that returns the Entity by the index of the m_ComponentArray</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        std::unordered_map&lt;size_t, Entity&gt; m_IndexToEntity;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="comment">// Number of Valid Entries in the m_ComponentArray</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">size_t</span> m_ValidEntries = 0;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    };</div>
 </div>
@@ -200,8 +199,8 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_manager.html">   94</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classchroma_1_1_component_manager.html">ComponentManager</a></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">// On App start you HAVE to call this function on every Component you have</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> RegisterComponent()</div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_manager.html#ae6743555b22fa6332fb2ef8e6e2fefdc">   98</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_component_manager.html#ae6743555b22fa6332fb2ef8e6e2fefdc">RegisterComponent</a>()</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="comment">// Get String Pointer of type</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* _name = <span class="keyword">typeid</span>(T).name();</div>
@@ -217,9 +216,10 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="comment">// Increase next Component Type</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            ++m_NextComponentType;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="comment">// Returns the registered Type of the given Component</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; ComponentType GetComponentType()</div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_manager.html#a144aab7fc0241ceae034615365228eda">  116</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <a class="code hl_typedef" href="namespacechroma.html#a3e18709c97d09ed4fd84b7c38f696cc7">ComponentType</a> <a class="code hl_function" href="classchroma_1_1_component_manager.html#a144aab7fc0241ceae034615365228eda">GetComponentType</a>()</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* _name = <span class="keyword">typeid</span>(T).name();</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
@@ -227,28 +227,31 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">return</span> m_RegisteredComponentTypes[_name];</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="comment">// Adds a Component to an Entity</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> AddComponent(Entity entity, T component)</div>
+<div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_manager.html#a91e287b34598a208effc526328e2649a">  126</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_component_manager.html#a91e287b34598a208effc526328e2649a">AddComponent</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity, T component)</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            GetComponentArray&lt;T&gt;()-&gt;Insert(entity, component);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        }</div>
+</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="comment">// Removes a Component from the Entity</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> RemoveComponent(Entity entity)</div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_manager.html#a36ba055ea10e04cfde9826986b854d21">  132</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_component_manager.html#a36ba055ea10e04cfde9826986b854d21">RemoveComponent</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity)</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            GetComponentArray&lt;T&gt;()-&gt;Remove(entity);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="comment">// Returns a Reference to </span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; T&amp; GetComponent(Entity entity)</div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_manager.html#a9332e9677ecd2690facf69e2b187eb6f">  138</a></span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; T&amp; <a class="code hl_function" href="classchroma_1_1_component_manager.html#a9332e9677ecd2690facf69e2b187eb6f">GetComponent</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity)</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        {</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="keywordflow">return</span> GetComponentArray&lt;T&gt;()-&gt;GetData(entity);</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
+</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="comment">// Notify each Component Array that an Entity has been destroyed</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="comment">// The Array will update its maps when it contains a Component of that Type</span></div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordtype">void</span> EntityDestroyed(Entity entity)</div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classchroma_1_1_component_manager.html#a36165250c2d7bf107be1e0df96670866">  145</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_component_manager.html#a36165250c2d7bf107be1e0df96670866">EntityDestroyed</a>(<a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> entity)</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <span class="keyword">const</span> pair : m_ComponentArrays)</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            {</div>
@@ -256,18 +259,15 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                _component-&gt;EntityDestroyed(entity);</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            }</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
+</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="comment">// A Map that holds all registered Component Types by their String Pointer</span></div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        std::unordered_map&lt;const char*, ComponentType&gt; m_RegisteredComponentTypes{};</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="comment">// Map that holds all Component Arrays by their String Pointer</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        std::unordered_map &lt;const char*, std::shared_ptr&lt;IComponentArray&gt;&gt; m_ComponentArrays{};</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="comment">// Component Type to be assigned to the next Component that gets registered</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        ComponentType m_NextComponentType = 0;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_typedef" href="namespacechroma.html#a3e18709c97d09ed4fd84b7c38f696cc7">ComponentType</a> m_NextComponentType = 0;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="comment">// Function that returns statically casted Pointer to the Component Array</span></div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; std::shared_ptr&lt;ComponentArray&lt;T&gt;&gt; GetComponentArray()</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        {</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* _name = <span class="keyword">typeid</span>(T).name();</div>
@@ -279,15 +279,31 @@ $(function(){initNavTree('_component_manager_8h_source.html',''); initResizable(
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    };</div>
 </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
-<div class="ttc" id="aclasschroma_1_1_component_array_html"><div class="ttname"><a href="classchroma_1_1_component_array.html">chroma::ComponentArray</a></div><div class="ttdef"><b>Definition</b> ComponentManager.h:23</div></div>
-<div class="ttc" id="aclasschroma_1_1_component_manager_html"><div class="ttname"><a href="classchroma_1_1_component_manager.html">chroma::ComponentManager</a></div><div class="ttdef"><b>Definition</b> ComponentManager.h:95</div></div>
-<div class="ttc" id="astructchroma_1_1_i_component_array_html"><div class="ttname"><a href="structchroma_1_1_i_component_array.html">chroma::IComponentArray</a></div><div class="ttdef"><b>Definition</b> ComponentManager.h:15</div></div>
+<div class="ttc" id="a_e_c_s___definitions_8h_html"><div class="ttname"><a href="_e_c_s___definitions_8h.html">ECS_Definitions.h</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_array_html"><div class="ttname"><a href="classchroma_1_1_component_array.html">chroma::ComponentArray</a></div><div class="ttdef"><b>Definition</b> <a href="#l00022">ComponentManager.h:23</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_array_html_a43262f4a63d90a0a98b0b410ecae14e8"><div class="ttname"><a href="classchroma_1_1_component_array.html#a43262f4a63d90a0a98b0b410ecae14e8">chroma::ComponentArray::Insert</a></div><div class="ttdeci">void Insert(Entity entity, T component)</div><div class="ttdoc">Inserts a Component at Entity's Index and Update Maps.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">ComponentManager.h:26</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_array_html_a7373df9665dc47f474ba9416458a5437"><div class="ttname"><a href="classchroma_1_1_component_array.html#a7373df9665dc47f474ba9416458a5437">chroma::ComponentArray::Remove</a></div><div class="ttdeci">void Remove(Entity entity)</div><div class="ttdoc">Removes the Component and the Entity.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">ComponentManager.h:40</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_array_html_a9c4035f9bf0f4748d58fd2078f9b630b"><div class="ttname"><a href="classchroma_1_1_component_array.html#a9c4035f9bf0f4748d58fd2078f9b630b">chroma::ComponentArray::GetData</a></div><div class="ttdeci">T &amp; GetData(Entity entity)</div><div class="ttdoc">Returns a Reference to the associated Component of the given Entity.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">ComponentManager.h:64</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_array_html_aff4dbbc54673dc486777c62783000a09"><div class="ttname"><a href="classchroma_1_1_component_array.html#aff4dbbc54673dc486777c62783000a09">chroma::ComponentArray::EntityDestroyed</a></div><div class="ttdeci">void EntityDestroyed(Entity entity) override</div><div class="ttdoc">Removes the Component from the Component Array when the Entity is destroyed.</div><div class="ttdef"><b>Definition</b> <a href="#l00072">ComponentManager.h:72</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_manager_html"><div class="ttname"><a href="classchroma_1_1_component_manager.html">chroma::ComponentManager</a></div><div class="ttdef"><b>Definition</b> <a href="#l00094">ComponentManager.h:95</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_manager_html_a144aab7fc0241ceae034615365228eda"><div class="ttname"><a href="classchroma_1_1_component_manager.html#a144aab7fc0241ceae034615365228eda">chroma::ComponentManager::GetComponentType</a></div><div class="ttdeci">ComponentType GetComponentType()</div><div class="ttdoc">Returns the registered Type of the given Component.</div><div class="ttdef"><b>Definition</b> <a href="#l00116">ComponentManager.h:116</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_manager_html_a36165250c2d7bf107be1e0df96670866"><div class="ttname"><a href="classchroma_1_1_component_manager.html#a36165250c2d7bf107be1e0df96670866">chroma::ComponentManager::EntityDestroyed</a></div><div class="ttdeci">void EntityDestroyed(Entity entity)</div><div class="ttdef"><b>Definition</b> <a href="#l00145">ComponentManager.h:145</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_manager_html_a36ba055ea10e04cfde9826986b854d21"><div class="ttname"><a href="classchroma_1_1_component_manager.html#a36ba055ea10e04cfde9826986b854d21">chroma::ComponentManager::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent(Entity entity)</div><div class="ttdoc">Removes a Component from the Entity.</div><div class="ttdef"><b>Definition</b> <a href="#l00132">ComponentManager.h:132</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_manager_html_a91e287b34598a208effc526328e2649a"><div class="ttname"><a href="classchroma_1_1_component_manager.html#a91e287b34598a208effc526328e2649a">chroma::ComponentManager::AddComponent</a></div><div class="ttdeci">void AddComponent(Entity entity, T component)</div><div class="ttdoc">Adds a Component to an Entity.</div><div class="ttdef"><b>Definition</b> <a href="#l00126">ComponentManager.h:126</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_manager_html_a9332e9677ecd2690facf69e2b187eb6f"><div class="ttname"><a href="classchroma_1_1_component_manager.html#a9332e9677ecd2690facf69e2b187eb6f">chroma::ComponentManager::GetComponent</a></div><div class="ttdeci">T &amp; GetComponent(Entity entity)</div><div class="ttdoc">Returns a Reference to the Component of this Type that corresponds to the given Entity.</div><div class="ttdef"><b>Definition</b> <a href="#l00138">ComponentManager.h:138</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_component_manager_html_ae6743555b22fa6332fb2ef8e6e2fefdc"><div class="ttname"><a href="classchroma_1_1_component_manager.html#ae6743555b22fa6332fb2ef8e6e2fefdc">chroma::ComponentManager::RegisterComponent</a></div><div class="ttdeci">void RegisterComponent()</div><div class="ttdoc">On App start you HAVE to call this function on every Component you have.</div><div class="ttdef"><b>Definition</b> <a href="#l00098">ComponentManager.h:98</a></div></div>
+<div class="ttc" id="anamespacechroma_html"><div class="ttname"><a href="namespacechroma.html">chroma</a></div><div class="ttdef"><b>Definition</b> <a href="_application_8h_source.html#l00008">Application.h:9</a></div></div>
+<div class="ttc" id="anamespacechroma_html_a3e18709c97d09ed4fd84b7c38f696cc7"><div class="ttname"><a href="namespacechroma.html#a3e18709c97d09ed4fd84b7c38f696cc7">chroma::ComponentType</a></div><div class="ttdeci">std::uint8_t ComponentType</div><div class="ttdoc">Maximum Entities per Scene -&gt; Override this Value to your needs.</div><div class="ttdef"><b>Definition</b> <a href="_e_c_s___definitions_8h_source.html#l00013">ECS_Definitions.h:13</a></div></div>
+<div class="ttc" id="anamespacechroma_html_aa415016bd5ef3af285cb2830675dd7d4"><div class="ttname"><a href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">chroma::Entity</a></div><div class="ttdeci">std::uint32_t Entity</div><div class="ttdef"><b>Definition</b> <a href="_e_c_s___definitions_8h_source.html#l00009">ECS_Definitions.h:9</a></div></div>
+<div class="ttc" id="astructchroma_1_1_i_component_array_html"><div class="ttname"><a href="structchroma_1_1_i_component_array.html">chroma::IComponentArray</a></div><div class="ttdef"><b>Definition</b> <a href="#l00014">ComponentManager.h:15</a></div></div>
+<div class="ttc" id="astructchroma_1_1_i_component_array_html_a46ea2de1c76c8097df281a6a644c0161"><div class="ttname"><a href="structchroma_1_1_i_component_array.html#a46ea2de1c76c8097df281a6a644c0161">chroma::IComponentArray::EntityDestroyed</a></div><div class="ttdeci">virtual void EntityDestroyed(Entity entity)=0</div></div>
+<div class="ttc" id="astructchroma_1_1_i_component_array_html_a5fe06c0283ee1daae959da5455d86299"><div class="ttname"><a href="structchroma_1_1_i_component_array.html#a5fe06c0283ee1daae959da5455d86299">chroma::IComponentArray::~IComponentArray</a></div><div class="ttdeci">virtual ~IComponentArray()=default</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_03b8e24d0c8528d6b83b13523eccafd1.html">ecs</a></li><li class="navelem"><b>ComponentManager.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_03b8e24d0c8528d6b83b13523eccafd1.html">ecs</a></li><li class="navelem"><a class="el" href="_component_manager_8h.html">ComponentManager.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

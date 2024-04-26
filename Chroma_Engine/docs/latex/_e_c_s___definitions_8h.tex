@@ -1,0 +1,30 @@
+\doxysection{ECS\+\_\+\+Definitions.\+h File Reference}
+\hypertarget{_e_c_s___definitions_8h}{}\label{_e_c_s___definitions_8h}\index{ECS\_Definitions.h@{ECS\_Definitions.h}}
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structchroma_1_1_system}{chroma\+::\+System}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacechroma}{chroma}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{chroma\+::\+Entity}} = std\+::uint32\+\_\+t
+\item 
+using \mbox{\hyperlink{namespacechroma_a3e18709c97d09ed4fd84b7c38f696cc7}{chroma\+::\+Component\+Type}} = std\+::uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em Maximum Entities per Scene -\/\texorpdfstring{$>$}{>} Override this Value to your needs. \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{chroma\+::\+Signature}} = std\+::bitset$<$\mbox{\hyperlink{namespacechroma_a7f7a93779dcf8c6df30217ef14962dec}{MAX\+\_\+\+COMPONENTS}}$>$
+\begin{DoxyCompactList}\small\item\em Max Components per Entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} \mbox{\hyperlink{namespacechroma_a2bee0e0117d3c45066e45a4cb605f9f5}{chroma\+::\+MAX\+\_\+\+ENTITIES}} = 5000
+\begin{DoxyCompactList}\small\item\em An Entity is just an ID. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacechroma_a3e18709c97d09ed4fd84b7c38f696cc7}{Component\+Type}} \mbox{\hyperlink{namespacechroma_a7f7a93779dcf8c6df30217ef14962dec}{chroma\+::\+MAX\+\_\+\+COMPONENTS}} = 32
+\begin{DoxyCompactList}\small\item\em Each Component has a unique \textquotesingle{}ID\textquotesingle{} which gets used to represent a Bit in the Signature Bitfield. \end{DoxyCompactList}\end{DoxyCompactItemize}

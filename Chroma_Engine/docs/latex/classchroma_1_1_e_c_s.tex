@@ -1,46 +1,191 @@
 \doxysection{chroma\+::ECS Class Reference}
 \hypertarget{classchroma_1_1_e_c_s}{}\label{classchroma_1_1_e_c_s}\index{chroma::ECS@{chroma::ECS}}
+
+
+Centralizes \doxylink{classchroma_1_1_e_c_s}{ECS} Management into one Class for convenience.  
+
+
+
+
+{\ttfamily \#include $<$ECS.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classchroma_1_1_e_c_s_af1edc12ca8aaecd347b37da0a4218ec0}\label{classchroma_1_1_e_c_s_af1edc12ca8aaecd347b37da0a4218ec0} 
-void {\bfseries Init} ()
+void \mbox{\hyperlink{classchroma_1_1_e_c_s_af1edc12ca8aaecd347b37da0a4218ec0}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Call this before using the \doxylink{classchroma_1_1_e_c_s}{ECS} as this creates the Initialize. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} \mbox{\hyperlink{classchroma_1_1_e_c_s_aedb4365515c0caf4ead53283a69dc4ad}{Create\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new Entity and returns it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchroma_1_1_e_c_s_ab26f4f1583be168c49672a7344acc249}{Destroy\+Entity}} (\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Destroys an Entity and notifies all Managers about it. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classchroma_1_1_e_c_s_aad7901c9d2863f9dd43e8e2cf2cafa27}{Register\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Wrapper for the Register\+Component Function from the \doxylink{classchroma_1_1_component_manager}{Component\+Manager}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classchroma_1_1_e_c_s_a324baf08e5334f3e8af27e020e79527c}{Add\+Component}} (\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} entity, T component)
 \item 
-\Hypertarget{classchroma_1_1_e_c_s_aedb4365515c0caf4ead53283a69dc4ad}\label{classchroma_1_1_e_c_s_aedb4365515c0caf4ead53283a69dc4ad} 
-Entity {\bfseries Create\+Entity} ()
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_ab26f4f1583be168c49672a7344acc249}\label{classchroma_1_1_e_c_s_ab26f4f1583be168c49672a7344acc249} 
-void {\bfseries Destroy\+Entity} (Entity entity)
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_aad7901c9d2863f9dd43e8e2cf2cafa27}\label{classchroma_1_1_e_c_s_aad7901c9d2863f9dd43e8e2cf2cafa27} 
-{\footnotesize template$<$typename T $>$ }\\void {\bfseries Register\+Component} ()
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_a324baf08e5334f3e8af27e020e79527c}\label{classchroma_1_1_e_c_s_a324baf08e5334f3e8af27e020e79527c} 
-{\footnotesize template$<$typename T $>$ }\\void {\bfseries Add\+Component} (Entity entity, T component)
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_a9ded58154ea86339e8c87347fdbf75db}\label{classchroma_1_1_e_c_s_a9ded58154ea86339e8c87347fdbf75db} 
-{\footnotesize template$<$typename T $>$ }\\void {\bfseries Remove\+Component} (Entity entity, T component)
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_a6061745563d6a6c1c77e8a24cae719f4}\label{classchroma_1_1_e_c_s_a6061745563d6a6c1c77e8a24cae719f4} 
-{\footnotesize template$<$typename T $>$ }\\T \& {\bfseries Get\+Component} (Entity entity)
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_a2eeb0b78d25654c618306f3e0475a816}\label{classchroma_1_1_e_c_s_a2eeb0b78d25654c618306f3e0475a816} 
-{\footnotesize template$<$typename T $>$ }\\Component\+Type {\bfseries Get\+Component\+Type} ()
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_a4f07585fdb0a59e56883592bd2c63853}\label{classchroma_1_1_e_c_s_a4f07585fdb0a59e56883592bd2c63853} 
-{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Register\+System} ()
-\item 
-\Hypertarget{classchroma_1_1_e_c_s_a90724364b0fda5bfed5812fcfbfd7f84}\label{classchroma_1_1_e_c_s_a90724364b0fda5bfed5812fcfbfd7f84} 
-{\footnotesize template$<$typename T $>$ }\\void {\bfseries Set\+System\+Signature} (Signature signature)
-\end{DoxyCompactItemize}
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classchroma_1_1_e_c_s_a9ded58154ea86339e8c87347fdbf75db}{Remove\+Component}} (\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} entity, T component)
+\begin{DoxyCompactList}\small\item\em Removes a Component from an Entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classchroma_1_1_e_c_s_a6061745563d6a6c1c77e8a24cae719f4}{Get\+Component}} (\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Returns a Reference to a Component of an Entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{namespacechroma_a3e18709c97d09ed4fd84b7c38f696cc7}{Component\+Type}} \mbox{\hyperlink{classchroma_1_1_e_c_s_a2eeb0b78d25654c618306f3e0475a816}{Get\+Component\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Component Type of T. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classchroma_1_1_e_c_s_a4f07585fdb0a59e56883592bd2c63853}{Register\+System}} ()
+\begin{DoxyCompactList}\small\item\em Registers the given \doxylink{structchroma_1_1_system}{System}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classchroma_1_1_e_c_s_a90724364b0fda5bfed5812fcfbfd7f84}{Set\+System\+Signature}} (\mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}} signature)
+\begin{DoxyCompactList}\small\item\em Sets the Signature for the given \doxylink{structchroma_1_1_system}{System} T. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classchroma_1_1_e_c_s_a5cc40c966c017ada2d76e67ef3f6e74e}\label{classchroma_1_1_e_c_s_a5cc40c966c017ada2d76e67ef3f6e74e} 
-static \mbox{\hyperlink{classchroma_1_1_e_c_s}{ECS}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Instance} ()
+static \mbox{\hyperlink{classchroma_1_1_e_c_s}{ECS}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classchroma_1_1_e_c_s_a5cc40c966c017ada2d76e67ef3f6e74e}{Get\+Instance}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Centralizes \doxylink{classchroma_1_1_e_c_s}{ECS} Management into one Class for convenience. 
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00010}{10}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classchroma_1_1_e_c_s_a324baf08e5334f3e8af27e020e79527c}\label{classchroma_1_1_e_c_s_a324baf08e5334f3e8af27e020e79527c} 
+\index{chroma::ECS@{chroma::ECS}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void chroma\+::\+ECS\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}}]{entity,  }\item[{T}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a Component to an Entity Make sure the Component has a default Constructor or else you will get an deleted function error! 
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00036}{36}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
+\Hypertarget{classchroma_1_1_e_c_s_aedb4365515c0caf4ead53283a69dc4ad}\label{classchroma_1_1_e_c_s_aedb4365515c0caf4ead53283a69dc4ad} 
+\index{chroma::ECS@{chroma::ECS}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} chroma\+::\+ECS\+::\+Create\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new Entity and returns it. 
+
+\Hypertarget{classchroma_1_1_e_c_s_ab26f4f1583be168c49672a7344acc249}\label{classchroma_1_1_e_c_s_ab26f4f1583be168c49672a7344acc249} 
+\index{chroma::ECS@{chroma::ECS}!DestroyEntity@{DestroyEntity}}
+\index{DestroyEntity@{DestroyEntity}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{DestroyEntity()}{DestroyEntity()}}
+{\footnotesize\ttfamily void chroma\+::\+ECS\+::\+Destroy\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Destroys an Entity and notifies all Managers about it. 
+
+\Hypertarget{classchroma_1_1_e_c_s_a6061745563d6a6c1c77e8a24cae719f4}\label{classchroma_1_1_e_c_s_a6061745563d6a6c1c77e8a24cae719f4} 
+\index{chroma::ECS@{chroma::ECS}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& chroma\+::\+ECS\+::\+Get\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a Reference to a Component of an Entity. 
+
+
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00066}{66}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
+\Hypertarget{classchroma_1_1_e_c_s_a2eeb0b78d25654c618306f3e0475a816}\label{classchroma_1_1_e_c_s_a2eeb0b78d25654c618306f3e0475a816} 
+\index{chroma::ECS@{chroma::ECS}!GetComponentType@{GetComponentType}}
+\index{GetComponentType@{GetComponentType}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{GetComponentType()}{GetComponentType()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{namespacechroma_a3e18709c97d09ed4fd84b7c38f696cc7}{Component\+Type}} chroma\+::\+ECS\+::\+Get\+Component\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Component Type of T. 
+
+
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00072}{72}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
+\Hypertarget{classchroma_1_1_e_c_s_a5cc40c966c017ada2d76e67ef3f6e74e}\label{classchroma_1_1_e_c_s_a5cc40c966c017ada2d76e67ef3f6e74e} 
+\index{chroma::ECS@{chroma::ECS}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classchroma_1_1_e_c_s}{ECS}} \texorpdfstring{$\ast$}{*} chroma\+::\+ECS\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classchroma_1_1_e_c_s_af1edc12ca8aaecd347b37da0a4218ec0}\label{classchroma_1_1_e_c_s_af1edc12ca8aaecd347b37da0a4218ec0} 
+\index{chroma::ECS@{chroma::ECS}!Init@{Init}}
+\index{Init@{Init}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void chroma\+::\+ECS\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Call this before using the \doxylink{classchroma_1_1_e_c_s}{ECS} as this creates the Initialize. 
+
+\Hypertarget{classchroma_1_1_e_c_s_aad7901c9d2863f9dd43e8e2cf2cafa27}\label{classchroma_1_1_e_c_s_aad7901c9d2863f9dd43e8e2cf2cafa27} 
+\index{chroma::ECS@{chroma::ECS}!RegisterComponent@{RegisterComponent}}
+\index{RegisterComponent@{RegisterComponent}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{RegisterComponent()}{RegisterComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void chroma\+::\+ECS\+::\+Register\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wrapper for the Register\+Component Function from the \doxylink{classchroma_1_1_component_manager}{Component\+Manager}. 
+
+
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00029}{29}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
+\Hypertarget{classchroma_1_1_e_c_s_a4f07585fdb0a59e56883592bd2c63853}\label{classchroma_1_1_e_c_s_a4f07585fdb0a59e56883592bd2c63853} 
+\index{chroma::ECS@{chroma::ECS}!RegisterSystem@{RegisterSystem}}
+\index{RegisterSystem@{RegisterSystem}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{RegisterSystem()}{RegisterSystem()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ chroma\+::\+ECS\+::\+Register\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers the given \doxylink{structchroma_1_1_system}{System}. 
+
+
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00079}{79}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
+\Hypertarget{classchroma_1_1_e_c_s_a9ded58154ea86339e8c87347fdbf75db}\label{classchroma_1_1_e_c_s_a9ded58154ea86339e8c87347fdbf75db} 
+\index{chroma::ECS@{chroma::ECS}!RemoveComponent@{RemoveComponent}}
+\index{RemoveComponent@{RemoveComponent}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{RemoveComponent()}{RemoveComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void chroma\+::\+ECS\+::\+Remove\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}}]{entity,  }\item[{T}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a Component from an Entity. 
+
+
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00052}{52}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
+\Hypertarget{classchroma_1_1_e_c_s_a90724364b0fda5bfed5812fcfbfd7f84}\label{classchroma_1_1_e_c_s_a90724364b0fda5bfed5812fcfbfd7f84} 
+\index{chroma::ECS@{chroma::ECS}!SetSystemSignature@{SetSystemSignature}}
+\index{SetSystemSignature@{SetSystemSignature}!chroma::ECS@{chroma::ECS}}
+\doxysubsubsection{\texorpdfstring{SetSystemSignature()}{SetSystemSignature()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void chroma\+::\+ECS\+::\+Set\+System\+Signature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}}}]{signature }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Signature for the given \doxylink{structchroma_1_1_system}{System} T. 
+
+
+
+Definition at line \mbox{\hyperlink{_e_c_s_8h_source_l00085}{85}} of file \mbox{\hyperlink{_e_c_s_8h_source}{ECS.\+h}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-ECS.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{_e_c_s_8h}{ECS.\+h}}\end{DoxyCompactItemize}

@@ -1,100 +1,90 @@
 \doxysection{ECS.\+h}
 \hypertarget{_e_c_s_8h_source}{}\label{_e_c_s_8h_source}\index{ECS.h@{ECS.h}}
-
+\mbox{\hyperlink{_e_c_s_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ecs/EntityManager.h"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ecs/ComponentManager.h"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}ecs/SystemManager.h"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }chroma}
-\DoxyCodeLine{00008\ \{}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ Centralizes\ ECS\ Management\ into\ one\ Class\ for\ convenience}}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_e_c_s}{ECS}}}
-\DoxyCodeLine{00011\ \ \ \ \ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Singleton}}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classchroma_1_1_e_c_s}{ECS}}*\ GetInstance();}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Call\ this\ before\ using\ the\ ECS\ as\ this\ creates\ the\ Initialize}}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Entity\ Management}}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Creates\ a\ new\ Entity\ and\ returns\ it}}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ Entity\ CreateEntity();}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Destroys\ an\ Entity\ and\ notifies\ all\ Managers\ about\ it}}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DestroyEntity(Entity\ entity);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Component\ Management}}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wrapper\ for\ the\ RegisterComponent\ Function\ from\ the\ ComponentManager}}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ RegisterComponent()}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ m\_ComponentManager-\/>RegisterComponent<T>();}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adds\ a\ Component\ to\ an\ Entity}}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Make\ sure\ the\ Component\ has\ a\ default\ Constructor\ or\ else\ you\ will\ get\ an\ deleted\ function\ error!}}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ AddComponent(Entity\ entity,\ T\ component)}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ m\_ComponentManager-\/>AddComponent(entity,\ component);}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Added\ Component\ to\ Entity\ "{}}\ <<\ entity\ <<\ std::endl;}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ to\ Component\ Type}}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ Signature\ \_signature\ =\ m\_EntityManager-\/>GetSignature(entity);}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \_signature.set(m\_ComponentManager-\/>GetComponentType<T>(),\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ in\ Managers}}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ m\_EntityManager-\/>SetSignature(entity,\ \_signature);}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ m\_SystemManager-\/>EntitySignatureChange(entity,\ \_signature);}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Removes\ a\ Component\ from\ an\ Entity}}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ RemoveComponent(Entity\ entity,\ T\ component)}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ m\_ComponentManager-\/>RemoveComponent(entity,\ component);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ to\ Component\ Type}}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ Signature\ \_signature\ =\ m\_EntityManager-\/>GetSignature();}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \_signature.set(m\_ComponentManager-\/>GetComponentType<T>(),\ \textcolor{keyword}{false});}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ in\ Managers}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ m\_EntityManager-\/>SetSignature(entity,\ \_signature);}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ m\_SystemManager-\/>EntitySignatureChange(entity,\ \_signature);}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ a\ Reference\ to\ a\ Component\ of\ an\ Entity}}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ T\&\ GetComponent(Entity\ entity)}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_ComponentManager-\/>GetComponent<T>(entity);}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ ComponentType\ GetComponentType()}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_ComponentManager-\/>GetComponentType<T>();}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ System}}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ std::shared\_ptr<T>\ RegisterSystem()}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Registered\ System\ "{}}\ <<\ std::endl;}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_SystemManager-\/>RegisterSystem<T>();}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ SetSystemSignature(Signature\ signature)}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ m\_SystemManager-\/>SetSignature<T>(signature);}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Manager}}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_entity_manager}{EntityManager}}*\ m\_EntityManager;}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_component_manager}{ComponentManager}}*\ m\_ComponentManager;}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_system_manager}{SystemManager}}*\ m\_SystemManager;}
-\DoxyCodeLine{00093\ \ \ \ \ \};}
-\DoxyCodeLine{00094\ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_entity_manager_8h}{ecs/EntityManager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_manager_8h}{ecs/ComponentManager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_system_manager_8h}{ecs/SystemManager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00007}00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacechroma}{chroma}}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00010}\mbox{\hyperlink{classchroma_1_1_e_c_s}{00010}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_e_c_s}{ECS}}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Singleton}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00015}\mbox{\hyperlink{classchroma_1_1_e_c_s_a5cc40c966c017ada2d76e67ef3f6e74e}{00015}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classchroma_1_1_e_c_s}{ECS}}*\ \mbox{\hyperlink{classchroma_1_1_e_c_s_a5cc40c966c017ada2d76e67ef3f6e74e}{GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00018}\mbox{\hyperlink{classchroma_1_1_e_c_s_af1edc12ca8aaecd347b37da0a4218ec0}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_af1edc12ca8aaecd347b37da0a4218ec0}{Init}}();}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Entity\ Management}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00022}\mbox{\hyperlink{classchroma_1_1_e_c_s_aedb4365515c0caf4ead53283a69dc4ad}{00022}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_aedb4365515c0caf4ead53283a69dc4ad}{CreateEntity}}();}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00025}\mbox{\hyperlink{classchroma_1_1_e_c_s_ab26f4f1583be168c49672a7344acc249}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_ab26f4f1583be168c49672a7344acc249}{DestroyEntity}}(\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}\ entity);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Component\ Management}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00029}\mbox{\hyperlink{classchroma_1_1_e_c_s_aad7901c9d2863f9dd43e8e2cf2cafa27}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_aad7901c9d2863f9dd43e8e2cf2cafa27}{RegisterComponent}}()}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ m\_ComponentManager-\/>\mbox{\hyperlink{classchroma_1_1_component_manager_ae6743555b22fa6332fb2ef8e6e2fefdc}{RegisterComponent}}<T>();}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00036}\mbox{\hyperlink{classchroma_1_1_e_c_s_a324baf08e5334f3e8af27e020e79527c}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_a324baf08e5334f3e8af27e020e79527c}{AddComponent}}(\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}\ entity,\ T\ component)}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ m\_ComponentManager-\/>\mbox{\hyperlink{classchroma_1_1_component_manager_a91e287b34598a208effc526328e2649a}{AddComponent}}(entity,\ component);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Added\ Component\ to\ Entity\ "{}}\ <<\ entity\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ to\ Component\ Type}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}}\ \_signature\ =\ m\_EntityManager-\/>\mbox{\hyperlink{classchroma_1_1_entity_manager_a5cc8deb7800cdef89e3f076db8948362}{GetSignature}}(entity);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \_signature.set(m\_ComponentManager-\/>\mbox{\hyperlink{classchroma_1_1_component_manager_a144aab7fc0241ceae034615365228eda}{GetComponentType}}<T>(),\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ in\ Managers}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ m\_EntityManager-\/>\mbox{\hyperlink{classchroma_1_1_entity_manager_a31eb58d858339c2b526b2d1e386159a7}{SetSignature}}(entity,\ \_signature);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ m\_SystemManager-\/>\mbox{\hyperlink{classchroma_1_1_system_manager_adfe0d3aebcd1784fa1268d236d16cc32}{EntitySignatureChange}}(entity,\ \_signature);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00052}\mbox{\hyperlink{classchroma_1_1_e_c_s_a9ded58154ea86339e8c87347fdbf75db}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_a9ded58154ea86339e8c87347fdbf75db}{RemoveComponent}}(\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}\ entity,\ T\ component)}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ m\_ComponentManager-\/>\mbox{\hyperlink{classchroma_1_1_component_manager_a36ba055ea10e04cfde9826986b854d21}{RemoveComponent}}(entity,\ component);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ to\ Component\ Type}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}}\ \_signature\ =\ m\_EntityManager-\/>\mbox{\hyperlink{classchroma_1_1_entity_manager_a5cc8deb7800cdef89e3f076db8948362}{GetSignature}}();}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \_signature.set(m\_ComponentManager-\/>\mbox{\hyperlink{classchroma_1_1_component_manager_a144aab7fc0241ceae034615365228eda}{GetComponentType}}<T>(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ Signature\ in\ Managers}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ m\_EntityManager-\/>\mbox{\hyperlink{classchroma_1_1_entity_manager_a31eb58d858339c2b526b2d1e386159a7}{SetSignature}}(entity,\ \_signature);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ m\_SystemManager-\/>\mbox{\hyperlink{classchroma_1_1_system_manager_adfe0d3aebcd1784fa1268d236d16cc32}{EntitySignatureChange}}(entity,\ \_signature);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00066}\mbox{\hyperlink{classchroma_1_1_e_c_s_a6061745563d6a6c1c77e8a24cae719f4}{00066}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ T\&\ \mbox{\hyperlink{classchroma_1_1_e_c_s_a6061745563d6a6c1c77e8a24cae719f4}{GetComponent}}(\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}\ entity)}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_ComponentManager-\/>\mbox{\hyperlink{classchroma_1_1_component_manager_a9332e9677ecd2690facf69e2b187eb6f}{GetComponent}}<T>(entity);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00072}\mbox{\hyperlink{classchroma_1_1_e_c_s_a2eeb0b78d25654c618306f3e0475a816}{00072}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \mbox{\hyperlink{namespacechroma_a3e18709c97d09ed4fd84b7c38f696cc7}{ComponentType}}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_a2eeb0b78d25654c618306f3e0475a816}{GetComponentType}}()}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00073}00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_ComponentManager-\/>\mbox{\hyperlink{classchroma_1_1_component_manager_a144aab7fc0241ceae034615365228eda}{GetComponentType}}<T>();}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ System}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00079}\mbox{\hyperlink{classchroma_1_1_e_c_s_a4f07585fdb0a59e56883592bd2c63853}{00079}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ std::shared\_ptr<T>\ \mbox{\hyperlink{classchroma_1_1_e_c_s_a4f07585fdb0a59e56883592bd2c63853}{RegisterSystem}}()}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_SystemManager-\/>\mbox{\hyperlink{classchroma_1_1_system_manager_a16177d042f653f642b735922268035e1}{RegisterSystem}}<T>();}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00082}00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00085}\mbox{\hyperlink{classchroma_1_1_e_c_s_a90724364b0fda5bfed5812fcfbfd7f84}{00085}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_e_c_s_a90724364b0fda5bfed5812fcfbfd7f84}{SetSystemSignature}}(\mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}}\ signature)}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00086}00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ m\_SystemManager-\/>\mbox{\hyperlink{classchroma_1_1_system_manager_abd92d32b77bf7763868cacdc93fc515b}{SetSignature}}<T>(signature);}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Manager}}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_entity_manager}{EntityManager}}*\ m\_EntityManager;}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_component_manager}{ComponentManager}}*\ m\_ComponentManager;}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_system_manager}{SystemManager}}*\ m\_SystemManager;}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00095}00095\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_e_c_s_8h_source_l00096}00096\ \}}
 
 \end{DoxyCode}

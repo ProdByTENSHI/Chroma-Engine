@@ -6,7 +6,7 @@
 
 namespace chroma
 {
-	// Centralizes ECS Management into one Class for convenience
+	//! Centralizes ECS Management into one Class for convenience
 	class ECS
 	{
 	public:
@@ -14,25 +14,25 @@ namespace chroma
 
 		static ECS* GetInstance();
 
-		// Call this before using the ECS as this creates the Initialize
+		//! Call this before using the ECS as this creates the Initialize
 		void Init();
 
 		// -- Entity Management
-		// Creates a new Entity and returns it
+		//! Creates a new Entity and returns it
 		Entity CreateEntity();
 
-		// Destroys an Entity and notifies all Managers about it
+		//! Destroys an Entity and notifies all Managers about it
 		void DestroyEntity(Entity entity);
 
 		// -- Component Management
-		// Wrapper for the RegisterComponent Function from the ComponentManager
+		//! Wrapper for the RegisterComponent Function from the ComponentManager
 		template <typename T> void RegisterComponent()
 		{
 			m_ComponentManager->RegisterComponent<T>();
 		}
 
-		// Adds a Component to an Entity
-		// Make sure the Component has a default Constructor or else you will get an deleted function error!
+		//! Adds a Component to an Entity
+		//! Make sure the Component has a default Constructor or else you will get an deleted function error!
 		template <typename T> void AddComponent(Entity entity, T component)
 		{
 			m_ComponentManager->AddComponent(entity, component);
@@ -48,7 +48,7 @@ namespace chroma
 			m_SystemManager->EntitySignatureChange(entity, _signature);
 		}
 
-		// Removes a Component from an Entity
+		//! Removes a Component from an Entity
 		template <typename T> void RemoveComponent(Entity entity, T component)
 		{
 			m_ComponentManager->RemoveComponent(entity, component);
@@ -62,24 +62,26 @@ namespace chroma
 			m_SystemManager->EntitySignatureChange(entity, _signature);
 		}
 
-		// Returns a Reference to a Component of an Entity
+		//! Returns a Reference to a Component of an Entity
 		template <typename T> T& GetComponent(Entity entity)
 		{
 			return m_ComponentManager->GetComponent<T>(entity);
 		}
 
+		//! Returns the Component Type of T
 		template <typename T> ComponentType GetComponentType()
 		{
 			return m_ComponentManager->GetComponentType<T>();
 		}
 
 		// -- System
+		//! Registers the given System
 		template <typename T> std::shared_ptr<T> RegisterSystem()
 		{
-			std::cout << "Registered System " << std::endl;
 			return m_SystemManager->RegisterSystem<T>();
 		}
 
+		//! Sets the Signature for the given System T
 		template <typename T> void SetSystemSignature(Signature signature)
 		{
 			m_SystemManager->SetSignature<T>(signature);

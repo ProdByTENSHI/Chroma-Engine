@@ -98,43 +98,265 @@ $(function(){initNavTree('classchroma_1_1_application.html',''); initResizable()
   <div class="headertitle"><div class="title">chroma::Application Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_application_8h_source.html">Application.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa304be6393ea71781c6aac1208775ff4" id="r_aa304be6393ea71781c6aac1208775ff4"><td class="memItemLeft" align="right" valign="top"><a id="aa304be6393ea71781c6aac1208775ff4" name="aa304be6393ea71781c6aac1208775ff4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (<a class="el" href="classchroma_1_1_window.html">Window</a> *window, <a class="el" href="classchroma_1_1_renderer.html">Renderer</a> *renderer)</td></tr>
+<tr class="memitem:a15c9e4e779617afa58ee364c41b01297" id="r_a15c9e4e779617afa58ee364c41b01297"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15c9e4e779617afa58ee364c41b01297">Application</a> ()</td></tr>
+<tr class="memdesc:a15c9e4e779617afa58ee364c41b01297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Before doing anything SDL Related the <a class="el" href="classchroma_1_1_application.html">Application</a> has to be created.  <br /></td></tr>
+<tr class="separator:a15c9e4e779617afa58ee364c41b01297"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa304be6393ea71781c6aac1208775ff4" id="r_aa304be6393ea71781c6aac1208775ff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa304be6393ea71781c6aac1208775ff4">Init</a> (<a class="el" href="classchroma_1_1_window.html">Window</a> *window, <a class="el" href="classchroma_1_1_renderer.html">Renderer</a> *renderer)</td></tr>
+<tr class="memdesc:aa304be6393ea71781c6aac1208775ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes Engine related Manager(Window, Renderer...)  <br /></td></tr>
 <tr class="separator:aa304be6393ea71781c6aac1208775ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3de60af2d78b715ee2d5db1968a8f03b" id="r_a3de60af2d78b715ee2d5db1968a8f03b"><td class="memItemLeft" align="right" valign="top"><a id="a3de60af2d78b715ee2d5db1968a8f03b" name="a3de60af2d78b715ee2d5db1968a8f03b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:a3de60af2d78b715ee2d5db1968a8f03b" id="r_a3de60af2d78b715ee2d5db1968a8f03b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3de60af2d78b715ee2d5db1968a8f03b">Update</a> ()</td></tr>
+<tr class="memdesc:a3de60af2d78b715ee2d5db1968a8f03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates as often as possible - Variable <a class="el" href="classchroma_1_1_time.html">Time</a> Step.  <br /></td></tr>
 <tr class="separator:a3de60af2d78b715ee2d5db1968a8f03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29fde834a992eeed968453e1223fc644" id="r_a29fde834a992eeed968453e1223fc644"><td class="memItemLeft" align="right" valign="top"><a id="a29fde834a992eeed968453e1223fc644" name="a29fde834a992eeed968453e1223fc644"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>FixedUpdate</b> ()</td></tr>
+<tr class="memitem:a29fde834a992eeed968453e1223fc644" id="r_a29fde834a992eeed968453e1223fc644"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29fde834a992eeed968453e1223fc644">FixedUpdate</a> ()</td></tr>
+<tr class="memdesc:a29fde834a992eeed968453e1223fc644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates in fixed intervals. Use for Physics and Collision related Stuff - Fixed <a class="el" href="classchroma_1_1_time.html">Time</a> Step.  <br /></td></tr>
 <tr class="separator:a29fde834a992eeed968453e1223fc644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacbef8c7d640ae1516ac96252436e9be" id="r_aacbef8c7d640ae1516ac96252436e9be"><td class="memItemLeft" align="right" valign="top"><a id="aacbef8c7d640ae1516ac96252436e9be" name="aacbef8c7d640ae1516ac96252436e9be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Render</b> ()</td></tr>
+<tr class="memitem:aacbef8c7d640ae1516ac96252436e9be" id="r_aacbef8c7d640ae1516ac96252436e9be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacbef8c7d640ae1516ac96252436e9be">Render</a> ()</td></tr>
+<tr class="memdesc:aacbef8c7d640ae1516ac96252436e9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the final Screen.  <br /></td></tr>
 <tr class="separator:aacbef8c7d640ae1516ac96252436e9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cc1e2a64c428057abe019aa38b37f04" id="r_a2cc1e2a64c428057abe019aa38b37f04"><td class="memItemLeft" align="right" valign="top"><a id="a2cc1e2a64c428057abe019aa38b37f04" name="a2cc1e2a64c428057abe019aa38b37f04"></a>
-const <a class="el" href="classchroma_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetWindow</b> () const</td></tr>
+<tr class="memitem:a2cc1e2a64c428057abe019aa38b37f04" id="r_a2cc1e2a64c428057abe019aa38b37f04"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classchroma_1_1_window.html">Window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cc1e2a64c428057abe019aa38b37f04">GetWindow</a> () const</td></tr>
 <tr class="separator:a2cc1e2a64c428057abe019aa38b37f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3cb06090bf72a97fe8733b143f9c5c4" id="r_ae3cb06090bf72a97fe8733b143f9c5c4"><td class="memItemLeft" align="right" valign="top"><a id="ae3cb06090bf72a97fe8733b143f9c5c4" name="ae3cb06090bf72a97fe8733b143f9c5c4"></a>
-const <a class="el" href="classchroma_1_1_renderer.html">Renderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRenderer</b> () const</td></tr>
+<tr class="memitem:ae3cb06090bf72a97fe8733b143f9c5c4" id="r_ae3cb06090bf72a97fe8733b143f9c5c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classchroma_1_1_renderer.html">Renderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3cb06090bf72a97fe8733b143f9c5c4">GetRenderer</a> () const</td></tr>
 <tr class="separator:ae3cb06090bf72a97fe8733b143f9c5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae2a8378d99b942d783bf5c7df8e88de7" id="r_ae2a8378d99b942d783bf5c7df8e88de7"><td class="memItemLeft" align="right" valign="top"><a id="ae2a8378d99b942d783bf5c7df8e88de7" name="ae2a8378d99b942d783bf5c7df8e88de7"></a>
-<a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OnApplicationStart</b></td></tr>
+<tr class="memitem:ae2a8378d99b942d783bf5c7df8e88de7" id="r_ae2a8378d99b942d783bf5c7df8e88de7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2a8378d99b942d783bf5c7df8e88de7">OnApplicationStart</a></td></tr>
 <tr class="separator:ae2a8378d99b942d783bf5c7df8e88de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab00a763bbe0d22b4a8b3b633bbeaf1a8" id="r_ab00a763bbe0d22b4a8b3b633bbeaf1a8"><td class="memItemLeft" align="right" valign="top"><a id="ab00a763bbe0d22b4a8b3b633bbeaf1a8" name="ab00a763bbe0d22b4a8b3b633bbeaf1a8"></a>
-<a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OnApplicationUpdate</b></td></tr>
+<tr class="memitem:ab00a763bbe0d22b4a8b3b633bbeaf1a8" id="r_ab00a763bbe0d22b4a8b3b633bbeaf1a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab00a763bbe0d22b4a8b3b633bbeaf1a8">OnApplicationUpdate</a></td></tr>
 <tr class="separator:ab00a763bbe0d22b4a8b3b633bbeaf1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25fef3701b294fcdef4f06538ba606a5" id="r_a25fef3701b294fcdef4f06538ba606a5"><td class="memItemLeft" align="right" valign="top"><a id="a25fef3701b294fcdef4f06538ba606a5" name="a25fef3701b294fcdef4f06538ba606a5"></a>
-<a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OnApplicationFixedUpdate</b></td></tr>
+<tr class="memitem:a25fef3701b294fcdef4f06538ba606a5" id="r_a25fef3701b294fcdef4f06538ba606a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25fef3701b294fcdef4f06538ba606a5">OnApplicationFixedUpdate</a></td></tr>
 <tr class="separator:a25fef3701b294fcdef4f06538ba606a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a587450c7aa12d33c504747356a854333" id="r_a587450c7aa12d33c504747356a854333"><td class="memItemLeft" align="right" valign="top"><a id="a587450c7aa12d33c504747356a854333" name="a587450c7aa12d33c504747356a854333"></a>
-<a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>OnApplicationEnd</b></td></tr>
+<tr class="memitem:a587450c7aa12d33c504747356a854333" id="r_a587450c7aa12d33c504747356a854333"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchroma_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a587450c7aa12d33c504747356a854333">OnApplicationEnd</a></td></tr>
 <tr class="separator:a587450c7aa12d33c504747356a854333"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_application_8h_source.html#l00010">10</a> of file <a class="el" href="_application_8h_source.html">Application.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a15c9e4e779617afa58ee364c41b01297" name="a15c9e4e779617afa58ee364c41b01297"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c9e4e779617afa58ee364c41b01297">&#9670;&#160;</a></span>Application()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chroma::Application::Application </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Before doing anything SDL Related the <a class="el" href="classchroma_1_1_application.html">Application</a> has to be created. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a29fde834a992eeed968453e1223fc644" name="a29fde834a992eeed968453e1223fc644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fde834a992eeed968453e1223fc644">&#9670;&#160;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Application::FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates in fixed intervals. Use for Physics and Collision related Stuff - Fixed <a class="el" href="classchroma_1_1_time.html">Time</a> Step. </p>
+
+</div>
+</div>
+<a id="ae3cb06090bf72a97fe8733b143f9c5c4" name="ae3cb06090bf72a97fe8733b143f9c5c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3cb06090bf72a97fe8733b143f9c5c4">&#9670;&#160;</a></span>GetRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classchroma_1_1_renderer.html">Renderer</a> &amp; chroma::Application::GetRenderer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_application_8h_source.html#l00031">31</a> of file <a class="el" href="_application_8h_source.html">Application.h</a>.</p>
+
+</div>
+</div>
+<a id="a2cc1e2a64c428057abe019aa38b37f04" name="a2cc1e2a64c428057abe019aa38b37f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc1e2a64c428057abe019aa38b37f04">&#9670;&#160;</a></span>GetWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classchroma_1_1_window.html">Window</a> &amp; chroma::Application::GetWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_application_8h_source.html#l00030">30</a> of file <a class="el" href="_application_8h_source.html">Application.h</a>.</p>
+
+</div>
+</div>
+<a id="aa304be6393ea71781c6aac1208775ff4" name="aa304be6393ea71781c6aac1208775ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa304be6393ea71781c6aac1208775ff4">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Application::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classchroma_1_1_window.html">Window</a> *</td>          <td class="paramname"><span class="paramname"><em>window</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classchroma_1_1_renderer.html">Renderer</a> *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes Engine related Manager(Window, Renderer...) </p>
+
+</div>
+</div>
+<a id="aacbef8c7d640ae1516ac96252436e9be" name="aacbef8c7d640ae1516ac96252436e9be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacbef8c7d640ae1516ac96252436e9be">&#9670;&#160;</a></span>Render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Application::Render </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders the final Screen. </p>
+
+</div>
+</div>
+<a id="a3de60af2d78b715ee2d5db1968a8f03b" name="a3de60af2d78b715ee2d5db1968a8f03b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de60af2d78b715ee2d5db1968a8f03b">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Application::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates as often as possible - Variable <a class="el" href="classchroma_1_1_time.html">Time</a> Step. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a587450c7aa12d33c504747356a854333" name="a587450c7aa12d33c504747356a854333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587450c7aa12d33c504747356a854333">&#9670;&#160;</a></span>OnApplicationEnd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classchroma_1_1_event.html">Event</a> chroma::Application::OnApplicationEnd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_application_8h_source.html#l00038">38</a> of file <a class="el" href="_application_8h_source.html">Application.h</a>.</p>
+
+</div>
+</div>
+<a id="a25fef3701b294fcdef4f06538ba606a5" name="a25fef3701b294fcdef4f06538ba606a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fef3701b294fcdef4f06538ba606a5">&#9670;&#160;</a></span>OnApplicationFixedUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classchroma_1_1_event.html">Event</a> chroma::Application::OnApplicationFixedUpdate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_application_8h_source.html#l00037">37</a> of file <a class="el" href="_application_8h_source.html">Application.h</a>.</p>
+
+</div>
+</div>
+<a id="ae2a8378d99b942d783bf5c7df8e88de7" name="ae2a8378d99b942d783bf5c7df8e88de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a8378d99b942d783bf5c7df8e88de7">&#9670;&#160;</a></span>OnApplicationStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classchroma_1_1_event.html">Event</a> chroma::Application::OnApplicationStart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_application_8h_source.html#l00035">35</a> of file <a class="el" href="_application_8h_source.html">Application.h</a>.</p>
+
+</div>
+</div>
+<a id="ab00a763bbe0d22b4a8b3b633bbeaf1a8" name="ab00a763bbe0d22b4a8b3b633bbeaf1a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00a763bbe0d22b4a8b3b633bbeaf1a8">&#9670;&#160;</a></span>OnApplicationUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classchroma_1_1_event.html">Event</a> chroma::Application::OnApplicationUpdate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_application_8h_source.html#l00036">36</a> of file <a class="el" href="_application_8h_source.html">Application.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_application_8h_source.html">Application.h</a></li>
 </ul>
@@ -143,7 +365,7 @@ Public Attributes</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>chroma</b></li><li class="navelem"><a class="el" href="classchroma_1_1_application.html">Application</a></li>
+    <li class="navelem"><a class="el" href="namespacechroma.html">chroma</a></li><li class="navelem"><a class="el" href="classchroma_1_1_application.html">Application</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

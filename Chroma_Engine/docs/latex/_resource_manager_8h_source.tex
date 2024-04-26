@@ -1,39 +1,39 @@
 \doxysection{Resource\+Manager.\+h}
 \hypertarget{_resource_manager_8h_source}{}\label{_resource_manager_8h_source}\index{ResourceManager.h@{ResourceManager.h}}
-
+\mbox{\hyperlink{_resource_manager_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL\_image.h>}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}rendering/Renderer.h"{}}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }chroma}
-\DoxyCodeLine{00013\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_resource_manager}{ResourceManager}}}
-\DoxyCodeLine{00015\ \ \ \ \ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Singleton}}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classchroma_1_1_resource_manager}{ResourceManager}}*\ GetInstance();}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Init(\mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ renderer)}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Renderer\ =\ renderer;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Resource\ Management}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ SDL\_Texture*\ GetTexture(\textcolor{keyword}{const}\ std::string\&\ path);}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ m\_Renderer;}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ SDL\_Texture*>\ m\_TextureCache;}
-\DoxyCodeLine{00032\ \ \ \ \ \};}
-\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <SDL\_image.h>}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_renderer_8h}{rendering/Renderer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00012}00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacechroma}{chroma}}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00014}\mbox{\hyperlink{classchroma_1_1_resource_manager}{00014}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_resource_manager}{ResourceManager}}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Singleton}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00018}\mbox{\hyperlink{classchroma_1_1_resource_manager_aa5f96df80763c41056fc8f84290e578e}{00018}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classchroma_1_1_resource_manager}{ResourceManager}}*\ \mbox{\hyperlink{classchroma_1_1_resource_manager_aa5f96df80763c41056fc8f84290e578e}{GetInstance}}();}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00020}\mbox{\hyperlink{classchroma_1_1_resource_manager_a4a73ed527933e3a09972005e56beb208}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_resource_manager_a4a73ed527933e3a09972005e56beb208}{Init}}(\mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ renderer)}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ m\_Renderer\ =\ renderer;}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Resource\ Management}}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00027}\mbox{\hyperlink{classchroma_1_1_resource_manager_af0e34073796046b2188dad051976a24f}{00027}}\ \ \ \ \ \ \ \ \ SDL\_Texture*\ \mbox{\hyperlink{classchroma_1_1_resource_manager_af0e34073796046b2188dad051976a24f}{GetTexture}}(\textcolor{keyword}{const}\ std::string\&\ path);}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ m\_Renderer;}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ std::unordered\_map<std::string,\ SDL\_Texture*>\ m\_TextureCache;}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00033}00033\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_resource_manager_8h_source_l00034}00034\ \}}
 
 \end{DoxyCode}

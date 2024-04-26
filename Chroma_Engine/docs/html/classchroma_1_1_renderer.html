@@ -97,31 +97,223 @@ $(function(){initNavTree('classchroma_1_1_renderer.html',''); initResizable(); }
   <div class="headertitle"><div class="title">chroma::Renderer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab06f6ab1b62202cfda3c968f5326640e" id="r_ab06f6ab1b62202cfda3c968f5326640e"><td class="memItemLeft" align="right" valign="top"><a id="ab06f6ab1b62202cfda3c968f5326640e" name="ab06f6ab1b62202cfda3c968f5326640e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer</b> (SDL_Window *window, Uint32 flags)</td></tr>
+<tr class="memitem:ab06f6ab1b62202cfda3c968f5326640e" id="r_ab06f6ab1b62202cfda3c968f5326640e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06f6ab1b62202cfda3c968f5326640e">Renderer</a> (SDL_Window *window, Uint32 flags)</td></tr>
 <tr class="separator:ab06f6ab1b62202cfda3c968f5326640e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56e42afac9d7b31bbd88aa17ae194830" id="r_a56e42afac9d7b31bbd88aa17ae194830"><td class="memItemLeft" align="right" valign="top"><a id="a56e42afac9d7b31bbd88aa17ae194830" name="a56e42afac9d7b31bbd88aa17ae194830"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Prepare</b> ()</td></tr>
+<tr class="memitem:a371ef8c6c1b8e6ca85b9a257bb5c2c98" id="r_a371ef8c6c1b8e6ca85b9a257bb5c2c98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a371ef8c6c1b8e6ca85b9a257bb5c2c98">~Renderer</a> ()</td></tr>
+<tr class="separator:a371ef8c6c1b8e6ca85b9a257bb5c2c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e42afac9d7b31bbd88aa17ae194830" id="r_a56e42afac9d7b31bbd88aa17ae194830"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56e42afac9d7b31bbd88aa17ae194830">Prepare</a> ()</td></tr>
+<tr class="memdesc:a56e42afac9d7b31bbd88aa17ae194830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans the Screen and Prepares everything before the next Frame is being drawn.  <br /></td></tr>
 <tr class="separator:a56e42afac9d7b31bbd88aa17ae194830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf3288f837ce521b2df7ad0e0190daac" id="r_adf3288f837ce521b2df7ad0e0190daac"><td class="memItemLeft" align="right" valign="top"><a id="adf3288f837ce521b2df7ad0e0190daac" name="adf3288f837ce521b2df7ad0e0190daac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTexture</b> (SDL_Texture *texture, const SDL_Rect *srcRect, const SDL_Rect *dstRect)</td></tr>
+<tr class="memitem:adf3288f837ce521b2df7ad0e0190daac" id="r_adf3288f837ce521b2df7ad0e0190daac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf3288f837ce521b2df7ad0e0190daac">RenderTexture</a> (SDL_Texture *texture, const SDL_Rect *srcRect, const SDL_Rect *dstRect)</td></tr>
+<tr class="memdesc:adf3288f837ce521b2df7ad0e0190daac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render a Texture with the given Size and Position.  <br /></td></tr>
 <tr class="separator:adf3288f837ce521b2df7ad0e0190daac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afadef3d03f33ebb15860e410ec990829" id="r_afadef3d03f33ebb15860e410ec990829"><td class="memItemLeft" align="right" valign="top"><a id="afadef3d03f33ebb15860e410ec990829" name="afadef3d03f33ebb15860e410ec990829"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RenderSurface</b> (SDL_Surface *surface, SDL_Rect srcRect, SDL_Rect dstRect)</td></tr>
+<tr class="memitem:afadef3d03f33ebb15860e410ec990829" id="r_afadef3d03f33ebb15860e410ec990829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afadef3d03f33ebb15860e410ec990829">RenderSurface</a> (SDL_Surface *surface, SDL_Rect srcRect, SDL_Rect dstRect)</td></tr>
+<tr class="memdesc:afadef3d03f33ebb15860e410ec990829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the given Surface into a Texture before rendering it with the given Size and Position.  <br /></td></tr>
 <tr class="separator:afadef3d03f33ebb15860e410ec990829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a989165cd1940ecc6a2b1d7019f37b185" id="r_a989165cd1940ecc6a2b1d7019f37b185"><td class="memItemLeft" align="right" valign="top"><a id="a989165cd1940ecc6a2b1d7019f37b185" name="a989165cd1940ecc6a2b1d7019f37b185"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Present</b> ()</td></tr>
+<tr class="memitem:a989165cd1940ecc6a2b1d7019f37b185" id="r_a989165cd1940ecc6a2b1d7019f37b185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a989165cd1940ecc6a2b1d7019f37b185">Present</a> ()</td></tr>
+<tr class="memdesc:a989165cd1940ecc6a2b1d7019f37b185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the final Frame. Gets called AFTER all the Render Functions.  <br /></td></tr>
 <tr class="separator:a989165cd1940ecc6a2b1d7019f37b185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbc7c7de0c119c4b666c9140798b388b" id="r_abbc7c7de0c119c4b666c9140798b388b"><td class="memItemLeft" align="right" valign="top"><a id="abbc7c7de0c119c4b666c9140798b388b" name="abbc7c7de0c119c4b666c9140798b388b"></a>
-SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>GetRenderer</b> ()</td></tr>
+<tr class="memitem:abbc7c7de0c119c4b666c9140798b388b" id="r_abbc7c7de0c119c4b666c9140798b388b"><td class="memItemLeft" align="right" valign="top">SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc7c7de0c119c4b666c9140798b388b">GetRenderer</a> ()</td></tr>
 <tr class="separator:abbc7c7de0c119c4b666c9140798b388b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab434d39bd88b9a2e689be5c765713b16" id="r_ab434d39bd88b9a2e689be5c765713b16"><td class="memItemLeft" align="right" valign="top"><a id="ab434d39bd88b9a2e689be5c765713b16" name="ab434d39bd88b9a2e689be5c765713b16"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetCreationStatus</b> ()</td></tr>
+<tr class="memitem:ab434d39bd88b9a2e689be5c765713b16" id="r_ab434d39bd88b9a2e689be5c765713b16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab434d39bd88b9a2e689be5c765713b16">GetCreationStatus</a> ()</td></tr>
 <tr class="separator:ab434d39bd88b9a2e689be5c765713b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_renderer_8h_source.html#l00007">7</a> of file <a class="el" href="_renderer_8h_source.html">Renderer.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab06f6ab1b62202cfda3c968f5326640e" name="ab06f6ab1b62202cfda3c968f5326640e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06f6ab1b62202cfda3c968f5326640e">&#9670;&#160;</a></span>Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chroma::Renderer::Renderer </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Window *</td>          <td class="paramname"><span class="paramname"><em>window</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Uint32</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a371ef8c6c1b8e6ca85b9a257bb5c2c98" name="a371ef8c6c1b8e6ca85b9a257bb5c2c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371ef8c6c1b8e6ca85b9a257bb5c2c98">&#9670;&#160;</a></span>~Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chroma::Renderer::~Renderer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab434d39bd88b9a2e689be5c765713b16" name="ab434d39bd88b9a2e689be5c765713b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab434d39bd88b9a2e689be5c765713b16">&#9670;&#160;</a></span>GetCreationStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool chroma::Renderer::GetCreationStatus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_renderer_8h_source.html#l00027">27</a> of file <a class="el" href="_renderer_8h_source.html">Renderer.h</a>.</p>
+
+</div>
+</div>
+<a id="abbc7c7de0c119c4b666c9140798b388b" name="abbc7c7de0c119c4b666c9140798b388b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc7c7de0c119c4b666c9140798b388b">&#9670;&#160;</a></span>GetRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Renderer * chroma::Renderer::GetRenderer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_renderer_8h_source.html#l00026">26</a> of file <a class="el" href="_renderer_8h_source.html">Renderer.h</a>.</p>
+
+</div>
+</div>
+<a id="a56e42afac9d7b31bbd88aa17ae194830" name="a56e42afac9d7b31bbd88aa17ae194830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e42afac9d7b31bbd88aa17ae194830">&#9670;&#160;</a></span>Prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Renderer::Prepare </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cleans the Screen and Prepares everything before the next Frame is being drawn. </p>
+
+</div>
+</div>
+<a id="a989165cd1940ecc6a2b1d7019f37b185" name="a989165cd1940ecc6a2b1d7019f37b185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989165cd1940ecc6a2b1d7019f37b185">&#9670;&#160;</a></span>Present()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Renderer::Present </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws the final Frame. Gets called AFTER all the Render Functions. </p>
+
+</div>
+</div>
+<a id="afadef3d03f33ebb15860e410ec990829" name="afadef3d03f33ebb15860e410ec990829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afadef3d03f33ebb15860e410ec990829">&#9670;&#160;</a></span>RenderSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Renderer::RenderSurface </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *</td>          <td class="paramname"><span class="paramname"><em>surface</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect</td>          <td class="paramname"><span class="paramname"><em>srcRect</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Rect</td>          <td class="paramname"><span class="paramname"><em>dstRect</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the given Surface into a Texture before rendering it with the given Size and Position. </p>
+
+</div>
+</div>
+<a id="adf3288f837ce521b2df7ad0e0190daac" name="adf3288f837ce521b2df7ad0e0190daac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3288f837ce521b2df7ad0e0190daac">&#9670;&#160;</a></span>RenderTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::Renderer::RenderTexture </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Texture *</td>          <td class="paramname"><span class="paramname"><em>texture</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_Rect *</td>          <td class="paramname"><span class="paramname"><em>srcRect</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SDL_Rect *</td>          <td class="paramname"><span class="paramname"><em>dstRect</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Render a Texture with the given Size and Position. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_renderer_8h_source.html">Renderer.h</a></li>
 </ul>
@@ -130,7 +322,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetCreationStatus</b>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>chroma</b></li><li class="navelem"><a class="el" href="classchroma_1_1_renderer.html">Renderer</a></li>
+    <li class="navelem"><a class="el" href="namespacechroma.html">chroma</a></li><li class="navelem"><a class="el" href="classchroma_1_1_renderer.html">Renderer</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

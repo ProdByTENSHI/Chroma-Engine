@@ -1,31 +1,115 @@
 \doxysection{chroma\+::Renderer Class Reference}
 \hypertarget{classchroma_1_1_renderer}{}\label{classchroma_1_1_renderer}\index{chroma::Renderer@{chroma::Renderer}}
+
+
+{\ttfamily \#include $<$Renderer.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classchroma_1_1_renderer_ab06f6ab1b62202cfda3c968f5326640e}\label{classchroma_1_1_renderer_ab06f6ab1b62202cfda3c968f5326640e} 
-{\bfseries Renderer} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}window, Uint32 flags)
+\mbox{\hyperlink{classchroma_1_1_renderer_ab06f6ab1b62202cfda3c968f5326640e}{Renderer}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}window, Uint32 flags)
 \item 
-\Hypertarget{classchroma_1_1_renderer_a56e42afac9d7b31bbd88aa17ae194830}\label{classchroma_1_1_renderer_a56e42afac9d7b31bbd88aa17ae194830} 
-void {\bfseries Prepare} ()
+\mbox{\hyperlink{classchroma_1_1_renderer_a371ef8c6c1b8e6ca85b9a257bb5c2c98}{\texorpdfstring{$\sim$}{\string~}\+Renderer}} ()
 \item 
-\Hypertarget{classchroma_1_1_renderer_adf3288f837ce521b2df7ad0e0190daac}\label{classchroma_1_1_renderer_adf3288f837ce521b2df7ad0e0190daac} 
-void {\bfseries Render\+Texture} (SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}texture, const SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}src\+Rect, const SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}dst\+Rect)
+void \mbox{\hyperlink{classchroma_1_1_renderer_a56e42afac9d7b31bbd88aa17ae194830}{Prepare}} ()
+\begin{DoxyCompactList}\small\item\em Cleans the Screen and Prepares everything before the next Frame is being drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchroma_1_1_renderer_adf3288f837ce521b2df7ad0e0190daac}{Render\+Texture}} (SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}texture, const SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}src\+Rect, const SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}dst\+Rect)
+\begin{DoxyCompactList}\small\item\em Render a Texture with the given Size and Position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchroma_1_1_renderer_afadef3d03f33ebb15860e410ec990829}{Render\+Surface}} (SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}surface, SDL\+\_\+\+Rect src\+Rect, SDL\+\_\+\+Rect dst\+Rect)
+\begin{DoxyCompactList}\small\item\em Converts the given Surface into a Texture before rendering it with the given Size and Position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchroma_1_1_renderer_a989165cd1940ecc6a2b1d7019f37b185}{Present}} ()
+\begin{DoxyCompactList}\small\item\em Draws the final Frame. Gets called AFTER all the Render Functions. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classchroma_1_1_renderer_abbc7c7de0c119c4b666c9140798b388b}{Get\+Renderer}} ()
 \item 
-\Hypertarget{classchroma_1_1_renderer_afadef3d03f33ebb15860e410ec990829}\label{classchroma_1_1_renderer_afadef3d03f33ebb15860e410ec990829} 
-void {\bfseries Render\+Surface} (SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}surface, SDL\+\_\+\+Rect src\+Rect, SDL\+\_\+\+Rect dst\+Rect)
-\item 
-\Hypertarget{classchroma_1_1_renderer_a989165cd1940ecc6a2b1d7019f37b185}\label{classchroma_1_1_renderer_a989165cd1940ecc6a2b1d7019f37b185} 
-void {\bfseries Present} ()
-\item 
-\Hypertarget{classchroma_1_1_renderer_abbc7c7de0c119c4b666c9140798b388b}\label{classchroma_1_1_renderer_abbc7c7de0c119c4b666c9140798b388b} 
-SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries Get\+Renderer} ()
-\item 
-\Hypertarget{classchroma_1_1_renderer_ab434d39bd88b9a2e689be5c765713b16}\label{classchroma_1_1_renderer_ab434d39bd88b9a2e689be5c765713b16} 
-bool {\bfseries Get\+Creation\+Status} ()
+bool \mbox{\hyperlink{classchroma_1_1_renderer_ab434d39bd88b9a2e689be5c765713b16}{Get\+Creation\+Status}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_renderer_8h_source_l00007}{7}} of file \mbox{\hyperlink{_renderer_8h_source}{Renderer.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classchroma_1_1_renderer_ab06f6ab1b62202cfda3c968f5326640e}\label{classchroma_1_1_renderer_ab06f6ab1b62202cfda3c968f5326640e} 
+\index{chroma::Renderer@{chroma::Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{Renderer()}{Renderer()}}
+{\footnotesize\ttfamily chroma\+::\+Renderer\+::\+Renderer (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}}]{window,  }\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+\Hypertarget{classchroma_1_1_renderer_a371ef8c6c1b8e6ca85b9a257bb5c2c98}\label{classchroma_1_1_renderer_a371ef8c6c1b8e6ca85b9a257bb5c2c98} 
+\index{chroma::Renderer@{chroma::Renderer}!````~Renderer@{\texorpdfstring{$\sim$}{\string~}Renderer}}
+\index{````~Renderer@{\texorpdfstring{$\sim$}{\string~}Renderer}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Renderer()}{\string~Renderer()}}
+{\footnotesize\ttfamily chroma\+::\+Renderer\+::\texorpdfstring{$\sim$}{\string~}\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classchroma_1_1_renderer_ab434d39bd88b9a2e689be5c765713b16}\label{classchroma_1_1_renderer_ab434d39bd88b9a2e689be5c765713b16} 
+\index{chroma::Renderer@{chroma::Renderer}!GetCreationStatus@{GetCreationStatus}}
+\index{GetCreationStatus@{GetCreationStatus}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{GetCreationStatus()}{GetCreationStatus()}}
+{\footnotesize\ttfamily bool chroma\+::\+Renderer\+::\+Get\+Creation\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_renderer_8h_source_l00027}{27}} of file \mbox{\hyperlink{_renderer_8h_source}{Renderer.\+h}}.
+
+\Hypertarget{classchroma_1_1_renderer_abbc7c7de0c119c4b666c9140798b388b}\label{classchroma_1_1_renderer_abbc7c7de0c119c4b666c9140798b388b} 
+\index{chroma::Renderer@{chroma::Renderer}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} chroma\+::\+Renderer\+::\+Get\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_renderer_8h_source_l00026}{26}} of file \mbox{\hyperlink{_renderer_8h_source}{Renderer.\+h}}.
+
+\Hypertarget{classchroma_1_1_renderer_a56e42afac9d7b31bbd88aa17ae194830}\label{classchroma_1_1_renderer_a56e42afac9d7b31bbd88aa17ae194830} 
+\index{chroma::Renderer@{chroma::Renderer}!Prepare@{Prepare}}
+\index{Prepare@{Prepare}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{Prepare()}{Prepare()}}
+{\footnotesize\ttfamily void chroma\+::\+Renderer\+::\+Prepare (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans the Screen and Prepares everything before the next Frame is being drawn. 
+
+\Hypertarget{classchroma_1_1_renderer_a989165cd1940ecc6a2b1d7019f37b185}\label{classchroma_1_1_renderer_a989165cd1940ecc6a2b1d7019f37b185} 
+\index{chroma::Renderer@{chroma::Renderer}!Present@{Present}}
+\index{Present@{Present}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily void chroma\+::\+Renderer\+::\+Present (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the final Frame. Gets called AFTER all the Render Functions. 
+
+\Hypertarget{classchroma_1_1_renderer_afadef3d03f33ebb15860e410ec990829}\label{classchroma_1_1_renderer_afadef3d03f33ebb15860e410ec990829} 
+\index{chroma::Renderer@{chroma::Renderer}!RenderSurface@{RenderSurface}}
+\index{RenderSurface@{RenderSurface}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{RenderSurface()}{RenderSurface()}}
+{\footnotesize\ttfamily void chroma\+::\+Renderer\+::\+Render\+Surface (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}}]{surface,  }\item[{SDL\+\_\+\+Rect}]{src\+Rect,  }\item[{SDL\+\_\+\+Rect}]{dst\+Rect }\end{DoxyParamCaption})}
+
+
+
+Converts the given Surface into a Texture before rendering it with the given Size and Position. 
+
+\Hypertarget{classchroma_1_1_renderer_adf3288f837ce521b2df7ad0e0190daac}\label{classchroma_1_1_renderer_adf3288f837ce521b2df7ad0e0190daac} 
+\index{chroma::Renderer@{chroma::Renderer}!RenderTexture@{RenderTexture}}
+\index{RenderTexture@{RenderTexture}!chroma::Renderer@{chroma::Renderer}}
+\doxysubsubsection{\texorpdfstring{RenderTexture()}{RenderTexture()}}
+{\footnotesize\ttfamily void chroma\+::\+Renderer\+::\+Render\+Texture (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{texture,  }\item[{const SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{src\+Rect,  }\item[{const SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}}]{dst\+Rect }\end{DoxyParamCaption})}
+
+
+
+Render a Texture with the given Size and Position. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Renderer.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{_renderer_8h}{Renderer.\+h}}\end{DoxyCompactItemize}

@@ -8,11 +8,11 @@
 
 namespace chroma
 {
-	// Handles everything ECS System related
+	//! Handles everything ECS System related
 	class SystemManager
 	{
 	public:
-		// Puts a System into the Register and returns a Shared Pointer to it
+		//! Puts a System into the Register and returns a Shared Pointer to it
 		template <typename T> std::shared_ptr<T> RegisterSystem()
 		{
 			const char* _name = typeid(T).name();
@@ -25,7 +25,7 @@ namespace chroma
 			return _system;
 		}
 
-		// Sets the Signature of the given System
+		//! Sets the Signature of the given System
 		template <typename T> void SetSignature(Signature signature)
 		{
 			const char* _name = typeid(T).name();
@@ -35,7 +35,7 @@ namespace chroma
 			m_Signatures.insert(std::make_pair(_name, signature));
 		}
 
-		// Removes Entity from all Systems Entity m_Entities set
+		//! Removes Entity from all Systems Entity m_Entities set
 		void EntityDestroyed(Entity entity)
 		{
 			for (auto const& pair : m_Systems)
@@ -45,7 +45,7 @@ namespace chroma
 			}
 		}
 
-		// Removes the Entity from its old Systems and adds it into all Systems that have the same Signature
+		//! Removes the Entity from its old Systems and adds it into all Systems that have the same Signature
 		void EntitySignatureChange(Entity entity, Signature signature)
 		{
 			for (auto const& pair : m_Systems)
@@ -68,10 +68,10 @@ namespace chroma
 		}
 
 	private:
-		// A Map that holds all System Signatures by their String Pointer
+		//! A Map that holds all System Signatures by their String Pointer
 		std::unordered_map<const char*, Signature> m_Signatures;
 
-		// A Map that holds all Systems as Shared Pointers by their String Pointer
+		//! A Map that holds all Systems as Shared Pointers by their String Pointer
 		std::unordered_map <const char*, std::shared_ptr<System>> m_Systems;
 
 	};

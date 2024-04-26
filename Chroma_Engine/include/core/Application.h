@@ -10,19 +10,19 @@ namespace chroma
 	class Application
 	{
 	public:
-		// Before doing anything SDL Related the Application has to be created
+		//! Before doing anything SDL Related the Application has to be created
 		Application();
 
-		// Initializes Engine related Manager(Window, Renderer...)
+		//! Initializes Engine related Manager(Window, Renderer...)
 		void Init(Window* window, Renderer* renderer);
 
-		// Updates as often as possible - Variable Time Step
+		//! Updates as often as possible - Variable Time Step
 		void Update();
 
-		// Updates in fixed intervals. Use for Physics and Collision related Stuff - Fixed Time Step
+		//! Updates in fixed intervals. Use for Physics and Collision related Stuff - Fixed Time Step
 		void FixedUpdate();
 
-		// Renders the final Screen
+		//! Renders the final Screen
 		void Render();
 
 		// -- Getter

@@ -99,34 +99,30 @@ $(function(){initNavTree('_renderer_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Renderer.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_renderer_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>chroma</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacechroma.html">chroma</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
 <div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html">    7</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a>(SDL_Window* window, Uint32 flags);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_class" href="classchroma_1_1_renderer.html">~Renderer</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#ab06f6ab1b62202cfda3c968f5326640e">   10</a></span>        <a class="code hl_function" href="classchroma_1_1_renderer.html#ab06f6ab1b62202cfda3c968f5326640e">Renderer</a>(SDL_Window* window, Uint32 flags);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#a371ef8c6c1b8e6ca85b9a257bb5c2c98">   11</a></span>        <a class="code hl_function" href="classchroma_1_1_renderer.html#a371ef8c6c1b8e6ca85b9a257bb5c2c98">~Renderer</a>();</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="comment">// Cleans the Screen and Prepares everything before the next Frame is being drawn</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">void</span> Prepare();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#a56e42afac9d7b31bbd88aa17ae194830">   14</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_renderer.html#a56e42afac9d7b31bbd88aa17ae194830">Prepare</a>();</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">// Render a Texture with the given Size and Position</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> RenderTexture(SDL_Texture* texture, <span class="keyword">const</span> SDL_Rect* srcRect, <span class="keyword">const</span> SDL_Rect* dstRect);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#adf3288f837ce521b2df7ad0e0190daac">   17</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_renderer.html#adf3288f837ce521b2df7ad0e0190daac">RenderTexture</a>(SDL_Texture* texture, <span class="keyword">const</span> SDL_Rect* srcRect, <span class="keyword">const</span> SDL_Rect* dstRect);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">// Converts the given Surface into a Texture before rendering it with the given Size and Position</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> RenderSurface(SDL_Surface* surface, SDL_Rect srcRect, SDL_Rect dstRect);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#afadef3d03f33ebb15860e410ec990829">   20</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_renderer.html#afadef3d03f33ebb15860e410ec990829">RenderSurface</a>(SDL_Surface* surface, SDL_Rect srcRect, SDL_Rect dstRect);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// Draws the final Frame. Gets called AFTER all the Render Functions</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">void</span> Present();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#a989165cd1940ecc6a2b1d7019f37b185">   23</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_renderer.html#a989165cd1940ecc6a2b1d7019f37b185">Present</a>();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">// -- GETTER</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        SDL_Renderer* GetRenderer() { <span class="keywordflow">return</span> m_Renderer; }</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> GetCreationStatus() { <span class="keywordflow">return</span> m_CreationStatus; }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#abbc7c7de0c119c4b666c9140798b388b">   26</a></span>        SDL_Renderer* <a class="code hl_function" href="classchroma_1_1_renderer.html#abbc7c7de0c119c4b666c9140798b388b">GetRenderer</a>() { <span class="keywordflow">return</span> m_Renderer; }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classchroma_1_1_renderer.html#ab434d39bd88b9a2e689be5c765713b16">   27</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classchroma_1_1_renderer.html#ab434d39bd88b9a2e689be5c765713b16">GetCreationStatus</a>() { <span class="keywordflow">return</span> m_CreationStatus; }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        SDL_Renderer* m_Renderer;</div>
@@ -136,13 +132,22 @@ $(function(){initNavTree('_renderer_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    };</div>
 </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
-<div class="ttc" id="aclasschroma_1_1_renderer_html"><div class="ttname"><a href="classchroma_1_1_renderer.html">chroma::Renderer</a></div><div class="ttdef"><b>Definition</b> Renderer.h:8</div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html"><div class="ttname"><a href="classchroma_1_1_renderer.html">chroma::Renderer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">Renderer.h:8</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_a371ef8c6c1b8e6ca85b9a257bb5c2c98"><div class="ttname"><a href="classchroma_1_1_renderer.html#a371ef8c6c1b8e6ca85b9a257bb5c2c98">chroma::Renderer::~Renderer</a></div><div class="ttdeci">~Renderer()</div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_a56e42afac9d7b31bbd88aa17ae194830"><div class="ttname"><a href="classchroma_1_1_renderer.html#a56e42afac9d7b31bbd88aa17ae194830">chroma::Renderer::Prepare</a></div><div class="ttdeci">void Prepare()</div><div class="ttdoc">Cleans the Screen and Prepares everything before the next Frame is being drawn.</div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_a989165cd1940ecc6a2b1d7019f37b185"><div class="ttname"><a href="classchroma_1_1_renderer.html#a989165cd1940ecc6a2b1d7019f37b185">chroma::Renderer::Present</a></div><div class="ttdeci">void Present()</div><div class="ttdoc">Draws the final Frame. Gets called AFTER all the Render Functions.</div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_ab06f6ab1b62202cfda3c968f5326640e"><div class="ttname"><a href="classchroma_1_1_renderer.html#ab06f6ab1b62202cfda3c968f5326640e">chroma::Renderer::Renderer</a></div><div class="ttdeci">Renderer(SDL_Window *window, Uint32 flags)</div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_ab434d39bd88b9a2e689be5c765713b16"><div class="ttname"><a href="classchroma_1_1_renderer.html#ab434d39bd88b9a2e689be5c765713b16">chroma::Renderer::GetCreationStatus</a></div><div class="ttdeci">bool GetCreationStatus()</div><div class="ttdef"><b>Definition</b> <a href="#l00027">Renderer.h:27</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_abbc7c7de0c119c4b666c9140798b388b"><div class="ttname"><a href="classchroma_1_1_renderer.html#abbc7c7de0c119c4b666c9140798b388b">chroma::Renderer::GetRenderer</a></div><div class="ttdeci">SDL_Renderer * GetRenderer()</div><div class="ttdef"><b>Definition</b> <a href="#l00026">Renderer.h:26</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_adf3288f837ce521b2df7ad0e0190daac"><div class="ttname"><a href="classchroma_1_1_renderer.html#adf3288f837ce521b2df7ad0e0190daac">chroma::Renderer::RenderTexture</a></div><div class="ttdeci">void RenderTexture(SDL_Texture *texture, const SDL_Rect *srcRect, const SDL_Rect *dstRect)</div><div class="ttdoc">Render a Texture with the given Size and Position.</div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html_afadef3d03f33ebb15860e410ec990829"><div class="ttname"><a href="classchroma_1_1_renderer.html#afadef3d03f33ebb15860e410ec990829">chroma::Renderer::RenderSurface</a></div><div class="ttdeci">void RenderSurface(SDL_Surface *surface, SDL_Rect srcRect, SDL_Rect dstRect)</div><div class="ttdoc">Converts the given Surface into a Texture before rendering it with the given Size and Position.</div></div>
+<div class="ttc" id="anamespacechroma_html"><div class="ttname"><a href="namespacechroma.html">chroma</a></div><div class="ttdef"><b>Definition</b> <a href="_application_8h_source.html#l00008">Application.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_27636f4d4b2113f82b513d65146ca471.html">rendering</a></li><li class="navelem"><b>Renderer.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_27636f4d4b2113f82b513d65146ca471.html">rendering</a></li><li class="navelem"><a class="el" href="_renderer_8h.html">Renderer.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

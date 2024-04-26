@@ -13,12 +13,19 @@ namespace chroma
 
 		~Sprite();
 
-		// Loads a Texture from the ResourceManager
+		//! Loads a Texture from the ResourceManager
 		void LoadTexture(const std::string& path);
 
+		//! Returns the current Texture
 		SDL_Texture* GetTexture()
 		{
 			return m_Texture;
+		}
+
+		//! Returns the Path of the current Texture
+		const std::string& GetPath()
+		{
+			return m_Path;
 		}
 
 	private:

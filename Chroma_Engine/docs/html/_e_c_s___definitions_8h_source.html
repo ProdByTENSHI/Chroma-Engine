@@ -99,41 +99,45 @@ $(function(){initNavTree('_e_c_s___definitions_8h_source.html',''); initResizabl
   <div class="headertitle"><div class="title">ECS_Definitions.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_e_c_s___definitions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;set&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;bitset&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>chroma</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacechroma.html">chroma</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">// -- Entity</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">using </span>Entity = std::uint32_t;               <span class="comment">// An Entity is just an ID</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">const</span> Entity MAX_ENTITIES = 5000;           <span class="comment">// Maximum Entities per Scene -&gt; Override this Value to your needs</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">    9</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> = std::uint32_t;               </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacechroma.html#a2bee0e0117d3c45066e45a4cb605f9f5">   10</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">Entity</a> <a class="code hl_variable" href="namespacechroma.html#a2bee0e0117d3c45066e45a4cb605f9f5">MAX_ENTITIES</a> = 5000;           </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// -- Component</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">using </span>ComponentType = std::uint8_t;         <span class="comment">// Each Component has a unique &#39;ID&#39; which gets used to represent a Bit in the Signature Bitfield</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> ComponentType MAX_COMPONENTS = 32;    <span class="comment">// Max Components per Entity</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacechroma.html#a3e18709c97d09ed4fd84b7c38f696cc7">   13</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacechroma.html#a3e18709c97d09ed4fd84b7c38f696cc7">ComponentType</a> = std::uint8_t;         </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacechroma.html#a7f7a93779dcf8c6df30217ef14962dec">   14</a></span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacechroma.html#a3e18709c97d09ed4fd84b7c38f696cc7">ComponentType</a> <a class="code hl_variable" href="namespacechroma.html#a7f7a93779dcf8c6df30217ef14962dec">MAX_COMPONENTS</a> = 32;    </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// -- Signature</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// To know what Components an Entity has and what Components a certain System cares about a Bitfield is used</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">using </span>Signature = std::bitset&lt;MAX_COMPONENTS&gt;;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacechroma.html#a08c2a4a0b6ea1fa8026ee06bb49245f8">   18</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespacechroma.html#a08c2a4a0b6ea1fa8026ee06bb49245f8">Signature</a> = std::bitset&lt;MAX_COMPONENTS&gt;;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">// A system is any functionality that iterates upon a list of entities with a certain signature of components</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Base class for all Systems</span></div>
 <div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structchroma_1_1_system.html">   22</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structchroma_1_1_system.html">System</a></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        std::set&lt;Entity&gt; m_Entities;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structchroma_1_1_system.html#a005ebcdf9c233f9f3b38dfdee2cb13c0">   24</a></span>        std::set&lt;Entity&gt; <a class="code hl_variable" href="structchroma_1_1_system.html#a005ebcdf9c233f9f3b38dfdee2cb13c0">m_Entities</a>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    };</div>
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
-<div class="ttc" id="astructchroma_1_1_system_html"><div class="ttname"><a href="structchroma_1_1_system.html">chroma::System</a></div><div class="ttdef"><b>Definition</b> ECS_Definitions.h:23</div></div>
+<div class="ttc" id="anamespacechroma_html"><div class="ttname"><a href="namespacechroma.html">chroma</a></div><div class="ttdef"><b>Definition</b> <a href="_application_8h_source.html#l00008">Application.h:9</a></div></div>
+<div class="ttc" id="anamespacechroma_html_a08c2a4a0b6ea1fa8026ee06bb49245f8"><div class="ttname"><a href="namespacechroma.html#a08c2a4a0b6ea1fa8026ee06bb49245f8">chroma::Signature</a></div><div class="ttdeci">std::bitset&lt; MAX_COMPONENTS &gt; Signature</div><div class="ttdoc">Max Components per Entity.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ECS_Definitions.h:18</a></div></div>
+<div class="ttc" id="anamespacechroma_html_a2bee0e0117d3c45066e45a4cb605f9f5"><div class="ttname"><a href="namespacechroma.html#a2bee0e0117d3c45066e45a4cb605f9f5">chroma::MAX_ENTITIES</a></div><div class="ttdeci">const Entity MAX_ENTITIES</div><div class="ttdoc">An Entity is just an ID.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">ECS_Definitions.h:10</a></div></div>
+<div class="ttc" id="anamespacechroma_html_a3e18709c97d09ed4fd84b7c38f696cc7"><div class="ttname"><a href="namespacechroma.html#a3e18709c97d09ed4fd84b7c38f696cc7">chroma::ComponentType</a></div><div class="ttdeci">std::uint8_t ComponentType</div><div class="ttdoc">Maximum Entities per Scene -&gt; Override this Value to your needs.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">ECS_Definitions.h:13</a></div></div>
+<div class="ttc" id="anamespacechroma_html_a7f7a93779dcf8c6df30217ef14962dec"><div class="ttname"><a href="namespacechroma.html#a7f7a93779dcf8c6df30217ef14962dec">chroma::MAX_COMPONENTS</a></div><div class="ttdeci">const ComponentType MAX_COMPONENTS</div><div class="ttdoc">Each Component has a unique 'ID' which gets used to represent a Bit in the Signature Bitfield.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">ECS_Definitions.h:14</a></div></div>
+<div class="ttc" id="anamespacechroma_html_aa415016bd5ef3af285cb2830675dd7d4"><div class="ttname"><a href="namespacechroma.html#aa415016bd5ef3af285cb2830675dd7d4">chroma::Entity</a></div><div class="ttdeci">std::uint32_t Entity</div><div class="ttdef"><b>Definition</b> <a href="#l00009">ECS_Definitions.h:9</a></div></div>
+<div class="ttc" id="astructchroma_1_1_system_html"><div class="ttname"><a href="structchroma_1_1_system.html">chroma::System</a></div><div class="ttdef"><b>Definition</b> <a href="#l00022">ECS_Definitions.h:23</a></div></div>
+<div class="ttc" id="astructchroma_1_1_system_html_a005ebcdf9c233f9f3b38dfdee2cb13c0"><div class="ttname"><a href="structchroma_1_1_system.html#a005ebcdf9c233f9f3b38dfdee2cb13c0">chroma::System::m_Entities</a></div><div class="ttdeci">std::set&lt; Entity &gt; m_Entities</div><div class="ttdef"><b>Definition</b> <a href="#l00024">ECS_Definitions.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_03b8e24d0c8528d6b83b13523eccafd1.html">ecs</a></li><li class="navelem"><b>ECS_Definitions.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_03b8e24d0c8528d6b83b13523eccafd1.html">ecs</a></li><li class="navelem"><a class="el" href="_e_c_s___definitions_8h.html">ECS_Definitions.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

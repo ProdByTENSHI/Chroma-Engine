@@ -1,43 +1,157 @@
 \doxysection{chroma\+::Input\+Manager Class Reference}
 \hypertarget{classchroma_1_1_input_manager}{}\label{classchroma_1_1_input_manager}\index{chroma::InputManager@{chroma::InputManager}}
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classchroma_1_1_input_manager_ae1fcc5019703e4a92920f77355fd0fdc}\label{classchroma_1_1_input_manager_ae1fcc5019703e4a92920f77355fd0fdc} 
-void {\bfseries Update} ()
-\item 
-\Hypertarget{classchroma_1_1_input_manager_a275229a5e78d71934f60ef15a532c1e3}\label{classchroma_1_1_input_manager_a275229a5e78d71934f60ef15a532c1e3} 
-Mouse\+Button\+Type {\bfseries Get\+Mouse\+Button\+By\+Event} (SDL\+\_\+\+Mouse\+Button\+Event e)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classchroma_1_1_input_manager_ae1fcc5019703e4a92920f77355fd0fdc}{Update}} ()
+\begin{DoxyCompactList}\small\item\em -- Gets called every Update Tick \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacechroma_a0a8f3080dd58d28fb8e6bf5c567a9e00}{Mouse\+Button\+Type}} \mbox{\hyperlink{classchroma_1_1_input_manager_a275229a5e78d71934f60ef15a532c1e3}{Get\+Mouse\+Button\+By\+Event}} (SDL\+\_\+\+Mouse\+Button\+Event e)
+\begin{DoxyCompactList}\small\item\em Converts a Mouse Button \doxylink{classchroma_1_1_event}{Event} from SDL into a Mouse\+Button\+Type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classchroma_1_1_input_manager_a53e3e2ff60e58123415a278d89065128}\label{classchroma_1_1_input_manager_a53e3e2ff60e58123415a278d89065128} 
-static \mbox{\hyperlink{classchroma_1_1_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Instance} ()
+static \mbox{\hyperlink{classchroma_1_1_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classchroma_1_1_input_manager_a53e3e2ff60e58123415a278d89065128}{Get\+Instance}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classchroma_1_1_input_manager_ac59e229421e9cbdf75f364d6ab82ca4a}\label{classchroma_1_1_input_manager_ac59e229421e9cbdf75f364d6ab82ca4a} 
-\mbox{\hyperlink{classchroma_1_1_event}{Event}} {\bfseries On\+Quit}
+\mbox{\hyperlink{classchroma_1_1_event}{Event}} \mbox{\hyperlink{classchroma_1_1_input_manager_ac59e229421e9cbdf75f364d6ab82ca4a}{On\+Quit}}
 \item 
+\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ SDL\+\_\+\+Keycode $>$ \mbox{\hyperlink{classchroma_1_1_input_manager_a06cc849bfe7fe0cde49309c5fabbabb2}{On\+Key\+Down}}
+\begin{DoxyCompactList}\small\item\em Gets called when the Player requests a \doxylink{classchroma_1_1_application}{Application} Exit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ SDL\+\_\+\+Keycode $>$ \mbox{\hyperlink{classchroma_1_1_input_manager_ac8dae9a68cf7b677a913e414ddcdb1d0}{On\+Key\+Up}}
+\begin{DoxyCompactList}\small\item\em Dispatches when a Key is pressed with the Key\+Code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ \mbox{\hyperlink{namespacechroma_a0a8f3080dd58d28fb8e6bf5c567a9e00}{Mouse\+Button\+Type}} $>$ \mbox{\hyperlink{classchroma_1_1_input_manager_a87ca0e331dcf53f9bc51691a31e6e7df}{On\+Mouse\+Down}}
+\begin{DoxyCompactList}\small\item\em Dispatches when a Key is released with the Key\+Code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ \mbox{\hyperlink{namespacechroma_a0a8f3080dd58d28fb8e6bf5c567a9e00}{Mouse\+Button\+Type}} $>$ \mbox{\hyperlink{classchroma_1_1_input_manager_a46aca7c376ba213869590c70a0fb2362}{On\+Mouse\+Up}}
+\begin{DoxyCompactList}\small\item\em Dispatches when a Mouse Button is clicked with the Button Type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ int, int $>$ \mbox{\hyperlink{classchroma_1_1_input_manager_a8793fdcc3bc1e12e43fd1bd912a96aeb}{On\+Mouse\+Move}}
+\begin{DoxyCompactList}\small\item\em Dispatches when a Mouse Button is released with the Button Type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8h_source_l00016}{16}} of file \mbox{\hyperlink{_input_manager_8h_source}{Input\+Manager.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classchroma_1_1_input_manager_a53e3e2ff60e58123415a278d89065128}\label{classchroma_1_1_input_manager_a53e3e2ff60e58123415a278d89065128} 
+\index{chroma::InputManager@{chroma::InputManager}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classchroma_1_1_input_manager}{Input\+Manager}} \texorpdfstring{$\ast$}{*} chroma\+::\+Input\+Manager\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classchroma_1_1_input_manager_a275229a5e78d71934f60ef15a532c1e3}\label{classchroma_1_1_input_manager_a275229a5e78d71934f60ef15a532c1e3} 
+\index{chroma::InputManager@{chroma::InputManager}!GetMouseButtonByEvent@{GetMouseButtonByEvent}}
+\index{GetMouseButtonByEvent@{GetMouseButtonByEvent}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{GetMouseButtonByEvent()}{GetMouseButtonByEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacechroma_a0a8f3080dd58d28fb8e6bf5c567a9e00}{Mouse\+Button\+Type}} chroma\+::\+Input\+Manager\+::\+Get\+Mouse\+Button\+By\+Event (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Mouse\+Button\+Event}]{e }\end{DoxyParamCaption})}
+
+
+
+Converts a Mouse Button \doxylink{classchroma_1_1_event}{Event} from SDL into a Mouse\+Button\+Type. 
+
+\Hypertarget{classchroma_1_1_input_manager_ae1fcc5019703e4a92920f77355fd0fdc}\label{classchroma_1_1_input_manager_ae1fcc5019703e4a92920f77355fd0fdc} 
+\index{chroma::InputManager@{chroma::InputManager}!Update@{Update}}
+\index{Update@{Update}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void chroma\+::\+Input\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+-- Gets called every Update Tick 
+
+
+
+\doxysubsection{Member Data Documentation}
 \Hypertarget{classchroma_1_1_input_manager_a06cc849bfe7fe0cde49309c5fabbabb2}\label{classchroma_1_1_input_manager_a06cc849bfe7fe0cde49309c5fabbabb2} 
-\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ SDL\+\_\+\+Keycode $>$ {\bfseries On\+Key\+Down}
-\item 
+\index{chroma::InputManager@{chroma::InputManager}!OnKeyDown@{OnKeyDown}}
+\index{OnKeyDown@{OnKeyDown}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{OnKeyDown}{OnKeyDown}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$SDL\+\_\+\+Keycode$>$ chroma\+::\+Input\+Manager\+::\+On\+Key\+Down}
+
+
+
+Gets called when the Player requests a \doxylink{classchroma_1_1_application}{Application} Exit. 
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8h_source_l00031}{31}} of file \mbox{\hyperlink{_input_manager_8h_source}{Input\+Manager.\+h}}.
+
 \Hypertarget{classchroma_1_1_input_manager_ac8dae9a68cf7b677a913e414ddcdb1d0}\label{classchroma_1_1_input_manager_ac8dae9a68cf7b677a913e414ddcdb1d0} 
-\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ SDL\+\_\+\+Keycode $>$ {\bfseries On\+Key\+Up}
-\item 
+\index{chroma::InputManager@{chroma::InputManager}!OnKeyUp@{OnKeyUp}}
+\index{OnKeyUp@{OnKeyUp}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{OnKeyUp}{OnKeyUp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$SDL\+\_\+\+Keycode$>$ chroma\+::\+Input\+Manager\+::\+On\+Key\+Up}
+
+
+
+Dispatches when a Key is pressed with the Key\+Code. 
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8h_source_l00032}{32}} of file \mbox{\hyperlink{_input_manager_8h_source}{Input\+Manager.\+h}}.
+
 \Hypertarget{classchroma_1_1_input_manager_a87ca0e331dcf53f9bc51691a31e6e7df}\label{classchroma_1_1_input_manager_a87ca0e331dcf53f9bc51691a31e6e7df} 
-\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ Mouse\+Button\+Type $>$ {\bfseries On\+Mouse\+Down}
-\item 
-\Hypertarget{classchroma_1_1_input_manager_a46aca7c376ba213869590c70a0fb2362}\label{classchroma_1_1_input_manager_a46aca7c376ba213869590c70a0fb2362} 
-\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ Mouse\+Button\+Type $>$ {\bfseries On\+Mouse\+Up}
-\item 
+\index{chroma::InputManager@{chroma::InputManager}!OnMouseDown@{OnMouseDown}}
+\index{OnMouseDown@{OnMouseDown}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{OnMouseDown}{OnMouseDown}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$\mbox{\hyperlink{namespacechroma_a0a8f3080dd58d28fb8e6bf5c567a9e00}{Mouse\+Button\+Type}}$>$ chroma\+::\+Input\+Manager\+::\+On\+Mouse\+Down}
+
+
+
+Dispatches when a Key is released with the Key\+Code. 
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8h_source_l00035}{35}} of file \mbox{\hyperlink{_input_manager_8h_source}{Input\+Manager.\+h}}.
+
 \Hypertarget{classchroma_1_1_input_manager_a8793fdcc3bc1e12e43fd1bd912a96aeb}\label{classchroma_1_1_input_manager_a8793fdcc3bc1e12e43fd1bd912a96aeb} 
-\mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$ int, int $>$ {\bfseries On\+Mouse\+Move}
-\end{DoxyCompactItemize}
+\index{chroma::InputManager@{chroma::InputManager}!OnMouseMove@{OnMouseMove}}
+\index{OnMouseMove@{OnMouseMove}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{OnMouseMove}{OnMouseMove}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$int, int$>$ chroma\+::\+Input\+Manager\+::\+On\+Mouse\+Move}
+
+
+
+Dispatches when a Mouse Button is released with the Button Type. 
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8h_source_l00037}{37}} of file \mbox{\hyperlink{_input_manager_8h_source}{Input\+Manager.\+h}}.
+
+\Hypertarget{classchroma_1_1_input_manager_a46aca7c376ba213869590c70a0fb2362}\label{classchroma_1_1_input_manager_a46aca7c376ba213869590c70a0fb2362} 
+\index{chroma::InputManager@{chroma::InputManager}!OnMouseUp@{OnMouseUp}}
+\index{OnMouseUp@{OnMouseUp}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{OnMouseUp}{OnMouseUp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchroma_1_1_event}{Event}}$<$\mbox{\hyperlink{namespacechroma_a0a8f3080dd58d28fb8e6bf5c567a9e00}{Mouse\+Button\+Type}}$>$ chroma\+::\+Input\+Manager\+::\+On\+Mouse\+Up}
+
+
+
+Dispatches when a Mouse Button is clicked with the Button Type. 
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8h_source_l00036}{36}} of file \mbox{\hyperlink{_input_manager_8h_source}{Input\+Manager.\+h}}.
+
+\Hypertarget{classchroma_1_1_input_manager_ac59e229421e9cbdf75f364d6ab82ca4a}\label{classchroma_1_1_input_manager_ac59e229421e9cbdf75f364d6ab82ca4a} 
+\index{chroma::InputManager@{chroma::InputManager}!OnQuit@{OnQuit}}
+\index{OnQuit@{OnQuit}!chroma::InputManager@{chroma::InputManager}}
+\doxysubsubsection{\texorpdfstring{OnQuit}{OnQuit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchroma_1_1_event}{Event}} chroma\+::\+Input\+Manager\+::\+On\+Quit}
+
+
+
+Definition at line \mbox{\hyperlink{_input_manager_8h_source_l00028}{28}} of file \mbox{\hyperlink{_input_manager_8h_source}{Input\+Manager.\+h}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Input\+Manager.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{_input_manager_8h}{Input\+Manager.\+h}}\end{DoxyCompactItemize}

@@ -98,31 +98,205 @@ $(function(){initNavTree('classchroma_1_1_event.html',''); initResizable(); });
   <div class="headertitle"><div class="title">chroma::Event&lt; Args &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_event_system_8h_source.html">EventSystem.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a930fe3222021ff8307976493d3ea3112" id="r_a930fe3222021ff8307976493d3ea3112"><td class="memItemLeft" align="right" valign="top"><a id="a930fe3222021ff8307976493d3ea3112" name="a930fe3222021ff8307976493d3ea3112"></a>
-typedef <a class="el" href="classchroma_1_1_event_handler.html">EventHandler</a>&lt; Args... &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>eventHandlerType</b></td></tr>
+<tr class="memitem:a930fe3222021ff8307976493d3ea3112" id="r_a930fe3222021ff8307976493d3ea3112"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classchroma_1_1_event_handler.html">EventHandler</a>&lt; Args... &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a></td></tr>
 <tr class="separator:a930fe3222021ff8307976493d3ea3112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2188f824f955b8060d3cd0603e8562f0" id="r_a2188f824f955b8060d3cd0603e8562f0"><td class="memItemLeft" align="right" valign="top"><a id="a2188f824f955b8060d3cd0603e8562f0" name="a2188f824f955b8060d3cd0603e8562f0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Subscribe</b> (const <a class="el" href="classchroma_1_1_event_handler.html">eventHandlerType</a> &amp;subscriber)</td></tr>
+<tr class="memitem:a2188f824f955b8060d3cd0603e8562f0" id="r_a2188f824f955b8060d3cd0603e8562f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2188f824f955b8060d3cd0603e8562f0">Subscribe</a> (const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;subscriber)</td></tr>
+<tr class="memdesc:a2188f824f955b8060d3cd0603e8562f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Subscriber will get notified and invoke its function when the <a class="el" href="classchroma_1_1_event.html">Event</a> is dispatched.  <br /></td></tr>
 <tr class="separator:a2188f824f955b8060d3cd0603e8562f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3519425f6638d971412b591a4e1d6c7" id="r_ae3519425f6638d971412b591a4e1d6c7"><td class="memItemLeft" align="right" valign="top"><a id="ae3519425f6638d971412b591a4e1d6c7" name="ae3519425f6638d971412b591a4e1d6c7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Unsubscribe</b> (const <a class="el" href="classchroma_1_1_event_handler.html">eventHandlerType</a> &amp;subscriber)</td></tr>
+<tr class="memitem:ae3519425f6638d971412b591a4e1d6c7" id="r_ae3519425f6638d971412b591a4e1d6c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3519425f6638d971412b591a4e1d6c7">Unsubscribe</a> (const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;subscriber)</td></tr>
+<tr class="memdesc:ae3519425f6638d971412b591a4e1d6c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Subscriber will no longer get notified when the <a class="el" href="classchroma_1_1_event.html">Event</a> is dispatched.  <br /></td></tr>
 <tr class="separator:ae3519425f6638d971412b591a4e1d6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8e7507dcab069bc7a4e56d0ae5c7900" id="r_aa8e7507dcab069bc7a4e56d0ae5c7900"><td class="memItemLeft" align="right" valign="top"><a id="aa8e7507dcab069bc7a4e56d0ae5c7900" name="aa8e7507dcab069bc7a4e56d0ae5c7900"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispatch</b> (Args... params)</td></tr>
+<tr class="memitem:aa8e7507dcab069bc7a4e56d0ae5c7900" id="r_aa8e7507dcab069bc7a4e56d0ae5c7900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8e7507dcab069bc7a4e56d0ae5c7900">Dispatch</a> (Args... params)</td></tr>
+<tr class="memdesc:aa8e7507dcab069bc7a4e56d0ae5c7900"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies every <a class="el" href="classchroma_1_1_event.html">Event</a> Handler that this <a class="el" href="classchroma_1_1_event.html">Event</a> was triggered with the given Arguments.  <br /></td></tr>
 <tr class="separator:aa8e7507dcab069bc7a4e56d0ae5c7900"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af12eb3faaeef021badddc00acead5f00" id="r_af12eb3faaeef021badddc00acead5f00"><td class="memItemLeft" align="right" valign="top"><a id="af12eb3faaeef021badddc00acead5f00" name="af12eb3faaeef021badddc00acead5f00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="classchroma_1_1_event_handler.html">eventHandlerType</a> &amp;other)</td></tr>
+<tr class="memitem:af12eb3faaeef021badddc00acead5f00" id="r_af12eb3faaeef021badddc00acead5f00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af12eb3faaeef021badddc00acead5f00">operator+=</a> (const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;other)</td></tr>
 <tr class="separator:af12eb3faaeef021badddc00acead5f00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb1340b33cbd6baaf21d0e4d5330c19" id="r_a9bb1340b33cbd6baaf21d0e4d5330c19"><td class="memItemLeft" align="right" valign="top"><a id="a9bb1340b33cbd6baaf21d0e4d5330c19" name="a9bb1340b33cbd6baaf21d0e4d5330c19"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>operator-=</b> (const <a class="el" href="classchroma_1_1_event_handler.html">eventHandlerType</a> &amp;other)</td></tr>
+<tr class="memitem:a9bb1340b33cbd6baaf21d0e4d5330c19" id="r_a9bb1340b33cbd6baaf21d0e4d5330c19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bb1340b33cbd6baaf21d0e4d5330c19">operator-=</a> (const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;other)</td></tr>
 <tr class="separator:a9bb1340b33cbd6baaf21d0e4d5330c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename... Args&gt;<br />
+class chroma::Event&lt; Args &gt;</div>
+<p class="definition">Definition at line <a class="el" href="_event_system_8h_source.html#l00056">56</a> of file <a class="el" href="_event_system_8h_source.html">EventSystem.h</a>.</p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a930fe3222021ff8307976493d3ea3112" name="a930fe3222021ff8307976493d3ea3112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a930fe3222021ff8307976493d3ea3112">&#9670;&#160;</a></span>eventHandlerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classchroma_1_1_event_handler.html">EventHandler</a>&lt;Args...&gt; <a class="el" href="classchroma_1_1_event.html">chroma::Event</a>&lt; Args &gt;::eventHandlerType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_system_8h_source.html#l00059">59</a> of file <a class="el" href="_event_system_8h_source.html">EventSystem.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa8e7507dcab069bc7a4e56d0ae5c7900" name="aa8e7507dcab069bc7a4e56d0ae5c7900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e7507dcab069bc7a4e56d0ae5c7900">&#9670;&#160;</a></span>Dispatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classchroma_1_1_event.html">chroma::Event</a>&lt; Args &gt;::Dispatch </td>
+          <td>(</td>
+          <td class="paramtype">Args...</td>          <td class="paramname"><span class="paramname"><em>params</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifies every <a class="el" href="classchroma_1_1_event.html">Event</a> Handler that this <a class="el" href="classchroma_1_1_event.html">Event</a> was triggered with the given Arguments. </p>
+
+<p class="definition">Definition at line <a class="el" href="_event_system_8h_source.html#l00076">76</a> of file <a class="el" href="_event_system_8h_source.html">EventSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="af12eb3faaeef021badddc00acead5f00" name="af12eb3faaeef021badddc00acead5f00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af12eb3faaeef021badddc00acead5f00">&#9670;&#160;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classchroma_1_1_event.html">chroma::Event</a>&lt; Args &gt;::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_system_8h_source.html#l00085">85</a> of file <a class="el" href="_event_system_8h_source.html">EventSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a9bb1340b33cbd6baaf21d0e4d5330c19" name="a9bb1340b33cbd6baaf21d0e4d5330c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb1340b33cbd6baaf21d0e4d5330c19">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classchroma_1_1_event.html">chroma::Event</a>&lt; Args &gt;::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_system_8h_source.html#l00090">90</a> of file <a class="el" href="_event_system_8h_source.html">EventSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="a2188f824f955b8060d3cd0603e8562f0" name="a2188f824f955b8060d3cd0603e8562f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2188f824f955b8060d3cd0603e8562f0">&#9670;&#160;</a></span>Subscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classchroma_1_1_event.html">chroma::Event</a>&lt; Args &gt;::Subscribe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>subscriber</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Subscriber will get notified and invoke its function when the <a class="el" href="classchroma_1_1_event.html">Event</a> is dispatched. </p>
+
+<p class="definition">Definition at line <a class="el" href="_event_system_8h_source.html#l00062">62</a> of file <a class="el" href="_event_system_8h_source.html">EventSystem.h</a>.</p>
+
+</div>
+</div>
+<a id="ae3519425f6638d971412b591a4e1d6c7" name="ae3519425f6638d971412b591a4e1d6c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3519425f6638d971412b591a4e1d6c7">&#9670;&#160;</a></span>Unsubscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classchroma_1_1_event.html">chroma::Event</a>&lt; Args &gt;::Unsubscribe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a930fe3222021ff8307976493d3ea3112">eventHandlerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>subscriber</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The Subscriber will no longer get notified when the <a class="el" href="classchroma_1_1_event.html">Event</a> is dispatched. </p>
+
+<p class="definition">Definition at line <a class="el" href="_event_system_8h_source.html#l00068">68</a> of file <a class="el" href="_event_system_8h_source.html">EventSystem.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_event_system_8h_source.html">EventSystem.h</a></li>
 </ul>
@@ -131,7 +305,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator-=</b> (const
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>chroma</b></li><li class="navelem"><a class="el" href="classchroma_1_1_event.html">Event</a></li>
+    <li class="navelem"><a class="el" href="namespacechroma.html">chroma</a></li><li class="navelem"><a class="el" href="classchroma_1_1_event.html">Event</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -22,7 +22,7 @@ namespace chroma
 	template <typename T> class ComponentArray : public IComponentArray
 	{
 	public:
-		// Inserts a Component at Entity's Index and Update Maps
+		//! Inserts a Component at Entity's Index and Update Maps
 		void Insert(Entity entity, T component)
 		{
 			assert(m_EntityToIndex.find(entity) == m_EntityToIndex.end() && "Entity ID not valid!");
@@ -36,7 +36,7 @@ namespace chroma
 			++m_ValidEntries;
 		}
 
-		// Removes the Component and the Entity
+		//! Removes the Component and the Entity
 		void Remove(Entity entity)
 		{
 			assert(m_EntityToIndex.find(entity) != m_EntityToIndex.end() && "Entity ID not valid!");
@@ -60,7 +60,7 @@ namespace chroma
 			--m_ValidEntries;
 		}
 
-		// Returns a Reference to the associated Component of the given Entity
+		//! Returns a Reference to the associated Component of the given Entity
 		T& GetData(Entity entity)
 		{
 			assert(m_EntityToIndex.find(entity) != m_EntityToIndex.end() && "Entity ID not valid!");
@@ -68,7 +68,7 @@ namespace chroma
 			return m_ComponentArray[m_EntityToIndex[entity]];
 		}
 
-
+		//! Removes the Component from the Component Array when the Entity is destroyed
 		void EntityDestroyed(Entity entity) override
 		{
 			if (m_EntityToIndex.find(entity) != m_EntityToIndex.end())
@@ -76,17 +76,17 @@ namespace chroma
 		}
 
 	private:
-		// A packed array that holds all Components of this type
-		// Each Entity has a unique Spot in the Compnent Array
+		//! A packed array that holds all Components of this type
+		//! Each Entity has a unique Spot in the Compnent Array
 		std::array<T, MAX_ENTITIES> m_ComponentArray;
 
-		// Unordered Map that returns the index into the m_ComponentArray by the Entity(ID)
+		//! Unordered Map that returns the index into the m_ComponentArray by the Entity(ID)
 		std::unordered_map<Entity, size_t> m_EntityToIndex;
 
-		// An Unordered Map that returns the Entity by the index of the m_ComponentArray
+		//! An Unordered Map that returns the Entity by the index of the m_ComponentArray
 		std::unordered_map<size_t, Entity> m_IndexToEntity;
 
-		// Number of Valid Entries in the m_ComponentArray
+		//! Number of Valid Entries in the m_ComponentArray
 		size_t m_ValidEntries = 0;
 	};
 
@@ -94,7 +94,7 @@ namespace chroma
 	class ComponentManager
 	{
 	public:
-		// On App start you HAVE to call this function on every Component you have
+		//! On App start you HAVE to call this function on every Component you have
 		template <typename T> void RegisterComponent()
 		{
 			// Get String Pointer of type
@@ -112,7 +112,7 @@ namespace chroma
 			++m_NextComponentType;
 		}
 
-		// Returns the registered Type of the given Component
+		//! Returns the registered Type of the given Component
 		template <typename T> ComponentType GetComponentType()
 		{
 			const char* _name = typeid(T).name();
@@ -122,26 +122,26 @@ namespace chroma
 			return m_RegisteredComponentTypes[_name];
 		}
 
-		// Adds a Component to an Entity
+		//! Adds a Component to an Entity
 		template <typename T> void AddComponent(Entity entity, T component)
 		{
 			GetComponentArray<T>()->Insert(entity, component);
 		}
 
-		// Removes a Component from the Entity
+		//! Removes a Component from the Entity
 		template <typename T> void RemoveComponent(Entity entity)
 		{
 			GetComponentArray<T>()->Remove(entity);
 		}
 
-		// Returns a Reference to 
+		//! Returns a Reference to the Component of this Type that corresponds to the given Entity
 		template <typename T> T& GetComponent(Entity entity)
 		{
 			return GetComponentArray<T>()->GetData(entity);
 		}
 
-		// Notify each Component Array that an Entity has been destroyed
-		// The Array will update its maps when it contains a Component of that Type
+		//! Notify each Component Array that an Entity has been destroyed
+		//! The Array will update its maps when it contains a Component of that Type
 		void EntityDestroyed(Entity entity)
 		{
 			for (auto& const pair : m_ComponentArrays)
@@ -152,16 +152,16 @@ namespace chroma
 		}
 
 	private:
-		// A Map that holds all registered Component Types by their String Pointer
+		//! A Map that holds all registered Component Types by their String Pointer
 		std::unordered_map<const char*, ComponentType> m_RegisteredComponentTypes{};
 
-		// Map that holds all Component Arrays by their String Pointer
+		//! Map that holds all Component Arrays by their String Pointer
 		std::unordered_map <const char*, std::shared_ptr<IComponentArray>> m_ComponentArrays{};
 
-		// Component Type to be assigned to the next Component that gets registered
+		//! Component Type to be assigned to the next Component that gets registered
 		ComponentType m_NextComponentType = 0;
 
-		// Function that returns statically casted Pointer to the Component Array
+		//! Function that returns statically casted Pointer to the Component Array
 		template <typename T> std::shared_ptr<ComponentArray<T>> GetComponentArray()
 		{
 			const char* _name = typeid(T).name();

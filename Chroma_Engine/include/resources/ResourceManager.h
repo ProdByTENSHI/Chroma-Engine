@@ -23,6 +23,7 @@ namespace chroma
 		}
 
 		// -- Resource Management
+		//! Returns a Texture either from the Cache or the Disk
 		SDL_Texture* GetTexture(const std::string& path);
 
 	private:

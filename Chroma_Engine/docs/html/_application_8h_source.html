@@ -99,45 +99,41 @@ $(function(){initNavTree('_application_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Application.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_application_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Window.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;rendering/Renderer.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_window_8h.html">Window.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_renderer_8h.html">rendering/Renderer.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;eventsystem/EventSystem.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="_event_system_8h.html">eventsystem/EventSystem.h</a>&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>chroma</div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespacechroma.html">    8</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacechroma.html">chroma</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classchroma_1_1_application.html">Application</a></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="comment">// Before doing anything SDL Related the Application has to be created</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="classchroma_1_1_application.html">Application</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#a15c9e4e779617afa58ee364c41b01297">   14</a></span>        <a class="code hl_function" href="classchroma_1_1_application.html#a15c9e4e779617afa58ee364c41b01297">Application</a>();</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">// Initializes Engine related Manager(Window, Renderer...)</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> Init(<a class="code hl_class" href="classchroma_1_1_window.html">Window</a>* window, <a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a>* renderer);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#aa304be6393ea71781c6aac1208775ff4">   17</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_application.html#aa304be6393ea71781c6aac1208775ff4">Init</a>(<a class="code hl_class" href="classchroma_1_1_window.html">Window</a>* window, <a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a>* renderer);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">// Updates as often as possible - Variable Time Step</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> Update();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#a3de60af2d78b715ee2d5db1968a8f03b">   20</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_application.html#a3de60af2d78b715ee2d5db1968a8f03b">Update</a>();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// Updates in fixed intervals. Use for Physics and Collision related Stuff - Fixed Time Step</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">void</span> FixedUpdate();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#a29fde834a992eeed968453e1223fc644">   23</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_application.html#a29fde834a992eeed968453e1223fc644">FixedUpdate</a>();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="comment">// Renders the final Screen</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> Render();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#aacbef8c7d640ae1516ac96252436e9be">   26</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classchroma_1_1_application.html#aacbef8c7d640ae1516ac96252436e9be">Render</a>();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="comment">// -- Getter</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> <a class="code hl_class" href="classchroma_1_1_window.html">Window</a>&amp; GetWindow()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *m_Window; }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">const</span> <a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a>&amp; GetRenderer()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *m_Renderer; }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#a2cc1e2a64c428057abe019aa38b37f04">   30</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="classchroma_1_1_window.html">Window</a>&amp; <a class="code hl_function" href="classchroma_1_1_application.html#a2cc1e2a64c428057abe019aa38b37f04">GetWindow</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *m_Window; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#ae3cb06090bf72a97fe8733b143f9c5c4">   31</a></span>        <span class="keyword">const</span> <a class="code hl_class" href="classchroma_1_1_renderer.html">Renderer</a>&amp; <a class="code hl_function" href="classchroma_1_1_application.html#ae3cb06090bf72a97fe8733b143f9c5c4">GetRenderer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *m_Renderer; }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">// -- Events</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> OnApplicationStart;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> OnApplicationUpdate;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> OnApplicationFixedUpdate;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> OnApplicationEnd;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#ae2a8378d99b942d783bf5c7df8e88de7">   35</a></span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> <a class="code hl_variable" href="classchroma_1_1_application.html#ae2a8378d99b942d783bf5c7df8e88de7">OnApplicationStart</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#ab00a763bbe0d22b4a8b3b633bbeaf1a8">   36</a></span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> <a class="code hl_variable" href="classchroma_1_1_application.html#ab00a763bbe0d22b4a8b3b633bbeaf1a8">OnApplicationUpdate</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#a25fef3701b294fcdef4f06538ba606a5">   37</a></span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> <a class="code hl_variable" href="classchroma_1_1_application.html#a25fef3701b294fcdef4f06538ba606a5">OnApplicationFixedUpdate</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classchroma_1_1_application.html#a587450c7aa12d33c504747356a854333">   38</a></span>        <a class="code hl_class" href="classchroma_1_1_event.html">Event&lt;&gt;</a> <a class="code hl_variable" href="classchroma_1_1_application.html#a587450c7aa12d33c504747356a854333">OnApplicationEnd</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="classchroma_1_1_window.html">Window</a>* m_Window = <span class="keyword">nullptr</span>;</div>
@@ -148,16 +144,32 @@ $(function(){initNavTree('_application_8h_source.html',''); initResizable(); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-<div class="ttc" id="aclasschroma_1_1_application_html"><div class="ttname"><a href="classchroma_1_1_application.html">chroma::Application</a></div><div class="ttdef"><b>Definition</b> Application.h:11</div></div>
-<div class="ttc" id="aclasschroma_1_1_event_html"><div class="ttname"><a href="classchroma_1_1_event.html">chroma::Event</a></div><div class="ttdef"><b>Definition</b> EventSystem.h:52</div></div>
-<div class="ttc" id="aclasschroma_1_1_renderer_html"><div class="ttname"><a href="classchroma_1_1_renderer.html">chroma::Renderer</a></div><div class="ttdef"><b>Definition</b> Renderer.h:8</div></div>
-<div class="ttc" id="aclasschroma_1_1_window_html"><div class="ttname"><a href="classchroma_1_1_window.html">chroma::Window</a></div><div class="ttdef"><b>Definition</b> Window.h:19</div></div>
+</div>
+<div class="ttc" id="a_event_system_8h_html"><div class="ttname"><a href="_event_system_8h.html">EventSystem.h</a></div></div>
+<div class="ttc" id="a_renderer_8h_html"><div class="ttname"><a href="_renderer_8h.html">Renderer.h</a></div></div>
+<div class="ttc" id="a_window_8h_html"><div class="ttname"><a href="_window_8h.html">Window.h</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html"><div class="ttname"><a href="classchroma_1_1_application.html">chroma::Application</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">Application.h:11</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_a15c9e4e779617afa58ee364c41b01297"><div class="ttname"><a href="classchroma_1_1_application.html#a15c9e4e779617afa58ee364c41b01297">chroma::Application::Application</a></div><div class="ttdeci">Application()</div><div class="ttdoc">Before doing anything SDL Related the Application has to be created.</div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_a25fef3701b294fcdef4f06538ba606a5"><div class="ttname"><a href="classchroma_1_1_application.html#a25fef3701b294fcdef4f06538ba606a5">chroma::Application::OnApplicationFixedUpdate</a></div><div class="ttdeci">Event OnApplicationFixedUpdate</div><div class="ttdef"><b>Definition</b> <a href="#l00037">Application.h:37</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_a29fde834a992eeed968453e1223fc644"><div class="ttname"><a href="classchroma_1_1_application.html#a29fde834a992eeed968453e1223fc644">chroma::Application::FixedUpdate</a></div><div class="ttdeci">void FixedUpdate()</div><div class="ttdoc">Updates in fixed intervals. Use for Physics and Collision related Stuff - Fixed Time Step.</div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_a2cc1e2a64c428057abe019aa38b37f04"><div class="ttname"><a href="classchroma_1_1_application.html#a2cc1e2a64c428057abe019aa38b37f04">chroma::Application::GetWindow</a></div><div class="ttdeci">const Window &amp; GetWindow() const</div><div class="ttdef"><b>Definition</b> <a href="#l00030">Application.h:30</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_a3de60af2d78b715ee2d5db1968a8f03b"><div class="ttname"><a href="classchroma_1_1_application.html#a3de60af2d78b715ee2d5db1968a8f03b">chroma::Application::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Updates as often as possible - Variable Time Step.</div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_a587450c7aa12d33c504747356a854333"><div class="ttname"><a href="classchroma_1_1_application.html#a587450c7aa12d33c504747356a854333">chroma::Application::OnApplicationEnd</a></div><div class="ttdeci">Event OnApplicationEnd</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Application.h:38</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_aa304be6393ea71781c6aac1208775ff4"><div class="ttname"><a href="classchroma_1_1_application.html#aa304be6393ea71781c6aac1208775ff4">chroma::Application::Init</a></div><div class="ttdeci">void Init(Window *window, Renderer *renderer)</div><div class="ttdoc">Initializes Engine related Manager(Window, Renderer...)</div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_aacbef8c7d640ae1516ac96252436e9be"><div class="ttname"><a href="classchroma_1_1_application.html#aacbef8c7d640ae1516ac96252436e9be">chroma::Application::Render</a></div><div class="ttdeci">void Render()</div><div class="ttdoc">Renders the final Screen.</div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_ab00a763bbe0d22b4a8b3b633bbeaf1a8"><div class="ttname"><a href="classchroma_1_1_application.html#ab00a763bbe0d22b4a8b3b633bbeaf1a8">chroma::Application::OnApplicationUpdate</a></div><div class="ttdeci">Event OnApplicationUpdate</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Application.h:36</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_ae2a8378d99b942d783bf5c7df8e88de7"><div class="ttname"><a href="classchroma_1_1_application.html#ae2a8378d99b942d783bf5c7df8e88de7">chroma::Application::OnApplicationStart</a></div><div class="ttdeci">Event OnApplicationStart</div><div class="ttdef"><b>Definition</b> <a href="#l00035">Application.h:35</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_application_html_ae3cb06090bf72a97fe8733b143f9c5c4"><div class="ttname"><a href="classchroma_1_1_application.html#ae3cb06090bf72a97fe8733b143f9c5c4">chroma::Application::GetRenderer</a></div><div class="ttdeci">const Renderer &amp; GetRenderer() const</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Application.h:31</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_event_html"><div class="ttname"><a href="classchroma_1_1_event.html">chroma::Event</a></div><div class="ttdef"><b>Definition</b> <a href="_event_system_8h_source.html#l00056">EventSystem.h:57</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_renderer_html"><div class="ttname"><a href="classchroma_1_1_renderer.html">chroma::Renderer</a></div><div class="ttdef"><b>Definition</b> <a href="_renderer_8h_source.html#l00007">Renderer.h:8</a></div></div>
+<div class="ttc" id="aclasschroma_1_1_window_html"><div class="ttname"><a href="classchroma_1_1_window.html">chroma::Window</a></div><div class="ttdef"><b>Definition</b> <a href="_window_8h_source.html#l00018">Window.h:19</a></div></div>
+<div class="ttc" id="anamespacechroma_html"><div class="ttname"><a href="namespacechroma.html">chroma</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">Application.h:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3d69f64eaf81436fe2b22361382717e5.html">core</a></li><li class="navelem"><b>Application.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3d69f64eaf81436fe2b22361382717e5.html">core</a></li><li class="navelem"><a class="el" href="_application_8h.html">Application.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -9,10 +9,10 @@ namespace chroma
 	public:
 		static Time* GetInstance();
 
-		// Returns the Time in the current Scene
+		//! Returns the Time in the current Scene
 		float GetTimeInScene();
 
-		// Returns Time since the last Frame
+		//! Returns Time since the last Frame
 		double GetDeltaTime();
 
 	private:

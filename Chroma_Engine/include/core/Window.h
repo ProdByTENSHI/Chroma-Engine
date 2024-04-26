@@ -21,11 +21,13 @@ namespace chroma
 		Window(const std::string& name, int width, int height, Uint32 flags);
 		~Window();
 
+		//! Returns if the Window Creation was successful
 		bool GetCreationStatus()
 		{
 			return m_CreationStatus;
 		}
 
+		//! Returns the Window Information
 		const WindowInformation& GetWindowInformation() const
 		{
 			return m_WindowInformation;

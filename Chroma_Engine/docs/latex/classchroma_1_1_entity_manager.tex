@@ -1,22 +1,83 @@
 \doxysection{chroma\+::Entity\+Manager Class Reference}
 \hypertarget{classchroma_1_1_entity_manager}{}\label{classchroma_1_1_entity_manager}\index{chroma::EntityManager@{chroma::EntityManager}}
+
+
+{\ttfamily \#include $<$Entity\+Manager.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classchroma_1_1_entity_manager_a045e646b3e95d52ca9e25b475094eb56}{Entity\+Manager}} ()
+\item 
+\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} \mbox{\hyperlink{classchroma_1_1_entity_manager_a623f2acadffa785ebba0d355fb6f7d7e}{Create\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new Entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchroma_1_1_entity_manager_abec72e43bd0904f71c1d83e5b3eab636}{Destroy\+Entity}} (\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Destroys the given Entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchroma_1_1_entity_manager_a31eb58d858339c2b526b2d1e386159a7}{Set\+Signature}} (\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} entity, \mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}} signature)
+\begin{DoxyCompactList}\small\item\em Sets the Signature of the given Entity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}} \mbox{\hyperlink{classchroma_1_1_entity_manager_a5cc8deb7800cdef89e3f076db8948362}{Get\+Signature}} (\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Returns the Signature of the given Entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_entity_manager_8h_source_l00012}{12}} of file \mbox{\hyperlink{_entity_manager_8h_source}{Entity\+Manager.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classchroma_1_1_entity_manager_a045e646b3e95d52ca9e25b475094eb56}\label{classchroma_1_1_entity_manager_a045e646b3e95d52ca9e25b475094eb56} 
+\index{chroma::EntityManager@{chroma::EntityManager}!EntityManager@{EntityManager}}
+\index{EntityManager@{EntityManager}!chroma::EntityManager@{chroma::EntityManager}}
+\doxysubsubsection{\texorpdfstring{EntityManager()}{EntityManager()}}
+{\footnotesize\ttfamily chroma\+::\+Entity\+Manager\+::\+Entity\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{classchroma_1_1_entity_manager_a623f2acadffa785ebba0d355fb6f7d7e}\label{classchroma_1_1_entity_manager_a623f2acadffa785ebba0d355fb6f7d7e} 
-Entity {\bfseries Create\+Entity} ()
-\item 
+\index{chroma::EntityManager@{chroma::EntityManager}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!chroma::EntityManager@{chroma::EntityManager}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}} chroma\+::\+Entity\+Manager\+::\+Create\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new Entity. 
+
 \Hypertarget{classchroma_1_1_entity_manager_abec72e43bd0904f71c1d83e5b3eab636}\label{classchroma_1_1_entity_manager_abec72e43bd0904f71c1d83e5b3eab636} 
-void {\bfseries Destroy\+Entity} (Entity entity)
-\item 
-\Hypertarget{classchroma_1_1_entity_manager_a31eb58d858339c2b526b2d1e386159a7}\label{classchroma_1_1_entity_manager_a31eb58d858339c2b526b2d1e386159a7} 
-void {\bfseries Set\+Signature} (Entity entity, Signature signature)
-\item 
+\index{chroma::EntityManager@{chroma::EntityManager}!DestroyEntity@{DestroyEntity}}
+\index{DestroyEntity@{DestroyEntity}!chroma::EntityManager@{chroma::EntityManager}}
+\doxysubsubsection{\texorpdfstring{DestroyEntity()}{DestroyEntity()}}
+{\footnotesize\ttfamily void chroma\+::\+Entity\+Manager\+::\+Destroy\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Destroys the given Entity. 
+
 \Hypertarget{classchroma_1_1_entity_manager_a5cc8deb7800cdef89e3f076db8948362}\label{classchroma_1_1_entity_manager_a5cc8deb7800cdef89e3f076db8948362} 
-Signature {\bfseries Get\+Signature} (Entity entity)
-\end{DoxyCompactItemize}
+\index{chroma::EntityManager@{chroma::EntityManager}!GetSignature@{GetSignature}}
+\index{GetSignature@{GetSignature}!chroma::EntityManager@{chroma::EntityManager}}
+\doxysubsubsection{\texorpdfstring{GetSignature()}{GetSignature()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}} chroma\+::\+Entity\+Manager\+::\+Get\+Signature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}}]{entity }\end{DoxyParamCaption})}
+
+
+
+Returns the Signature of the given Entity. 
+
+\Hypertarget{classchroma_1_1_entity_manager_a31eb58d858339c2b526b2d1e386159a7}\label{classchroma_1_1_entity_manager_a31eb58d858339c2b526b2d1e386159a7} 
+\index{chroma::EntityManager@{chroma::EntityManager}!SetSignature@{SetSignature}}
+\index{SetSignature@{SetSignature}!chroma::EntityManager@{chroma::EntityManager}}
+\doxysubsubsection{\texorpdfstring{SetSignature()}{SetSignature()}}
+{\footnotesize\ttfamily void chroma\+::\+Entity\+Manager\+::\+Set\+Signature (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechroma_aa415016bd5ef3af285cb2830675dd7d4}{Entity}}}]{entity,  }\item[{\mbox{\hyperlink{namespacechroma_a08c2a4a0b6ea1fa8026ee06bb49245f8}{Signature}}}]{signature }\end{DoxyParamCaption})}
+
+
+
+Sets the Signature of the given Entity. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Entity\+Manager.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{_entity_manager_8h}{Entity\+Manager.\+h}}\end{DoxyCompactItemize}

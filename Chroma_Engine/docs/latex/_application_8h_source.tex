@@ -1,53 +1,48 @@
 \doxysection{Application.\+h}
 \hypertarget{_application_8h_source}{}\label{_application_8h_source}\index{Application.h@{Application.h}}
-
+\mbox{\hyperlink{_application_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Window.h"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}rendering/Renderer.h"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <eventsystem/EventSystem.h>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }chroma}
-\DoxyCodeLine{00009\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_application}{Application}}}
-\DoxyCodeLine{00011\ \ \ \ \ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Before\ doing\ anything\ SDL\ Related\ the\ Application\ has\ to\ be\ created}}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_application}{Application}}();}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initializes\ Engine\ related\ Manager(Window,\ Renderer...)}}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Init(\mbox{\hyperlink{classchroma_1_1_window}{Window}}*\ window,\ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ renderer);}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Updates\ as\ often\ as\ possible\ -\/\ Variable\ Time\ Step}}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Updates\ in\ fixed\ intervals.\ Use\ for\ Physics\ and\ Collision\ related\ Stuff\ -\/\ Fixed\ Time\ Step}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ FixedUpdate();}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Renders\ the\ final\ Screen}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Render();}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Getter}}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_window}{Window}}\&\ GetWindow()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *m\_Window;\ \}}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}\&\ GetRenderer()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *m\_Renderer;\ \}}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Events}}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ OnApplicationStart;}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ OnApplicationUpdate;}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ OnApplicationFixedUpdate;}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ OnApplicationEnd;}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_window}{Window}}*\ m\_Window\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ m\_Renderer\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_IsRunning\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \};}
-\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_window_8h}{Window.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_renderer_8h}{rendering/Renderer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_event_system_8h}{eventsystem/EventSystem.h}}>}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00008}\mbox{\hyperlink{namespacechroma}{00008}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacechroma}{chroma}}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00010}\mbox{\hyperlink{classchroma_1_1_application}{00010}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_application}{Application}}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00011}00011\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00014}\mbox{\hyperlink{classchroma_1_1_application_a15c9e4e779617afa58ee364c41b01297}{00014}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_application_a15c9e4e779617afa58ee364c41b01297}{Application}}();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00017}\mbox{\hyperlink{classchroma_1_1_application_aa304be6393ea71781c6aac1208775ff4}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_application_aa304be6393ea71781c6aac1208775ff4}{Init}}(\mbox{\hyperlink{classchroma_1_1_window}{Window}}*\ window,\ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ renderer);}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00020}\mbox{\hyperlink{classchroma_1_1_application_a3de60af2d78b715ee2d5db1968a8f03b}{00020}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_application_a3de60af2d78b715ee2d5db1968a8f03b}{Update}}();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00023}\mbox{\hyperlink{classchroma_1_1_application_a29fde834a992eeed968453e1223fc644}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_application_a29fde834a992eeed968453e1223fc644}{FixedUpdate}}();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00026}\mbox{\hyperlink{classchroma_1_1_application_aacbef8c7d640ae1516ac96252436e9be}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classchroma_1_1_application_aacbef8c7d640ae1516ac96252436e9be}{Render}}();}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Getter}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00030}\mbox{\hyperlink{classchroma_1_1_application_a2cc1e2a64c428057abe019aa38b37f04}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_window}{Window}}\&\ \mbox{\hyperlink{classchroma_1_1_application_a2cc1e2a64c428057abe019aa38b37f04}{GetWindow}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *m\_Window;\ \}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00031}\mbox{\hyperlink{classchroma_1_1_application_ae3cb06090bf72a97fe8733b143f9c5c4}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}\&\ \mbox{\hyperlink{classchroma_1_1_application_ae3cb06090bf72a97fe8733b143f9c5c4}{GetRenderer}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *m\_Renderer;\ \}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Events}}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00035}\mbox{\hyperlink{classchroma_1_1_application_ae2a8378d99b942d783bf5c7df8e88de7}{00035}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ \mbox{\hyperlink{classchroma_1_1_application_ae2a8378d99b942d783bf5c7df8e88de7}{OnApplicationStart}};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00036}\mbox{\hyperlink{classchroma_1_1_application_ab00a763bbe0d22b4a8b3b633bbeaf1a8}{00036}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ \mbox{\hyperlink{classchroma_1_1_application_ab00a763bbe0d22b4a8b3b633bbeaf1a8}{OnApplicationUpdate}};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00037}\mbox{\hyperlink{classchroma_1_1_application_a25fef3701b294fcdef4f06538ba606a5}{00037}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ \mbox{\hyperlink{classchroma_1_1_application_a25fef3701b294fcdef4f06538ba606a5}{OnApplicationFixedUpdate}};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00038}\mbox{\hyperlink{classchroma_1_1_application_a587450c7aa12d33c504747356a854333}{00038}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ \mbox{\hyperlink{classchroma_1_1_application_a587450c7aa12d33c504747356a854333}{OnApplicationEnd}};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00040}00040\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_window}{Window}}*\ m\_Window\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}*\ m\_Renderer\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_IsRunning\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00046}00046\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_application_8h_source_l00047}00047\ \}}
 
 \end{DoxyCode}

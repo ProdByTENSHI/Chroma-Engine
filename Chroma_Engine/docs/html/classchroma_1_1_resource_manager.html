@@ -98,22 +98,97 @@ $(function(){initNavTree('classchroma_1_1_resource_manager.html',''); initResiza
   <div class="headertitle"><div class="title">chroma::ResourceManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4a73ed527933e3a09972005e56beb208" id="r_a4a73ed527933e3a09972005e56beb208"><td class="memItemLeft" align="right" valign="top"><a id="a4a73ed527933e3a09972005e56beb208" name="a4a73ed527933e3a09972005e56beb208"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (<a class="el" href="classchroma_1_1_renderer.html">Renderer</a> *renderer)</td></tr>
+<tr class="memitem:a4a73ed527933e3a09972005e56beb208" id="r_a4a73ed527933e3a09972005e56beb208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a73ed527933e3a09972005e56beb208">Init</a> (<a class="el" href="classchroma_1_1_renderer.html">Renderer</a> *renderer)</td></tr>
 <tr class="separator:a4a73ed527933e3a09972005e56beb208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0e34073796046b2188dad051976a24f" id="r_af0e34073796046b2188dad051976a24f"><td class="memItemLeft" align="right" valign="top"><a id="af0e34073796046b2188dad051976a24f" name="af0e34073796046b2188dad051976a24f"></a>
-SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>GetTexture</b> (const std::string &amp;path)</td></tr>
+<tr class="memitem:af0e34073796046b2188dad051976a24f" id="r_af0e34073796046b2188dad051976a24f"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0e34073796046b2188dad051976a24f">GetTexture</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:af0e34073796046b2188dad051976a24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Texture either from the Cache or the Disk.  <br /></td></tr>
 <tr class="separator:af0e34073796046b2188dad051976a24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5f96df80763c41056fc8f84290e578e" id="r_aa5f96df80763c41056fc8f84290e578e"><td class="memItemLeft" align="right" valign="top"><a id="aa5f96df80763c41056fc8f84290e578e" name="aa5f96df80763c41056fc8f84290e578e"></a>
-static <a class="el" href="classchroma_1_1_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetInstance</b> ()</td></tr>
+<tr class="memitem:aa5f96df80763c41056fc8f84290e578e" id="r_aa5f96df80763c41056fc8f84290e578e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classchroma_1_1_resource_manager.html">ResourceManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5f96df80763c41056fc8f84290e578e">GetInstance</a> ()</td></tr>
 <tr class="separator:aa5f96df80763c41056fc8f84290e578e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_resource_manager_8h_source.html#l00014">14</a> of file <a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa5f96df80763c41056fc8f84290e578e" name="aa5f96df80763c41056fc8f84290e578e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f96df80763c41056fc8f84290e578e">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classchroma_1_1_resource_manager.html">ResourceManager</a> * chroma::ResourceManager::GetInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0e34073796046b2188dad051976a24f" name="af0e34073796046b2188dad051976a24f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0e34073796046b2188dad051976a24f">&#9670;&#160;</a></span>GetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * chroma::ResourceManager::GetTexture </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Texture either from the Cache or the Disk. </p>
+
+</div>
+</div>
+<a id="a4a73ed527933e3a09972005e56beb208" name="a4a73ed527933e3a09972005e56beb208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a73ed527933e3a09972005e56beb208">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chroma::ResourceManager::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classchroma_1_1_renderer.html">Renderer</a> *</td>          <td class="paramname"><span class="paramname"><em>renderer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_resource_manager_8h_source.html#l00020">20</a> of file <a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_resource_manager_8h_source.html">ResourceManager.h</a></li>
 </ul>
@@ -122,7 +197,7 @@ static <a class="el" href="classchroma_1_1_resource_manager.html">ResourceManage
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>chroma</b></li><li class="navelem"><a class="el" href="classchroma_1_1_resource_manager.html">ResourceManager</a></li>
+    <li class="navelem"><a class="el" href="namespacechroma.html">chroma</a></li><li class="navelem"><a class="el" href="classchroma_1_1_resource_manager.html">ResourceManager</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
