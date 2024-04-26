@@ -32,6 +32,8 @@ namespace chroma
 
 			SDL_FreeSurface(_loadedSurface);
 
+			std::cout << "Loaded Texture" << std::endl;
+
 			return _texture;
 		}
 	}

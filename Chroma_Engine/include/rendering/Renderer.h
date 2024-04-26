@@ -14,10 +14,10 @@ namespace chroma
 		void Prepare();
 
 		// Render a Texture with the given Size and Position
-		void Render(SDL_Texture* texture, SDL_Rect srcRect, SDL_Rect dstRect);
+		void RenderTexture(SDL_Texture* texture, const SDL_Rect* srcRect, const SDL_Rect* dstRect);
 
 		// Converts the given Surface into a Texture before rendering it with the given Size and Position
-		void Render(SDL_Surface* surface, SDL_Rect srcRect, SDL_Rect dstRect);
+		void RenderSurface(SDL_Surface* surface, SDL_Rect srcRect, SDL_Rect dstRect);
 
 		// Draws the final Frame. Gets called AFTER all the Render Functions
 		void Present();

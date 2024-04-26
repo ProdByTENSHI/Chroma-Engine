@@ -21,8 +21,6 @@ namespace chroma
 	// Base class for all Systems
 	struct System
 	{
-		virtual void Update() = 0;
-
 		std::set<Entity> m_Entities;
 	};
 }

@@ -32,12 +32,15 @@ namespace chroma
 		}
 
 		// Adds a Component to an Entity
+		// Make sure the Component has a default Constructor or else you will get an deleted function error!
 		template <typename T> void AddComponent(Entity entity, T component)
 		{
 			m_ComponentManager->AddComponent(entity, component);
 
+			std::cout << "Added Component to Entity " << entity << std::endl;
+
 			// Set Signature to Component Type
-			Signature _signature = m_EntityManager->GetSignature();
+			Signature _signature = m_EntityManager->GetSignature(entity);
 			_signature.set(m_ComponentManager->GetComponentType<T>(), true);
 
 			// Set Signature in Managers
@@ -71,9 +74,10 @@ namespace chroma
 		}
 
 		// -- System
-		template <typename T> void RegisterSystem()
+		template <typename T> std::shared_ptr<T> RegisterSystem()
 		{
-			m_SystemManager->RegisterSystem<T>();
+			std::cout << "Registered System " << std::endl;
+			return m_SystemManager->RegisterSystem<T>();
 		}
 
 		template <typename T> void SetSystemSignature(Signature signature)

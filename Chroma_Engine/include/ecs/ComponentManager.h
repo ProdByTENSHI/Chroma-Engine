@@ -25,7 +25,7 @@ namespace chroma
 		// Inserts a Component at Entity's Index and Update Maps
 		void Insert(Entity entity, T component)
 		{
-			assert(entity != m_EntityToIndex.find(entity) && "Entity ID not valid!");
+			assert(m_EntityToIndex.find(entity) == m_EntityToIndex.end() && "Entity ID not valid!");
 
 			size_t _newIndex = m_ValidEntries;
 
@@ -33,15 +33,13 @@ namespace chroma
 			m_IndexToEntity[_newIndex] = entity;
 			m_ComponentArray[_newIndex] = component;
 
-			Logger::getInstance()->Log("Registered Component!");
-
 			++m_ValidEntries;
 		}
 
 		// Removes the Component and the Entity
 		void Remove(Entity entity)
 		{
-			assert(entity != m_EntityToIndex.find(entity) && "Entity ID not valid!");
+			assert(m_EntityToIndex.find(entity) != m_EntityToIndex.end() && "Entity ID not valid!");
 
 			// Copy last Element into entities Index
 			size_t _removedEntityIndex = m_EntityToIndex[entity];
@@ -65,7 +63,7 @@ namespace chroma
 		// Returns a Reference to the associated Component of the given Entity
 		T& GetData(Entity entity)
 		{
-			assert(entity != m_EntityToIndex.find(entity) && "Entity ID not valid!");
+			assert(m_EntityToIndex.find(entity) != m_EntityToIndex.end() && "Entity ID not valid!");
 
 			return m_ComponentArray[m_EntityToIndex[entity]];
 		}
@@ -73,12 +71,8 @@ namespace chroma
 
 		void EntityDestroyed(Entity entity) override
 		{
-			assert(entity != m_EntityToIndex.find(entity) && "Entity ID not valid!");
-
-			if (std::find(m_EntityToIndex.begin, m_EntityToIndex.end, entity) != m_EntityToIndex.end)
-			{
+			if (m_EntityToIndex.find(entity) != m_EntityToIndex.end())
 				Remove(entity);
-			}
 		}
 
 	private:
@@ -109,10 +103,10 @@ namespace chroma
 			assert(m_RegisteredComponentTypes.find(_name) == m_RegisteredComponentTypes.end() && "Cannot register already registered Component");
 
 			// Register Component Type
-			m_RegisteredComponentTypes.insert(std::make_pair(_name, m_NextComponentType));
+			m_RegisteredComponentTypes.insert({ _name, m_NextComponentType });
 
 			// Create Component Array of given Component Type and insert it into the m_ComponentArrays Map
-			m_ComponentArrays.insert(std::make_pair(_name, std::make_shared<ComponentArray<T>>()));
+			m_ComponentArrays.insert({ _name, std::make_shared<ComponentArray<T>>() });
 
 			// Increase next Component Type
 			++m_NextComponentType;
@@ -143,7 +137,7 @@ namespace chroma
 		// Returns a Reference to 
 		template <typename T> T& GetComponent(Entity entity)
 		{
-			GetComponentArray<T>()->GetData(entity);
+			return GetComponentArray<T>()->GetData(entity);
 		}
 
 		// Notify each Component Array that an Entity has been destroyed
@@ -170,7 +164,7 @@ namespace chroma
 		// Function that returns statically casted Pointer to the Component Array
 		template <typename T> std::shared_ptr<ComponentArray<T>> GetComponentArray()
 		{
-			const char* _name = typeid(T).name;
+			const char* _name = typeid(T).name();
 
 			assert(m_RegisteredComponentTypes.find(_name) != m_RegisteredComponentTypes.end() && "Component not registered!");
 

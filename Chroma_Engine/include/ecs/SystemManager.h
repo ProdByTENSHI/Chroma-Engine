@@ -15,7 +15,7 @@ namespace chroma
 		// Puts a System into the Register and returns a Shared Pointer to it
 		template <typename T> std::shared_ptr<T> RegisterSystem()
 		{
-			const char* _name = typeid(_name).name();
+			const char* _name = typeid(T).name();
 
 			assert(m_Systems.find(_name) == m_Systems.end() && "System already registered!");
 
@@ -32,7 +32,7 @@ namespace chroma
 
 			assert(m_Systems.find(_name) != m_Systems.end() && "System not registered!");
 
-			m_Signatures.insert(std::make_pair(_name, T));
+			m_Signatures.insert(std::make_pair(_name, signature));
 		}
 
 		// Removes Entity from all Systems Entity m_Entities set
@@ -52,9 +52,9 @@ namespace chroma
 			{
 				auto const& _type = pair.first;
 				auto const& _system = pair.second;
-				Signature _systemSignature = m_Signatures[_type];
+				auto const& _systemSignature = m_Signatures[_type];
 
-				if ((_systemSignature & signature) == _systemSignature)
+				if ((signature & _systemSignature) == _systemSignature)
 				{
 					// Add to Systems Entity Set
 					_system->m_Entities.insert(entity);

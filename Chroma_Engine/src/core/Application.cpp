@@ -4,6 +4,7 @@
 
 #include "logger/Logger.h"
 #include "input/InputManager.h"
+#include "resources/ResourceManager.h"
 #include "ecs/ECS.h"
 
 namespace chroma
@@ -42,6 +43,8 @@ namespace chroma
 
 		m_Renderer = renderer;
 
+		ResourceManager::GetInstance()->Init(m_Renderer);
+
 		ECS::GetInstance()->Init();
 
 		// Lambda Function for the On Quit Event
@@ -49,6 +52,8 @@ namespace chroma
 			{
 				m_IsRunning = false;
 				OnApplicationEnd.Dispatch();
+
+				Logger::GetInstance()->Log("Chroma Engine shutdown");
 
 				SDL_Quit();
 			});

@@ -4,7 +4,8 @@
 #include <eventsystem/EventSystem.h>
 
 #include "ecs/ECS.h"
-#include "ecs/Components/Components.h"
+#include "ecs/components/Components.h"
+#include "ecs/systems/Systems.h"
 
 using namespace chroma;
 
@@ -20,11 +21,32 @@ int main(int argc, char* argv[])
 
 	_app->Init(_window, _renderer);
 
+	// -- Register Components First
 	ECS::GetInstance()->RegisterComponent<TransformComponent>();
 	ECS::GetInstance()->RegisterComponent<SpriteComponent>();
 
-	Entity _entity = ECS::GetInstance()->CreateEntity();
+	// -- After Component Registration, Register Systems
+	auto _spriteRendererSystem = ECS::GetInstance()->RegisterSystem<SpriteRendererSystem>();
 
+	Signature _systemSignature;
+	_systemSignature.set(ECS::GetInstance()->GetComponentType<TransformComponent>());
+	_systemSignature.set(ECS::GetInstance()->GetComponentType<SpriteComponent>());
+
+	ECS::GetInstance()->SetSystemSignature<SpriteRendererSystem>(_systemSignature);
+
+	// -- Create Entities and do whatever you want to
+	std::vector<Entity> _entities;
+
+	Entity _entity = ECS::GetInstance()->CreateEntity();
+	_entities.push_back(_entity);
+	ECS::GetInstance()->AddComponent<TransformComponent>(_entity, TransformComponent({ glm::vec3(50, 50, 0) }));
+	ECS::GetInstance()->AddComponent<SpriteComponent>(_entity, SpriteComponent("res/test.png"));
+
+	EventHandler<> _systemUpdate([&_renderer, &_spriteRendererSystem]()
+		{
+			_spriteRendererSystem->Update(_renderer);
+		});
+	_app->OnApplicationUpdate.Subscribe(_systemUpdate);
 	_app->Update();
 
 	return 0;

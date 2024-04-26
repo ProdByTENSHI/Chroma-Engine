@@ -30,12 +30,12 @@ namespace chroma
 		SDL_RenderClear(m_Renderer);
 	}
 
-	void Renderer::Render(SDL_Texture* texture, SDL_Rect srcRect, SDL_Rect dstRect)
+	void Renderer::RenderTexture(SDL_Texture* texture, const SDL_Rect* srcRect, const SDL_Rect* dstRect)
 	{
-		SDL_RenderCopy(m_Renderer, texture, &srcRect, &dstRect);
+		SDL_RenderCopy(m_Renderer, texture, srcRect, dstRect);
 	}
 
-	void Renderer::Render(SDL_Surface* surface, SDL_Rect srcRect, SDL_Rect dstRect)
+	void Renderer::RenderSurface(SDL_Surface* surface, SDL_Rect srcRect, SDL_Rect dstRect)
 	{
 		SDL_Texture* _texture = SDL_CreateTextureFromSurface(m_Renderer, surface);
 		SDL_RenderCopy(m_Renderer, _texture, &srcRect, &dstRect);
