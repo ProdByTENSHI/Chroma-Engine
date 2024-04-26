@@ -18,13 +18,13 @@ namespace chroma
 				auto& _transformComponent = ECS::GetInstance()->GetComponent<TransformComponent>(entity);
 				auto& _spriteComponent = ECS::GetInstance()->GetComponent<SpriteComponent>(entity);
 
-				SDL_Rect _position;
-				_position.w = 100;
-				_position.h = 100;
-				_position.x = _transformComponent.position.x;
-				_position.y = _transformComponent.position.y;
+				SDL_Rect _transform;
+				_transform.w = _transformComponent.size.x;
+				_transform.h = _transformComponent.size.y;
+				_transform.x = _transformComponent.position.x;
+				_transform.y = _transformComponent.position.y;
 
-				renderer->RenderTexture(_spriteComponent.m_Sprite->GetTexture(), NULL, &_position);
+				renderer->RenderTexture(_spriteComponent.m_Sprite->GetTexture(), NULL, &_transform);
 			}
 		}
 	};

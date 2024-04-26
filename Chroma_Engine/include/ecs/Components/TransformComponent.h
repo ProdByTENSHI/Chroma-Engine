@@ -6,9 +6,10 @@ namespace chroma
 {
 	struct TransformComponent
 	{
-		TransformComponent() { position = glm::vec3(0, 0, 0); }
-		TransformComponent(glm::vec3 position) : position(position) {}
+		TransformComponent() { position = glm::vec2(0, 0); size = glm::vec2(100, 100); }
+		TransformComponent(glm::vec2 position, glm::vec2 size) : position(position), size(size) {}
 
-		glm::vec3 position;
+		glm::vec2 position;
+		glm::vec2 size;
 	};
 }

@@ -6,6 +6,7 @@
 #include "ecs/ECS.h"
 #include "ecs/components/Components.h"
 #include "ecs/systems/Systems.h"
+#include "util/Random.h"
 
 using namespace chroma;
 
@@ -35,12 +36,16 @@ int main(int argc, char* argv[])
 	ECS::GetInstance()->SetSystemSignature<SpriteRendererSystem>(_systemSignature);
 
 	// -- Create Entities and do whatever you want to
-	std::vector<Entity> _entities;
-
-	Entity _entity = ECS::GetInstance()->CreateEntity();
-	_entities.push_back(_entity);
-	ECS::GetInstance()->AddComponent<TransformComponent>(_entity, TransformComponent({ glm::vec3(50, 50, 0) }));
-	ECS::GetInstance()->AddComponent<SpriteComponent>(_entity, SpriteComponent("res/test.png"));
+	int _entitiesToGenerate = MAX_ENTITIES;
+	for (int i = 0; i < _entitiesToGenerate; i++)
+	{
+		Entity _entity = ECS::GetInstance()->CreateEntity();
+		TransformComponent _transform;
+		_transform.position = glm::vec2((float)Random::GetInt(0, 1920), (float)Random::GetInt(0, 1280));
+		_transform.size = glm::vec2(250, 250);
+		ECS::GetInstance()->AddComponent<TransformComponent>(_entity, _transform);
+		ECS::GetInstance()->AddComponent<SpriteComponent>(_entity, SpriteComponent("res/test.png"));
+	}
 
 	EventHandler<> _systemUpdate([&_renderer, &_spriteRendererSystem]()
 		{
