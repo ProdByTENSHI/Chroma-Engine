@@ -1,0 +1,47 @@
+\doxysection{Input\+Manager.\+h}
+\hypertarget{_input_manager_8h_source}{}\label{_input_manager_8h_source}\index{InputManager.h@{InputManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <eventsystem/EventSystem.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }chroma}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{enum}\ MouseButtonType}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ Left\ =\ 0,}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ Middle\ =\ 1,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ Right\ =\ 2}
+\DoxyCodeLine{00013\ \ \ \ \ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_input_manager}{InputManager}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classchroma_1_1_input_manager}{InputManager}}*\ GetInstance();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ MouseButtonType\ GetMouseButtonByEvent(SDL\_MouseButtonEvent\ e);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Application\ Events}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<>}}\ OnQuit;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Key\ Events}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<SDL\_Keycode>}}\ OnKeyDown;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dispatches\ when\ a\ Key\ is\ pressed\ with\ the\ KeyCode}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<SDL\_Keycode>}}\ OnKeyUp;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dispatches\ when\ a\ Key\ is\ released\ with\ the\ KeyCode}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Mouse\ Events}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<MouseButtonType>}}\ OnMouseDown;\ \ \ \ \ \ \ \textcolor{comment}{//\ Dispatches\ when\ a\ Mouse\ Button\ is\ clicked\ with\ the\ Button\ Type}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<MouseButtonType>}}\ OnMouseUp;\ \ \ \ \ \textcolor{comment}{//\ Dispatches\ when\ a\ Mouse\ Button\ is\ released\ with\ the\ Button\ Type}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_event}{Event<int,\ int>}}\ OnMouseMove;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Dispatches\ when\ the\ Mouse\ is\ moved\ with\ the\ X\ and\ Y\ of\ the\ new\ Position}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_input_manager}{InputManager}}()\ \{\}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_input_manager}{InputManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classchroma_1_1_input_manager}{InputManager}}\&\ other);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ SDL\_Window*\ m\_Window\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}

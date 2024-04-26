@@ -1,0 +1,41 @@
+\doxysection{Renderer.\+h}
+\hypertarget{_renderer_8h_source}{}\label{_renderer_8h_source}\index{Renderer.h@{Renderer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }chroma}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_renderer}{Renderer}}(SDL\_Window*\ window,\ Uint32\ flags);}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_renderer}{\string~Renderer}}();}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cleans\ the\ Screen\ and\ Prepares\ everything\ before\ the\ next\ Frame\ is\ being\ drawn}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Prepare();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Render\ a\ Texture\ with\ the\ given\ Size\ and\ Position}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderTexture(SDL\_Texture*\ texture,\ \textcolor{keyword}{const}\ SDL\_Rect*\ srcRect,\ \textcolor{keyword}{const}\ SDL\_Rect*\ dstRect);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Converts\ the\ given\ Surface\ into\ a\ Texture\ before\ rendering\ it\ with\ the\ given\ Size\ and\ Position}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderSurface(SDL\_Surface*\ surface,\ SDL\_Rect\ srcRect,\ SDL\_Rect\ dstRect);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draws\ the\ final\ Frame.\ Gets\ called\ AFTER\ all\ the\ Render\ Functions}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Present();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ GETTER}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ SDL\_Renderer*\ GetRenderer()\ \{\ \textcolor{keywordflow}{return}\ m\_Renderer;\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ GetCreationStatus()\ \{\ \textcolor{keywordflow}{return}\ m\_CreationStatus;\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ SDL\_Renderer*\ m\_Renderer;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_CreationStatus;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,31 @@
+\doxysection{chroma\+::Event\texorpdfstring{$<$}{<} Args \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classchroma_1_1_event}{}\label{classchroma_1_1_event}\index{chroma::Event$<$ Args $>$@{chroma::Event$<$ Args $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classchroma_1_1_event_a930fe3222021ff8307976493d3ea3112}\label{classchroma_1_1_event_a930fe3222021ff8307976493d3ea3112} 
+typedef \mbox{\hyperlink{classchroma_1_1_event_handler}{Event\+Handler}}$<$ Args... $>$ {\bfseries event\+Handler\+Type}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classchroma_1_1_event_a2188f824f955b8060d3cd0603e8562f0}\label{classchroma_1_1_event_a2188f824f955b8060d3cd0603e8562f0} 
+void {\bfseries Subscribe} (const \mbox{\hyperlink{classchroma_1_1_event_handler}{event\+Handler\+Type}} \&subscriber)
+\item 
+\Hypertarget{classchroma_1_1_event_ae3519425f6638d971412b591a4e1d6c7}\label{classchroma_1_1_event_ae3519425f6638d971412b591a4e1d6c7} 
+void {\bfseries Unsubscribe} (const \mbox{\hyperlink{classchroma_1_1_event_handler}{event\+Handler\+Type}} \&subscriber)
+\item 
+\Hypertarget{classchroma_1_1_event_aa8e7507dcab069bc7a4e56d0ae5c7900}\label{classchroma_1_1_event_aa8e7507dcab069bc7a4e56d0ae5c7900} 
+void {\bfseries Dispatch} (Args... params)
+\item 
+\Hypertarget{classchroma_1_1_event_af12eb3faaeef021badddc00acead5f00}\label{classchroma_1_1_event_af12eb3faaeef021badddc00acead5f00} 
+void {\bfseries operator+=} (const \mbox{\hyperlink{classchroma_1_1_event_handler}{event\+Handler\+Type}} \&other)
+\item 
+\Hypertarget{classchroma_1_1_event_a9bb1340b33cbd6baaf21d0e4d5330c19}\label{classchroma_1_1_event_a9bb1340b33cbd6baaf21d0e4d5330c19} 
+void {\bfseries operator-\/=} (const \mbox{\hyperlink{classchroma_1_1_event_handler}{event\+Handler\+Type}} \&other)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event\+System.\+h\end{DoxyCompactItemize}

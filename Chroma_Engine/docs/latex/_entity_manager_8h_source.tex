@@ -1,0 +1,45 @@
+\doxysection{Entity\+Manager.\+h}
+\hypertarget{_entity_manager_8h_source}{}\label{_entity_manager_8h_source}\index{EntityManager.h@{EntityManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ecs/ECS\_Definitions.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}logger/Logger.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }chroma}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Entity\ Manager}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classchroma_1_1_entity_manager}{EntityManager}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classchroma_1_1_entity_manager}{EntityManager}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Entity\ Lifetime}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ Entity\ CreateEntity();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DestroyEntity(Entity\ entity);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Signature}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetSignature(Entity\ entity,\ Signature\ signature);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Signature\ GetSignature(Entity\ entity);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ *\ Gets\ filled\ with\ MAX\_ENTITIES\ Amount\ of\ Entities\ at\ the\ Start}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ *\ When\ creating\ an\ Entity\ an\ Entity\ is\ popped\ of\ the\ Front(FIFO)}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ *\ When\ Destroying\ an\ Entity\ it\ is\ returned\ to\ the\ Queue}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::queue<Entity>\ m\_AvaiableEntities;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ An\ Array\ that\ holds\ all\ Signatures\ where\ the\ Index\ corresponds\ to\ the\ Entity\ ID}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::array<Signature,\ MAX\_ENTITIES>\ m\_Signatures;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Keeps\ track\ of\ the\ amount\ of\ Entities\ in\ the\ Scene}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ uint32\_t\ m\_EntitiesInScene;}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}

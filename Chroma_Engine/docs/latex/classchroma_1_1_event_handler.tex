@@ -1,0 +1,31 @@
+\doxysection{chroma\+::Event\+Handler\texorpdfstring{$<$}{<} Args \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classchroma_1_1_event_handler}{}\label{classchroma_1_1_event_handler}\index{chroma::EventHandler$<$ Args $>$@{chroma::EventHandler$<$ Args $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classchroma_1_1_event_handler_acef7fdb9900eca46e29df925cbe7ff41}\label{classchroma_1_1_event_handler_acef7fdb9900eca46e29df925cbe7ff41} 
+typedef std\+::function$<$ void(Args...)$>$ {\bfseries function\+Type}
+\item 
+\Hypertarget{classchroma_1_1_event_handler_ad417f6ff7069532db09923c1f7be84ec}\label{classchroma_1_1_event_handler_ad417f6ff7069532db09923c1f7be84ec} 
+typedef unsigned int {\bfseries handler\+Id}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classchroma_1_1_event_handler_a8389a9fe43f22f3a2cc751d79d8f7a61}\label{classchroma_1_1_event_handler_a8389a9fe43f22f3a2cc751d79d8f7a61} 
+{\bfseries Event\+Handler} (const function\+Type \&function)
+\item 
+\Hypertarget{classchroma_1_1_event_handler_ac25a70d063048acdd2cdf3d93f0c3572}\label{classchroma_1_1_event_handler_ac25a70d063048acdd2cdf3d93f0c3572} 
+void {\bfseries operator()} (Args... params) const
+\item 
+\Hypertarget{classchroma_1_1_event_handler_a8226cc030ec417b74d30eb14ac52ecb7}\label{classchroma_1_1_event_handler_a8226cc030ec417b74d30eb14ac52ecb7} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classchroma_1_1_event_handler}{Event\+Handler}} \&other) const
+\item 
+\Hypertarget{classchroma_1_1_event_handler_a06a1cd9bb1f210189b4c1357eb93d6fd}\label{classchroma_1_1_event_handler_a06a1cd9bb1f210189b4c1357eb93d6fd} 
+handler\+Id {\bfseries Get\+ID} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event\+System.\+h\end{DoxyCompactItemize}

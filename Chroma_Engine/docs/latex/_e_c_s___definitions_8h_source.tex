@@ -1,0 +1,32 @@
+\doxysection{ECS\+\_\+\+Definitions.\+h}
+\hypertarget{_e_c_s___definitions_8h_source}{}\label{_e_c_s___definitions_8h_source}\index{ECS\_Definitions.h@{ECS\_Definitions.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <bitset>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }chroma}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Entity}}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{using\ }Entity\ =\ std::uint32\_t;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ An\ Entity\ is\ just\ an\ ID}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{const}\ Entity\ MAX\_ENTITIES\ =\ 5000;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Maximum\ Entities\ per\ Scene\ -\/>\ Override\ this\ Value\ to\ your\ needs}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Component}}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{using\ }ComponentType\ =\ std::uint8\_t;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Each\ Component\ has\ a\ unique\ 'ID'\ which\ gets\ used\ to\ represent\ a\ Bit\ in\ the\ Signature\ Bitfield}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{const}\ ComponentType\ MAX\_COMPONENTS\ =\ 32;\ \ \ \ \textcolor{comment}{//\ Max\ Components\ per\ Entity}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ -\/-\/\ Signature}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ To\ know\ what\ Components\ an\ Entity\ has\ and\ what\ Components\ a\ certain\ System\ cares\ about\ a\ Bitfield\ is\ used}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{using\ }Signature\ =\ std::bitset<MAX\_COMPONENTS>;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ A\ system\ is\ any\ functionality\ that\ iterates\ upon\ a\ list\ of\ entities\ with\ a\ certain\ signature\ of\ components}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Base\ class\ for\ all\ Systems}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structchroma_1_1_system}{System}}}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::set<Entity>\ m\_Entities;}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}
