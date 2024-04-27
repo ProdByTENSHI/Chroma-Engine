@@ -16,6 +16,15 @@ namespace chroma
 	//! A Scene is a State of a Game that stores Entities with their Components and their Data
 	class Scene
 	{
+	public:
+		//! Overrides the m_Data Struct
+		void Save();
+
+		//! Loads the given Data into this Scene
+		void Load(const SceneData& data);
+
+	private:
+		SceneData m_Data;
 
 	};
 

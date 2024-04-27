@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SDL.h>
+#include <bgfx/bgfx.h>
 
 namespace chroma
 {
