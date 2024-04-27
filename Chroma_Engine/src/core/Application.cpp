@@ -11,7 +11,7 @@ namespace chroma
 {
 	Application::Application()
 	{
-		// Initialize SDL and other Libraries
+		// Initialize SDL
 		if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		{
 			Logger::GetInstance()->Log("Could not initialize SDL");
@@ -23,24 +23,13 @@ namespace chroma
 
 	void Application::Init(Window* window, Renderer* renderer)
 	{
-		if (!window->GetCreationStatus())
-		{
-			Logger::GetInstance()->Log("Window could not be created");
-			m_IsRunning = false;
+		// Create Window
+		assert(window->GetCreationStatus() && "Could not initialize SDL Window!");
 
-			return;
-		}
+		// Create Renderer
+		assert(renderer->GetCreationStatus() && "Could not initialize BGFX");
 
 		m_Window = window;
-
-		if (!renderer->GetCreationStatus())
-		{
-			Logger::GetInstance()->Log("Renderer could not be created");
-			m_IsRunning = false;
-
-			return;
-		}
-
 		m_Renderer = renderer;
 
 		ResourceManager::GetInstance()->Init(m_Renderer);
@@ -71,7 +60,6 @@ namespace chroma
 	{
 		while (m_IsRunning)
 		{
-			m_Renderer->Prepare();
 			OnApplicationUpdate.Dispatch();
 
 			InputManager::GetInstance()->Update();
@@ -88,8 +76,8 @@ namespace chroma
 
 	void Application::Render()
 	{
-		m_Renderer->Present();
-
+		// Render
+		SDL_Delay(32);
 		Update();
 	}
 }

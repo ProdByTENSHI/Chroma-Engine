@@ -37,17 +37,16 @@ namespace chroma
 		}
 	}
 
+	// TODO: Load actual Scene Data -- This is only placeholder
 	void LoadSceneFunc()
 	{
-		int _entitiesToGenerate = MAX_ENTITIES;
-		for (int i = 0; i < _entitiesToGenerate; i++)
+		for (int i = 0; i < MAX_ENTITIES; i++)
 		{
 			Entity _entity = ECS::GetInstance()->CreateEntity();
 			TransformComponent _transform;
 			_transform.position = glm::vec2((float)Random::GetInt(0, 1920), (float)Random::GetInt(0, 1280));
 			_transform.size = glm::vec2(250, 250);
 			ECS::GetInstance()->AddComponent<TransformComponent>(_entity, _transform);
-			ECS::GetInstance()->AddComponent<SpriteComponent>(_entity, SpriteComponent("res/test.png"));
 		}
 	}
 

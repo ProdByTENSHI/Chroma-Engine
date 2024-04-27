@@ -22,13 +22,7 @@ namespace chroma
 			m_Renderer = renderer;
 		}
 
-		// -- Resource Management
-		//! Returns a Texture either from the Cache or the Disk
-		SDL_Texture* GetTexture(const std::string& path);
-
 	private:
 		Renderer* m_Renderer;
-
-		std::unordered_map<std::string, SDL_Texture*> m_TextureCache;
 	};
 }
