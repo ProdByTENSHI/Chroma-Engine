@@ -47,6 +47,8 @@ namespace chroma
 
 		ECS::GetInstance()->Init();
 
+		m_SceneManager = new SceneManager();
+
 		// Lambda Function for the On Quit Event
 		EventHandler<> _quitFunction = EventHandler<>([this]()
 			{

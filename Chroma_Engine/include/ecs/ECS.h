@@ -3,6 +3,7 @@
 #include "ecs/EntityManager.h"
 #include "ecs/ComponentManager.h"
 #include "ecs/SystemManager.h"
+#include "eventsystem/EventSystem.h"
 
 namespace chroma
 {
@@ -86,6 +87,9 @@ namespace chroma
 		{
 			m_SystemManager->SetSignature<T>(signature);
 		}
+
+		//! Called when Initializing the ECS
+		Event<> OnEcsInitialize;
 
 	private:
 		// -- Manager

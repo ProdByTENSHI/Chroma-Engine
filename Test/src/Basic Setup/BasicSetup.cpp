@@ -10,6 +10,25 @@
 
 using namespace chroma;
 
+std::shared_ptr<SpriteRendererSystem> spriteRenderSystem;
+
+// Registers all Components and Systems
+void initializeECS()
+{
+	// -- Register Components First
+	ECS::GetInstance()->RegisterComponent<TransformComponent>();
+	ECS::GetInstance()->RegisterComponent<SpriteComponent>();
+
+	// -- After Component Registration, Register Systems
+	spriteRenderSystem = ECS::GetInstance()->RegisterSystem<SpriteRendererSystem>();
+
+	Signature _systemSignature;
+	_systemSignature.set(ECS::GetInstance()->GetComponentType<TransformComponent>());
+	_systemSignature.set(ECS::GetInstance()->GetComponentType<SpriteComponent>());
+
+	ECS::GetInstance()->SetSystemSignature<SpriteRendererSystem>(_systemSignature);
+}
+
 int main(int argc, char* argv[])
 {
 	Application* _app = new Application();
@@ -20,36 +39,17 @@ int main(int argc, char* argv[])
 	Uint32 _renderFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
 	Renderer* _renderer = new Renderer(_window->GetWindowInformation().window, _renderFlags);
 
+	EventHandler<> _ecsInitHandler(initializeECS);
+	ECS::GetInstance()->OnEcsInitialize.Subscribe(_ecsInitHandler);
+
 	_app->Init(_window, _renderer);
 
-	// -- Register Components First
-	ECS::GetInstance()->RegisterComponent<TransformComponent>();
-	ECS::GetInstance()->RegisterComponent<SpriteComponent>();
+	Scene* _scene = new Scene();
+	_app->GetSceneManager().LoadScene(*_scene);
 
-	// -- After Component Registration, Register Systems
-	auto _spriteRendererSystem = ECS::GetInstance()->RegisterSystem<SpriteRendererSystem>();
-
-	Signature _systemSignature;
-	_systemSignature.set(ECS::GetInstance()->GetComponentType<TransformComponent>());
-	_systemSignature.set(ECS::GetInstance()->GetComponentType<SpriteComponent>());
-
-	ECS::GetInstance()->SetSystemSignature<SpriteRendererSystem>(_systemSignature);
-
-	// -- Create Entities and do whatever you want to
-	int _entitiesToGenerate = MAX_ENTITIES;
-	for (int i = 0; i < _entitiesToGenerate; i++)
-	{
-		Entity _entity = ECS::GetInstance()->CreateEntity();
-		TransformComponent _transform;
-		_transform.position = glm::vec2((float)Random::GetInt(0, 1920), (float)Random::GetInt(0, 1280));
-		_transform.size = glm::vec2(250, 250);
-		ECS::GetInstance()->AddComponent<TransformComponent>(_entity, _transform);
-		ECS::GetInstance()->AddComponent<SpriteComponent>(_entity, SpriteComponent("res/test.png"));
-	}
-
-	EventHandler<> _systemUpdate([&_renderer, &_spriteRendererSystem]()
+	EventHandler<> _systemUpdate([&_renderer]()
 		{
-			_spriteRendererSystem->Update(_renderer);
+			spriteRenderSystem->Update(_renderer);
 		});
 	_app->OnApplicationUpdate.Subscribe(_systemUpdate);
 	_app->Update();

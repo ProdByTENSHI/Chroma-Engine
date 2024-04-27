@@ -17,6 +17,8 @@ namespace chroma
 		m_EntityManager = new EntityManager();
 		m_ComponentManager = new ComponentManager();
 		m_SystemManager = new SystemManager();
+
+		OnEcsInitialize.Dispatch();
 	}
 
 	Entity ECS::CreateEntity()

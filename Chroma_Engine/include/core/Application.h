@@ -2,6 +2,7 @@
 
 #include "Window.h"
 #include "rendering/Renderer.h"
+#include "scene/SceneManager.h"
 
 #include <eventsystem/EventSystem.h>
 
@@ -29,6 +30,7 @@ namespace chroma
 
 		const Window& GetWindow() const { return *m_Window; }
 		const Renderer& GetRenderer() const { return *m_Renderer; }
+		SceneManager& GetSceneManager() const { return *m_SceneManager; }
 
 		// -- Events
 
@@ -40,6 +42,7 @@ namespace chroma
 	private:
 		Window* m_Window = nullptr;
 		Renderer* m_Renderer = nullptr;
+		SceneManager* m_SceneManager = nullptr;
 
 		bool m_IsRunning = false;
 
