@@ -1,6 +1,6 @@
 
 # Chroma Engine
-A 2D Game Engine made with C++, SDL and BGFX.
+A 2D Game Engine made with C++, SDL and a custom written OpenGL Renderer.
 
 The Goal is to provide base functionality for Games to build upon.
 The Code is structured to be work as modules to create reusability for Projects.
