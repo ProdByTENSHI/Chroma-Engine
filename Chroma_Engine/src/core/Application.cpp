@@ -11,10 +11,15 @@ namespace chroma
 {
 	Application::Application()
 	{
+		//Use OpenGL 3.1 core
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 1);
+		SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+
 		// Initialize SDL
 		if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 		{
-			Logger::GetInstance()->Log("Could not initialize SDL");
+			std::cerr << "Could not initialize SDL. SDL Error: " << SDL_GetError() << std::endl;
 			return;
 		}
 
@@ -25,15 +30,21 @@ namespace chroma
 	{
 		// Create Window
 		assert(window->GetCreationStatus() && "Could not initialize SDL Window!");
+		m_Window = window;
+
+		// Create OpenGL Context
+		SDL_GLContext glContext = SDL_GL_CreateContext(m_Window->GetWindowInformation().window);
+		if (glContext == NULL)
+		{
+			std::cerr << "Could not create OpenGL Context " << SDL_GetError() << std::endl;
+			return;
+		}
 
 		// Create Renderer
 		assert(renderer->GetCreationStatus() && "Could not initialize BGFX");
-
-		m_Window = window;
 		m_Renderer = renderer;
 
 		ResourceManager::GetInstance()->Init(m_Renderer);
-
 		ECS::GetInstance()->Init();
 
 		m_SceneManager = new SceneManager();

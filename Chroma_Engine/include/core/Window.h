@@ -22,13 +22,13 @@ namespace chroma
 		~Window();
 
 		//! Returns if the Window Creation was successful
-		bool GetCreationStatus()
+		inline bool GetCreationStatus()
 		{
 			return m_CreationStatus;
 		}
 
 		//! Returns the Window Information
-		const WindowInformation& GetWindowInformation() const
+		inline const WindowInformation& GetWindowInformation() const
 		{
 			return m_WindowInformation;
 		}

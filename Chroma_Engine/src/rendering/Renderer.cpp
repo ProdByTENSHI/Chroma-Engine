@@ -9,13 +9,6 @@ namespace chroma
 {
 	Renderer::Renderer() : m_CreationStatus(false)
 	{
-		bgfx::init();
-
 		m_CreationStatus = true;
-	}
-
-	Renderer::~Renderer()
-	{
-
 	}
 }

@@ -1,21 +1,18 @@
 #include "core/Window.h"
 
+#include <iostream>
 #include "logger/Logger.h"
 
 namespace chroma
 {
-	Window::Window(const std::string& name, int width, int height, Uint32 flags)
+	Window::Window(const std::string& name, int width, int height, Uint32 flags) : m_CreationStatus(false)
 	{
 		// Create Window
 		m_WindowInformation.window = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, flags);
 		if (m_WindowInformation.window == nullptr)
 		{
-			Logger::GetInstance()->Log("Window could not be created!");
-			m_CreationStatus = false;
+			std::cerr << "Could not create Window " << SDL_GetError() << std::endl;
 		}
-
-		// Create OpenGL Context
-		SDL_GLContext context = SDL_GL_CreateContext(m_WindowInformation.window);
 
 		// Populate Window Information Struct
 		m_WindowInformation.name = name;

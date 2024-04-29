@@ -44,8 +44,8 @@ namespace chroma
 		{
 			Entity _entity = ECS::GetInstance()->CreateEntity();
 			TransformComponent _transform;
-			_transform.position = glm::vec2((float)Random::GetInt(0, 1920), (float)Random::GetInt(0, 1280));
-			_transform.size = glm::vec2(250, 250);
+			_transform.position = Vector2((float)Random::GetInt(0, 1920), (float)Random::GetInt(0, 1280));
+			_transform.size = Vector2(100, 100);
 			ECS::GetInstance()->AddComponent<TransformComponent>(_entity, _transform);
 		}
 	}

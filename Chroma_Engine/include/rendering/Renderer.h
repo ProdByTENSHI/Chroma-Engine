@@ -1,7 +1,6 @@
 #pragma once
 
 #include <SDL.h>
-#include <bgfx/bgfx.h>
 
 namespace chroma
 {
@@ -9,9 +8,8 @@ namespace chroma
 	{
 	public:
 		Renderer();
-		~Renderer();
 
-		bool GetCreationStatus() const
+		inline bool GetCreationStatus() const
 		{
 			return m_CreationStatus;
 		}

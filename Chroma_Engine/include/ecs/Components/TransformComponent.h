@@ -1,15 +1,22 @@
 #pragma once
 
-#include <glm.hpp>
-
 namespace chroma
 {
+	struct Vector2
+	{
+		Vector2() : x(0), y(0) {}
+		Vector2(float x, float y) { this->x = x; this->y = y; }
+
+		float x;
+		float y;
+	};
+
 	struct TransformComponent
 	{
-		TransformComponent() { position = glm::vec2(0, 0); size = glm::vec2(100, 100); }
-		TransformComponent(glm::vec2 position, glm::vec2 size) : position(position), size(size) {}
+		TransformComponent() : position(Vector2(0, 0)), size(Vector2(100, 100)) {}
+		TransformComponent(Vector2 position, Vector2 size) : position(position), size(size) {}
 
-		glm::vec2 position;
-		glm::vec2 size;
+		Vector2 position;
+		Vector2 size;
 	};
 }

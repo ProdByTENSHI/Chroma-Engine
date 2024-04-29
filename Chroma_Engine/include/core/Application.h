@@ -28,9 +28,9 @@ namespace chroma
 
 		// -- Getter
 
-		const Window& GetWindow() const { return *m_Window; }
-		const Renderer& GetRenderer() const { return *m_Renderer; }
-		SceneManager& GetSceneManager() const { return *m_SceneManager; }
+		inline const Window& GetWindow() const { return *m_Window; }
+		inline const Renderer& GetRenderer() const { return *m_Renderer; }
+		inline SceneManager& GetSceneManager() const { return *m_SceneManager; }
 
 		// -- Events
 
