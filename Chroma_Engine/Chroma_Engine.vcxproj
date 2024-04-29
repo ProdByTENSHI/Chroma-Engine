@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Chroma_Engine\include;$(SolutionDir)Chroma_Engine\vendor\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Chroma_Engine\vendor\glew\include;$(SolutionDir)Chroma_Engine\include;$(SolutionDir)Chroma_Engine\vendor\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Chroma_Engine\include;$(SolutionDir)Chroma_Engine\vendor\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Chroma_Engine\vendor\glew\include;$(SolutionDir)Chroma_Engine\include;$(SolutionDir)Chroma_Engine\vendor\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,6 +148,7 @@
     <ClInclude Include="include\io\ISerializable.h" />
     <ClInclude Include="include\logger\Logger.h" />
     <ClInclude Include="include\rendering\Renderer.h" />
+    <ClInclude Include="include\rendering\VBO.h" />
     <ClInclude Include="include\resources\ResourceManager.h" />
     <ClInclude Include="include\scene\SceneManager.h" />
     <ClInclude Include="include\util\Bit.h" />
@@ -235,6 +236,7 @@
     <ClInclude Include="vendor\SDL2\include\SDL_vulkan.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\rendering\VBO.cpp" />
     <ClCompile Include="src\scene\Scene.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
     <ClCompile Include="src\core\Time.cpp" />

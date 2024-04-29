@@ -13,6 +13,7 @@
     <ClCompile Include="src\resources\ResourceManager.cpp" />
     <ClCompile Include="src\util\Random.cpp" />
     <ClCompile Include="src\scene\SceneManager.cpp" />
+    <ClCompile Include="src\rendering\VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core\Application.h" />
@@ -117,5 +118,6 @@
     <ClInclude Include="vendor\SDL2\include\SDL_video.h" />
     <ClInclude Include="vendor\SDL2\include\SDL_vulkan.h" />
     <ClInclude Include="include\ecs\components\TransformComponent.h" />
+    <ClInclude Include="include\rendering\VBO.h" />
   </ItemGroup>
 </Project>

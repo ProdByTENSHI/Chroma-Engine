@@ -36,7 +36,7 @@ namespace chroma
 		SDL_GLContext glContext = SDL_GL_CreateContext(m_Window->GetWindowInformation().window);
 		if (glContext == NULL)
 		{
-			std::cerr << "Could not create OpenGL Context " << SDL_GetError() << std::endl;
+			std::cerr << "Could not create OpenGL Context " << SDL_GetError() << " : Make sure to set the SDL_WINDOW_OPENGL Window Flag!" << std::endl;
 			return;
 		}
 
@@ -74,6 +74,7 @@ namespace chroma
 			OnApplicationUpdate.Dispatch();
 
 			InputManager::GetInstance()->Update();
+			SDL_Delay(32);
 			FixedUpdate();
 		}
 	}
@@ -88,7 +89,6 @@ namespace chroma
 	void Application::Render()
 	{
 		// Render
-		SDL_Delay(32);
 		Update();
 	}
 }
