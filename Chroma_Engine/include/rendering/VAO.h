@@ -19,17 +19,28 @@ namespace chroma
 	class VAO
 	{
 	public:
+		//! Generated the Vertex Array Buffer
 		VAO();
+
+		//! Deleted the Vertex Array Buffer
 		~VAO();
 
+		//! Binds the Vertex Array Buffer
 		void Bind();
+
+		//! Unbinds the Vertex Array Buffer
 		void Unbind();
 
-		void EnableVertexAttrib(const VAOLayout& vaoLayout);
-		void DisableVertexAttrib(GLint index);
+		//! Enables a Vertex Array Attribute and pushes the Layout
+		void PushVertexAttrib(const VAOLayout& vaoLayout);
 
-		inline GLuint GetID() const { return m_ID; }
+		//! Disables the Vertex Array Attribute with the given Index
+		void PopVertexAttrib(GLint index);
 
+		//! Returns the Buffer ID
+		inline GLuint GetBufferID() const { return m_BufferID; }
+
+		//! Returns the Size of the given Type in Bytes
 		static inline GLint GetSizeByType(GLenum type)
 		{
 			switch (type)
@@ -49,7 +60,7 @@ namespace chroma
 		}
 
 	private:
-		GLuint m_ID;
+		GLuint m_BufferID;
 
 	};
 }

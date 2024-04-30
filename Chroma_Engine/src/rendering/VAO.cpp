@@ -2,19 +2,19 @@
 
 namespace chroma
 {
-	VAO::VAO() : m_ID(0)
+	VAO::VAO() : m_BufferID(0)
 	{
-		glGenVertexArrays(1, &m_ID);
+		glGenVertexArrays(1, &m_BufferID);
 	}
 
 	VAO::~VAO()
 	{
-		glDeleteVertexArrays(1, &m_ID);
+		glDeleteVertexArrays(1, &m_BufferID);
 	}
 
 	void VAO::Bind()
 	{
-		glBindVertexArray(m_ID);
+		glBindVertexArray(m_BufferID);
 	}
 
 	void VAO::Unbind()
@@ -22,13 +22,13 @@ namespace chroma
 		glBindVertexArray(0);
 	}
 
-	void VAO::EnableVertexAttrib(const VAOLayout& layout)
+	void VAO::PushVertexAttrib(const VAOLayout& layout)
 	{
 		glEnableVertexAttribArray(layout.attribIndex);
 		glVertexAttribPointer(layout.attribIndex, layout.size, layout.type, layout.shouldNormalize, layout.stride, layout.pointer);
 	}
 
-	void VAO::DisableVertexAttrib(GLint index)
+	void VAO::PopVertexAttrib(GLint index)
 	{
 		glDisableVertexAttribArray(index);
 	}
