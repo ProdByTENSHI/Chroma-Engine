@@ -7,7 +7,7 @@ namespace chroma
 	class VBO
 	{
 	public:
-		VBO(float vertices[]);
+		VBO();
 		~VBO();
 
 		void Bind();

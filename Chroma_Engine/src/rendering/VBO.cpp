@@ -2,10 +2,9 @@
 
 namespace chroma
 {
-	VBO::VBO(float vertices[])
+	VBO::VBO()
 	{
 		glGenBuffers(1, &m_Buffer);
-		SetBufferData(vertices);
 	}
 
 	VBO::~VBO()
