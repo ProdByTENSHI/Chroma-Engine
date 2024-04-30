@@ -147,6 +147,7 @@
     <ClInclude Include="include\input\InputManager.h" />
     <ClInclude Include="include\io\ISerializable.h" />
     <ClInclude Include="include\logger\Logger.h" />
+    <ClInclude Include="include\rendering\IBO.h" />
     <ClInclude Include="include\rendering\Renderer.h" />
     <ClInclude Include="include\rendering\Shader.h" />
     <ClInclude Include="include\rendering\VAO.h" />
@@ -529,6 +530,7 @@
     <ClInclude Include="vendor\SDL2\include\SDL_vulkan.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\rendering\IBO.cpp" />
     <ClCompile Include="src\rendering\Shader.cpp" />
     <ClCompile Include="src\rendering\VAO.cpp" />
     <ClCompile Include="src\rendering\VBO.cpp" />
@@ -543,7 +545,6 @@
     <ClCompile Include="src\rendering\Renderer.cpp" />
     <ClCompile Include="src\resources\ResourceManager.cpp" />
     <ClCompile Include="src\scene\SceneManager.cpp" />
-    <ClCompile Include="src\util\Random.cpp" />
     <ClCompile Include="vendor\glm\glm\detail\glm.cpp" />
   </ItemGroup>
   <ItemGroup>

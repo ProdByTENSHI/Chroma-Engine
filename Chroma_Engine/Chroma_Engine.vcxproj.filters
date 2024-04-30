@@ -11,12 +11,12 @@
     <ClCompile Include="src\logger\Logger.cpp" />
     <ClCompile Include="src\rendering\Renderer.cpp" />
     <ClCompile Include="src\resources\ResourceManager.cpp" />
-    <ClCompile Include="src\util\Random.cpp" />
     <ClCompile Include="src\scene\SceneManager.cpp" />
     <ClCompile Include="src\rendering\VBO.cpp" />
     <ClCompile Include="src\rendering\VAO.cpp" />
     <ClCompile Include="src\rendering\Shader.cpp" />
     <ClCompile Include="vendor\glm\glm\detail\glm.cpp" />
+    <ClCompile Include="src\rendering\IBO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core\Application.h" />
@@ -415,6 +415,7 @@
     <ClInclude Include="vendor\glew\include\GL\glew.h" />
     <ClInclude Include="vendor\glew\include\GL\glxew.h" />
     <ClInclude Include="vendor\glew\include\GL\wglew.h" />
+    <ClInclude Include="include\rendering\IBO.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vendor\glm\glm\detail\func_common.inl" />
