@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+#include <GL/glew.h>
 #include "logger/Logger.h"
 #include "input/InputManager.h"
 #include "resources/ResourceManager.h"
@@ -9,7 +10,7 @@
 
 namespace chroma
 {
-	Application::Application()
+	Application::Application(Window* window, Renderer* renderer)
 	{
 		//Use OpenGL 3.1 core
 		SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
@@ -23,22 +24,26 @@ namespace chroma
 			return;
 		}
 
-		m_IsRunning = true;
-	}
-
-	void Application::Init(Window* window, Renderer* renderer)
-	{
 		// Create Window
 		assert(window->GetCreationStatus() && "Could not initialize SDL Window!");
 		m_Window = window;
 
-		// Create OpenGL Context
-		SDL_GLContext glContext = SDL_GL_CreateContext(m_Window->GetWindowInformation().window);
-		if (glContext == NULL)
+		// Create OpenGL Context and make current
+		SDL_GLContext _glContext = SDL_GL_CreateContext(m_Window->GetWindowInformation().window);
+		if (_glContext == NULL)
 		{
 			std::cerr << "Could not create OpenGL Context " << SDL_GetError() << " : Make sure to set the SDL_WINDOW_OPENGL Window Flag!" << std::endl;
 			return;
 		}
+
+		SDL_GL_MakeCurrent(window->GetWindowInformation().window, _glContext);
+
+		// Initialize GLEW
+		GLenum _glewInitStatus = glewInit();
+		if (_glewInitStatus != GLEW_OK)
+			std::cerr << "Could not initialize glew. Error " << glewGetErrorString(_glewInitStatus) << std::endl;
+
+		std::cout << "Initialized GLEW " << glewGetString(GLEW_VERSION) << std::endl;
 
 		// Create Renderer
 		assert(renderer->GetCreationStatus() && "Could not initialize BGFX");
@@ -65,6 +70,8 @@ namespace chroma
 		OnApplicationStart.Dispatch();
 
 		Logger::GetInstance()->Log("Chroma Engine initialized");
+
+		m_IsRunning = true;
 	}
 
 	void Application::Update()

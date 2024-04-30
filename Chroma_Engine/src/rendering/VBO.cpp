@@ -5,9 +5,7 @@ namespace chroma
 	VBO::VBO(float vertices[])
 	{
 		glGenBuffers(1, &m_Buffer);
-		Bind();
-
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+		SetBufferData(vertices);
 	}
 
 	VBO::~VBO()
@@ -23,5 +21,11 @@ namespace chroma
 	void VBO::Unbind()
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
+	}
+
+	void VBO::SetBufferData(float vertices[])
+	{
+		Bind();
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 	}
 }

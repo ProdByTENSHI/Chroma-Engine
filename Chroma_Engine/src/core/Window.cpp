@@ -25,6 +25,5 @@ namespace chroma
 	Window::~Window()
 	{
 		SDL_DestroyWindow(m_WindowInformation.window);
-		delete m_WindowInformation.window;
 	}
 }

@@ -11,11 +11,8 @@ namespace chroma
 	class Application
 	{
 	public:
-		//! Before doing anything SDL Related the Application has to be created
-		Application();
-
-		//! Initializes Engine related Manager(Window, Renderer...)
-		void Init(Window* window, Renderer* renderer);
+		//! Initializes the Libraries and the Engine Systems
+		Application(Window* window, Renderer* renderer);
 
 		//! Updates as often as possible - Variable Time Step
 		void Update();

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <GL/glew.h>
-#include <GL/GL.h>
 
 namespace chroma
 {
@@ -13,6 +12,7 @@ namespace chroma
 
 		void Bind();
 		void Unbind();
+		void SetBufferData(float vertices[]);
 
 	private:
 		GLuint m_Buffer;
