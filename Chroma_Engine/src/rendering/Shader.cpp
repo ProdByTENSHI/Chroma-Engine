@@ -76,6 +76,58 @@ namespace chroma
 
 	void Shader::Use()
 	{
+		glUseProgram(m_Program);
+	}
+
+	void Shader::SetUniform1i(const std::string& name, GLint value)
+	{
+		glUniform1i(GetUniformLocation(name), value);
+	}
+
+	void Shader::SetUniform1f(const std::string& name, GLfloat value)
+	{
+		glUniform1f(GetUniformLocation(name), value);
+	}
+
+	void Shader::SetUniformVec2f(const std::string& name, const glm::vec2& value)
+	{
+		glUniform2f(GetUniformLocation(name), value.x, value.y);
+	}
+
+	void Shader::SetUniformVec3f(const std::string& name, const glm::vec3& value)
+	{
+		glUniform3f(GetUniformLocation(name), value.x, value.y, value.z);
+	}
+
+	GLint Shader::GetUniformLocation(const std::string& name)
+	{
+		// Try to load from cache
+		if (m_UniformCache.find(name) != m_UniformCache.end())
+			return m_UniformCache[name];
+
+		// Try to get Uniform Location
+		GLint _location = glGetUniformLocation(m_Program, name.c_str());
+
+		// Check for Errors
+		if (_location == -1)
+		{
+			std::cerr << "WARNING: Uniform Location " << name << " does not exist!" << std::endl;
+
+			GLint _activeUniformsCount;
+			glGetProgramiv(m_Program, GL_ACTIVE_UNIFORMS, &_activeUniformsCount);
+			for (int i = 0; _activeUniformsCount < 0; i++)
+			{
+				char _name[100];
+				glGetActiveUniformName(m_Program, i, sizeof(_name), nullptr, _name);
+				std::cout << "Active Uniforms: " << _name << std::endl;
+			}
+		}
+		else
+		{
+			m_UniformCache.insert({ name, _location });
+		}
+
+		return _location;
 	}
 
 	std::string Shader::GetSourceFromFile(const std::string& path)

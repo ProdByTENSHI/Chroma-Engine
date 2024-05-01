@@ -24,7 +24,6 @@ int main(int argc, char* argv[])
 	Uint32 _windowFlags = SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL;
 	Window* _window = new Window("Basic Setup", 1280, 720, _windowFlags);
 
-	Uint32 _renderFlags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
 	Renderer* _renderer = new Renderer();
 
 	EventHandler<> _ecsInitHandler(initializeECS);

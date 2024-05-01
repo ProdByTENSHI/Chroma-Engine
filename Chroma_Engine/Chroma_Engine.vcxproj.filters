@@ -17,6 +17,7 @@
     <ClCompile Include="src\rendering\Shader.cpp" />
     <ClCompile Include="vendor\glm\glm\detail\glm.cpp" />
     <ClCompile Include="src\rendering\IBO.cpp" />
+    <ClCompile Include="src\resources\Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core\Application.h" />
@@ -416,6 +417,7 @@
     <ClInclude Include="vendor\glew\include\GL\glxew.h" />
     <ClInclude Include="vendor\glew\include\GL\wglew.h" />
     <ClInclude Include="include\rendering\IBO.h" />
+    <ClInclude Include="include\resources\Sprite.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vendor\glm\glm\detail\func_common.inl" />

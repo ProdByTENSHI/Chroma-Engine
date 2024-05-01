@@ -153,6 +153,7 @@
     <ClInclude Include="include\rendering\VAO.h" />
     <ClInclude Include="include\rendering\VBO.h" />
     <ClInclude Include="include\resources\ResourceManager.h" />
+    <ClInclude Include="include\resources\Sprite.h" />
     <ClInclude Include="include\scene\SceneManager.h" />
     <ClInclude Include="include\util\Bit.h" />
     <ClInclude Include="include\util\Random.h" />
@@ -534,6 +535,7 @@
     <ClCompile Include="src\rendering\Shader.cpp" />
     <ClCompile Include="src\rendering\VAO.cpp" />
     <ClCompile Include="src\rendering\VBO.cpp" />
+    <ClCompile Include="src\resources\Sprite.cpp" />
     <ClCompile Include="src\scene\Scene.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
     <ClCompile Include="src\core\Time.cpp" />
